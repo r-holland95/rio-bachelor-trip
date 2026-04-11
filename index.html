@@ -190,6 +190,20 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
   .hero{padding:80px 60px 60px;}
   .g3{grid-template-columns:repeat(3,1fr);}
 }
+
+/* PICK CARDS */
+.picks-h3{font-family:'Playfair Display',serif;color:#fff;font-size:18px;margin:26px 0 12px;display:flex;align-items:center;gap:8px;}
+.pick-card{background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:8px;}
+.pick-card.featured{border-color:rgba(201,168,76,0.5);}
+.pick-card h4{color:#fff;font-size:15px;font-family:'Playfair Display',serif;font-weight:700;}
+.pick-card p{color:var(--tm);font-size:13px;line-height:1.6;}
+.pick-meta{color:var(--tm);font-size:12px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.pick-label{display:inline-block;background:rgba(93,173,226,0.12);border:1px solid rgba(93,173,226,0.3);color:#5dade2;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:2px;align-self:flex-start;}
+.pick-label.alt{background:rgba(201,168,76,0.1);border-color:var(--bdr);color:var(--tm);}
+.pick-label.gold-label{background:rgba(201,168,76,0.15);border-color:rgba(201,168,76,0.4);color:var(--gold);}
+.pick-link{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:12px;font-weight:500;text-decoration:none;border:1px solid var(--bdr);border-radius:3px;padding:6px 11px;background:rgba(201,168,76,0.07);transition:background .2s,border-color .2s;align-self:flex-start;}
+.pick-link:hover{background:rgba(201,168,76,0.15);border-color:rgba(201,168,76,0.5);}
+
 </style>
 </head>
 <body>
@@ -246,6 +260,7 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 <button class="nb" onclick="S('packing',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-bag"/></svg>Packing</button>
 <button class="nb" onclick="S('budget',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-dollar"/></svg>Budget &amp; Payment</button>
 
+<button class="nb" onclick="S('picks',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-star"/></svg>Tommy's Picks</button>
 </nav>
 <!-- ITINERARY -->
 <div id="itin" class="sec active">
@@ -628,6 +643,232 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 </div>
 <div class="tip ok" style="margin-top:24px;"><h4><svg class="i" width="14" height="14"><use href="#s-dollar"/></svg> Smart Money Tips</h4><p>Use a Wise card or Charles Schwab debit — both have zero foreign transaction fees, saving 3–5% on every purchase. Wise lets you hold Brazilian Reais and convert at the best rate. Also: Amex Platinum cardholders get Priority Pass lounge access at MIA — makes the departure experience significantly better.</p></div>
 </div>
+
+<!-- TOMMY'S PICKS -->
+<div id="picks" class="sec">
+<div class="eyebrow">Curated by Tommy</div><h2>Tommy's Picks</h2><div class="div"></div>
+<p class="desc">Real links, real options — everything researched and handpicked for this trip.</p>
+
+<!-- ACCOMMODATION -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-bed"/></svg> Airbnb Options
+</h3>
+<div class="g2">
+<div class="pick-card">
+<div class="pick-label">Option 1</div>
+<h4>Villa in Rio de Janeiro</h4>
+<div class="pick-meta"><svg class="i" width="12" height="12" style="color:var(--gold)"><use href="#s-star"/></svg> 4.83 &nbsp;&middot;&nbsp; 6 bedrooms &nbsp;&middot;&nbsp; 11 beds &nbsp;&middot;&nbsp; 8 baths</div>
+<p>Top-rated luxury villa with full capacity for the crew. High rating means reliable quality and a host who delivers.</p>
+<a href="https://www.airbnb.com" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Airbnb</a>
+</div>
+<div class="pick-card">
+<div class="pick-label alt">Option 2</div>
+<h4>Home in Rio de Janeiro</h4>
+<div class="pick-meta"><svg class="i" width="12" height="12" style="color:var(--gold)"><use href="#s-star"/></svg> New listing &nbsp;&middot;&nbsp; 5 bedrooms &nbsp;&middot;&nbsp; 8 beds &nbsp;&middot;&nbsp; 7 baths</div>
+<p>Brand new listing — no reviews yet but strong specs. Good backup if Option 1 is booked. Worth messaging the host for details.</p>
+<a href="https://www.airbnb.com" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Airbnb</a>
+</div>
+</div>
+
+<!-- CARNIVAL -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-music"/></svg> Carnival Grandstand Tickets
+</h3>
+<div class="tip ok"><h4><svg class="i" width="14" height="14"><use href="#s-check"/></svg> Section 9 is the BEST Section</h4><p>Section 9 lets you arrive at any time — no strict entry window. Sunday or Monday are the best nights. $392 per ticket. We will decide which night makes most sense based on the full schedule.</p></div>
+<div class="pick-card" style="margin-bottom:18px;">
+<h4>Carnival Sambadrome Grandstand Tickets</h4>
+<div class="pick-meta">$392 per person &nbsp;&middot;&nbsp; Section 9 recommended &nbsp;&middot;&nbsp; Sunday or Monday nights</div>
+<p>Official grandstand seats at the Sambadrome for the main Carnival parade. Section 9 is the move — flexible arrival, great sightlines, and the most relaxed experience of all sections.</p>
+<a href="https://www.dobrazilright.com/rio-carnival-grandstand-tickets/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> dobrazilright.com — Buy Tickets</a>
+</div>
+
+<!-- ACTIVITIES -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-sun"/></svg> Activities and Experiences
+</h3>
+<div class="g2">
+<div class="pick-card">
+<div class="pick-label">Must-Do</div>
+<h4>Hang Gliding over Rio</h4>
+<p>Launch from Pedra Bonita and soar over the city, Ipanema beach, and Leblon below. One of the most unique things you can do in any city on earth. Tandem jumps — no experience needed.</p>
+<a href="https://www.instagram.com/reel/C-X_LjLujbV/?igsh=bndpaTA3cHBhZ2Z4" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch the vibe on Instagram</a>
+</div>
+<div class="pick-card">
+<div class="pick-label">Pro Tip</div>
+<h4>Escadaria Selarón</h4>
+<p>The famous mosaic staircase of Rio — one of the most photographed spots in the city. Go very early morning (before 8am) to get photos without hundreds of tourists in frame. Worth the early wake-up call.</p>
+<a href="https://youtu.be/_FE194VN6c4?si=K6Lw0nITVMb0zR1K" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on YouTube</a>
+</div>
+<div class="pick-card">
+<div class="pick-label">Beach Day</div>
+<h4>Ipanema Beach on Sunday</h4>
+<p>Sunday at Ipanema is the event. The entire city comes out — music, vendors, beach sports, and an incredible atmosphere. Post 9 is the social hub. Make sure Day 4 or 5 falls on a Sunday.</p>
+<a href="https://www.instagram.com/reel/DTglMPyEVM6/?igsh=cHpyMDRnM3l1NnVn" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch the vibe on Instagram</a>
+</div>
+<div class="pick-card">
+<div class="pick-label">Culture</div>
+<h4>Pedra do Sal — Samba at the Source</h4>
+<p>Historic Afro-Brazilian square where samba was literally born. Free samba party every Friday and Monday night. Outdoor, authentic, locals and visitors together. This is the cultural heartbeat of Rio.</p>
+<a href="https://www.instagram.com/reel/DTtvsVrDM4H/?igsh=MWZwMzcxMjdvYmlmYw==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+<a href="https://youtu.be/TJPtopDvsQk?si=USJvSZJqUwtyY5LL" class="pick-link" target="_blank" style="margin-top:6px;"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Full video on YouTube</a>
+</div>
+</div>
+
+<!-- NIGHTLIFE -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-moon"/></svg> Nightlife and Bars
+</h3>
+<div class="g2">
+<div class="pick-card featured">
+<div class="pick-label gold-label">Black-Owned</div>
+<h4>Casa Black Rio</h4>
+<p>Popular club in Rio tailored specifically to Afro-Brazilians. This is the cultural nightlife experience — Black Brazilian music, energy, and community. A must-attend for the crew. Cannot be replicated anywhere else.</p>
+<div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+<a href="https://www.instagram.com/reel/DVrVHmvAcVA/?igsh=MW84dW96ajlsMjczOA==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+<a href="https://www.youtube.com/live/VtMkR2VWk1c?si=5G9b2GFG3P6qwjNE" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Full livestream on YouTube</a>
+</div>
+</div>
+<div class="pick-card featured">
+<div class="pick-label gold-label">Yacht Party</div>
+<h4>Foreign Lux Yacht Party</h4>
+<p>Upscale yacht party experience in Rio — dressed up, on the water, the full luxury vibe. Check dates and availability around Feb 5–10 to see if this lines up with the trip.</p>
+<a href="https://www.instagram.com/reel/DE0aba9ygYS/?igsh=bW5xcmRqb3owcXR3" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+</div>
+<div class="pick-card">
+<div class="pick-label">Rooftop</div>
+<h4>Sky Leme Rooftop</h4>
+<p>Rooftop bar with sweeping views over Leme and Copacabana. Great for drinks, sunset, and getting the night started right. Chic crowd, good cocktails, incredible backdrop.</p>
+<a href="https://www.instagram.com/reel/DTk7UflgMcj/?igsh=ZzM3bHB4YTBoZWh6" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+</div>
+<div class="pick-card">
+<div class="pick-label">Bar</div>
+<h4>Bar da Laje</h4>
+<p>Iconic elevated bar in Rio with panoramic hillside views. Known for a lively crowd, great caipirinhas, and an energy that captures exactly what Rio nightlife feels like.</p>
+<a href="https://www.instagram.com/reel/DU4NUscEZd4/?igsh=MTFxNWVjNmxnM3duOA==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+</div>
+<div class="pick-card">
+<div class="pick-label">Rooftop Bar</div>
+<h4>Skylab Rio — Orthon Palace</h4>
+<p>Rooftop bar at the top of the historic Othon Palace hotel on Copacabana. One of the most famous rooftop views in the city — Cristo on one side, the beach on the other.</p>
+<a href="https://www.instagram.com/reel/DWL8Ik7imvG/?igsh=eHdydTJyZ3JpcjQ4" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+</div>
+<div class="pick-card">
+<div class="pick-label">Neighborhood</div>
+<h4>Lapa — Bars and Clubs District</h4>
+<p>Lapa is Rio's historic nightlife epicenter — arched aqueducts, dozens of bars and clubs, live samba spilling into the streets. This is where you go at midnight and stay until sunrise.</p>
+<a href="https://www.instagram.com/reel/DI_qUcEpIQK/?igsh=d2pocXZtczZpejFm" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Most visited places in Rio</a>
+</div>
+</div>
+
+<!-- RESTAURANTS -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-chef"/></svg> Restaurants
+</h3>
+<div class="g2">
+<div class="pick-card">
+<div class="pick-label gold-label">Famous</div>
+<h4>Braseiro da Gávea</h4>
+<p>One of Rio's most famous restaurants, known specifically for their steaks. Legendary status among locals and visitors alike. A proper Brazilian churrasqueira experience — not touristy, not overhyped, just genuinely great.</p>
+<div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+<a href="https://www.instagram.com/reel/C2A_1NxO8a6/?igsh=MTR2ZTVlNjEyYm1wNg==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+<a href="https://www.instagram.com/reel/DVv0tVgDU2r/?igsh=MWx1eGZ3aTV3azZkdg==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> More on Instagram</a>
+</div>
+</div>
+<div class="pick-card">
+<div class="pick-label">Dinner and Dance</div>
+<h4>Roxy and Dinner Brazil</h4>
+<p>A dinner and entertainment experience — Brazilian food combined with live music and samba performance. Great option for one of the group dinners where you want more than just a meal.</p>
+<a href="https://www.viator.com/search/5531248P1?mcid=70066" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book on Viator</a>
+</div>
+</div>
+
+<!-- HELICOPTER -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-heli"/></svg> Helicopter Tours
+</h3>
+<div class="g2">
+<div class="pick-card">
+<h4>Option 1 — Viator Helicopter Tour</h4>
+<p>Vetted tour operator on Viator with verified reviews. Easy booking, confirmation handled through the platform. Good option if you want the safety net of a major booking site.</p>
+<a href="https://www.viator.com/search/410016P4?mcid=70066" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book on Viator</a>
+</div>
+<div class="pick-card">
+<h4>Option 2 — Rio2Fly</h4>
+<p>Rio-based helicopter company, local operator. Potentially better pricing by booking direct. Multiple flight routes available including Carnival special flights. Worth getting a quote.</p>
+<a href="https://rio2fly.com.br/en/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Visit rio2fly.com.br</a>
+</div>
+</div>
+
+<!-- PRIVATE CHEF -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-chef"/></svg> Private Chef
+</h3>
+<div class="pick-card" style="margin-bottom:18px;">
+<h4>Take a Chef — Rio de Janeiro</h4>
+<p>Vetted private chefs in Rio. Browse profiles, view menus, and get a quote directly for your dates (Feb 5–10). Filter by cuisine type — request Brazilian, seafood, or international depending on what the crew wants each day. Book 4–6 weeks ahead minimum.</p>
+<a href="https://www.takeachef.com/en-br/private-chef/rio-de-janeiro" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Get a quote — takeachef.com</a>
+</div>
+
+<!-- AIRPORT TRANSPORT -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-car"/></svg> Airport Transportation
+</h3>
+<div class="g2">
+<div class="pick-card">
+<h4>Option 1 — GetYourGuide Shuttle</h4>
+<p>GIG airport shuttle transfer to and from hotels. Vetted and pre-bookable. Great for coordinating group pickup with a fixed price — no surge pricing surprises after a long international flight.</p>
+<a href="https://www.getyourguide.com/rio-de-janeiro-l9/rio-galeao-airport-gig-shuttle-transfer-tofrom-hotels-t385548?date_from=2027-02-05&date_to=2027-02-05" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book on GetYourGuide</a>
+</div>
+<div class="pick-card">
+<h4>Option 2 — Rio Airport Transfer</h4>
+<p>Dedicated private transfer service from GIG to Copacabana and other Rio neighborhoods. Private vehicles, fixed pricing, English-speaking drivers. Book your exact pickup time in advance.</p>
+<a href="https://rioairporttransfer.com/transfers/copacabana/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book at rioairporttransfer.com</a>
+</div>
+</div>
+
+<!-- BOAT / YACHT -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-boat"/></svg> Boat and Yacht Rentals
+</h3>
+<div class="g2">
+<div class="pick-card featured">
+<div class="pick-label gold-label">Luxury</div>
+<h4>Yacht Viverex — Click &amp; Boat</h4>
+<p>Private motor yacht rental in Rio de Janeiro. Full self-charter or with skipper. Peer-reviewed platform with transparent pricing. Book for Day 3 (Feb 7) for the full yacht day experience.</p>
+<a href="https://www.clickandboat.com/us/boat-rental/rio-de-janeiro/motor-yacht/yacht-viverex-yb7kjdk" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Click &amp; Boat</a>
+</div>
+<div class="pick-card">
+<div class="pick-label alt">Alternative</div>
+<h4>GetMyBoat — Rio Charter</h4>
+<p>Another vetted boat rental marketplace. Compare options, read captain reviews, and message directly. Good if the Viverex is unavailable on your dates — multiple Rio operators are listed here.</p>
+<a href="https://www.getmyboat.com/trips/2NJx0ljY/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on GetMyBoat</a>
+</div>
+</div>
+
+<!-- MISC -->
+<h3 class="picks-h3">
+<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-globe"/></svg> Good to Know
+</h3>
+<div class="g2">
+<div class="pick-card">
+<h4>Most Visited Places in Rio</h4>
+<p>A full overview reel of the top spots across the city — good reference for the crew to watch before the trip so everyone has the same visual of what to expect.</p>
+<a href="https://www.instagram.com/reel/DI_qUcEpIQK/?igsh=d2pocXZtczZpejFm" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
+</div>
+<div class="pick-card">
+<h4>Brazilian Slang Words</h4>
+<p>Learn the words Cariocas actually use. Goes way beyond "obrigado." Knowing even 5–10 of these will get you respect from locals and make every interaction better. Study before you land.</p>
+<a href="https://www.instagram.com/p/DVwlnVnEanr/?img_index=5&igsh=ZHJqYzh2cnQ0Nmg2" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Instagram</a>
+</div>
+<div class="pick-card">
+<h4>Caipirinhas</h4>
+<p>Brazil's national cocktail — cachaça, lime, sugar, and ice. Made properly it is one of the best drinks in the world. Learn the difference between a real caipirinha and a tourist version before you go.</p>
+<span class="tag g">National Drink</span><span class="tag">Cachaça + Lime + Sugar</span>
+</div>
+</div>
+
+</div>
+
 
 <!-- FOOTER -->
 <div class="footer">
