@@ -292,6 +292,257 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 .mt-street{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#888;}
 .mt-white{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:var(--gold);}
 
+
+/* MEAL LEGEND */
+.meal-legend{display:inline-flex;align-items:center;font-size:12px;padding:5px 12px;border-radius:3px;font-weight:600;}
+.chef-leg{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.4);color:#b07fe0;}
+.white-leg{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.5);color:var(--gold);}
+.out-leg{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.cat-leg{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.st-leg{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--tm);}
+
+  .sec{padding:20px 14px;}
+  .hero h1{font-size:clamp(22px,7vw,36px);}
+  .hero-sub{font-size:11px;letter-spacing:1.5px;}
+  .hero-dates{gap:10px;padding:10px 14px;}
+  .date-val{font-size:14px;}
+  .g2,.g3{grid-template-columns:1fr;}
+  .stats{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .sb{padding:10px;}
+  .sn{font-size:18px;}
+  .nb{padding:12px 10px;font-size:10px;gap:4px;}
+  .nb svg{display:none;}
+  .card{padding:16px;}
+  .card h3{font-size:16px;}
+  .tip{padding:12px 14px;}
+  .ct{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;}
+  .costtbl{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;}
+  .fc{padding:14px;}
+  .fc h4{font-size:14px;}
+  .route{justify-content:center;gap:6px;}
+  .city .code{font-size:18px;}
+  .rline{min-width:24px;}
+  .iday .ihd{padding:12px 14px;}
+  .iday .iitems{padding:12px 14px;}
+  .ii{gap:8px;}
+  .it{min-width:60px;font-size:10px;}
+  .hc .hb{padding:14px;}
+  .pcat{padding:14px;}
+  .tl{padding-left:18px;}
+  .tli{padding:0 0 20px 14px;}
+  .gh-step{padding:14px;}
+  .code-block{font-size:11px;padding:10px;}
+  .itin-hd h3,.ihd h3{font-size:15px;}
+}
+/* Large desktop 1200px+ */
+@media(min-width:1200px){
+  .sec{padding:44px 60px;}
+  .hero{padding:80px 60px 60px;}
+  .g3{grid-template-columns:repeat(3,1fr);}
+}
+
+
+
+
+/* COST CALCULATOR & TABLES */
+.grp-btn{background:var(--cb);border:1px solid var(--bdr);color:var(--tm);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:10px 22px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.grp-btn:hover{color:var(--tx);border-color:var(--gold);}
+.grp-btn.active{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold);}
+.ctab{border-collapse:collapse;font-family:'DM Sans',sans-serif;}
+.ctab thead tr{background:#1a1a1a;}
+.ctab th{padding:11px 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);}
+.ctab td{padding:11px 14px;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top;}
+.ctab tr:hover td{background:rgba(255,255,255,0.02);}
+.ctab .sec-row td{background:rgba(201,168,76,0.06);color:var(--gold);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;padding:8px 14px;}
+.ctab .tot-row td{background:#1a1a1a;border-top:1px solid var(--bdr);font-weight:700;}
+.ctab .exp-name{color:#fff;font-weight:500;}
+.ctab .type-fixed{color:#5dade2;font-size:11px;}
+.ctab .type-pp{color:#e67e22;font-size:11px;}
+.ctab .amt{text-align:right;color:#e8c96a;font-weight:600;}
+.ctab .notes-col{color:var(--tm);font-size:12px;}
+/* PAYMENT TABLE */
+.pay-section{margin-bottom:22px;}
+.pay-section-hdr{background:#2c2c2c;padding:10px 16px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border:1px solid var(--bdr);}
+.pay-section-hdr h4{color:#fff;font-family:'Playfair Display',serif;font-size:16px;font-weight:700;}
+.pay-section-hdr .due-badge{font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:2px;}
+.due-now{background:rgba(231,76,60,0.2);border:1px solid rgba(231,76,60,0.4);color:#e74c3c;}
+.due-soon{background:rgba(230,126,34,0.2);border:1px solid rgba(230,126,34,0.4);color:#e67e22;}
+.due-later{background:rgba(41,128,185,0.2);border:1px solid rgba(41,128,185,0.4);color:#5dade2;}
+.pay-item{display:flex;gap:0;border:1px solid var(--bdr);border-top:none;background:var(--cb);}
+.pay-item:last-child{border-radius:0 0 4px 4px;}
+.pay-item:nth-child(even){background:#141414;}
+.pay-item-name{flex:2;padding:13px 16px;color:#fff;font-size:13px;font-weight:500;border-right:1px solid var(--bdr);}
+.pay-item-name small{display:block;color:var(--tm);font-size:12px;font-weight:400;margin-top:3px;}
+.pay-item-pp{flex:1;padding:13px 14px;text-align:right;color:#e8c96a;font-size:14px;font-weight:700;border-right:1px solid var(--bdr);}
+.pay-item-pp small{display:block;color:var(--tm);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:400;margin-top:2px;}
+.pay-item-type{flex:1;padding:13px 14px;font-size:11px;color:var(--tm);display:flex;align-items:center;}
+/* MEAL TABLE */
+.meal-day{margin-bottom:18px;}
+.meal-day-hdr{background:#2c2c2c;padding:12px 18px;border-radius:4px 4px 0 0;border:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.meal-day-hdr h4{color:#fff;font-family:'Playfair Display',serif;font-size:16px;}
+.meal-row{display:flex;border:1px solid var(--bdr);border-top:none;background:var(--cb);}
+.meal-row:nth-child(even){background:#141414;}
+.meal-row:last-child{border-radius:0 0 4px 4px;}
+.meal-time{width:110px;flex-shrink:0;padding:12px 14px;color:var(--gold);font-size:12px;font-weight:600;border-right:1px solid var(--bdr);}
+.meal-type-badge{width:110px;flex-shrink:0;padding:12px 14px;display:flex;align-items:flex-start;border-right:1px solid var(--bdr);}
+.meal-type-badge span{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:2px;}
+.mt-chef{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.4);color:#b07fe0;}
+.mt-white{background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.5);color:var(--gold);}
+.mt-out{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.mt-cat{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.mt-street{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--tm);}
+.meal-content{flex:1;padding:12px 16px;}
+.meal-content h5{color:#fff;font-size:13px;font-weight:500;margin-bottom:3px;}
+.meal-content p{color:var(--tm);font-size:12px;}
+@media(max-width:480px){.pay-item{flex-wrap:wrap;}.pay-item-name{flex:1 0 100%;border-right:none;border-bottom:1px solid var(--bdr);}.pay-item-pp,.pay-item-type{flex:1;}.meal-row{flex-wrap:wrap;}.meal-time,.meal-type-badge{width:50%;}.meal-content{flex:1 0 100%;}}
+
+
+/* DATA TABLES */
+.dtbl{width:100%;border-collapse:collapse;font-size:13px;}
+.dtbl thead tr{background:rgba(201,168,76,0.08);}
+.dtbl th{padding:9px 11px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-align:center;border-bottom:1px solid var(--bdr);}
+.dtbl td{padding:10px 11px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top;}
+.dtbl tbody tr:hover td{background:rgba(255,255,255,0.02);}
+.sec-row td{background:rgba(201,168,76,0.06)!important;color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 11px;font-weight:600;}
+.exp-name{color:#fff;font-weight:500;}
+.notes-cell{color:var(--tm);font-size:12px;}
+.money-cell{text-align:right;color:#5dade2;font-weight:600;white-space:nowrap;}
+.pp-label{text-align:center;color:#666;font-size:11px;font-style:italic;}
+.res-only{color:#555;font-style:italic;}
+.type-cell{text-align:center;}
+/* Date urgency */
+.date-urgent{text-align:center;color:#e74c3c;font-weight:700;font-size:12px;background:rgba(231,76,60,0.08);}
+.date-med{text-align:center;color:#e67e22;font-weight:700;font-size:12px;background:rgba(230,126,34,0.08);}
+.date-low{text-align:center;color:#5dade2;font-weight:600;font-size:12px;background:rgba(41,128,185,0.06);}
+/* Payment badges */
+.pay-badge{display:inline-block;font-size:10px;letter-spacing:.8px;padding:3px 8px;border-radius:2px;font-weight:600;white-space:nowrap;}
+.dep{background:rgba(230,126,34,0.15);border:1px solid rgba(230,126,34,0.4);color:#e67e22;}
+.full{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.35);color:#e74c3c;}
+.bal{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.35);color:#5dade2;}
+.res{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);color:#888;}
+/* Cost Calculator */
+.gcb{background:var(--cb);border:1px solid var(--bdr);color:var(--tm);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:8px 18px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.gcb:hover{color:var(--tx);border-color:rgba(201,168,76,0.5);}
+.gcb.active-g{background:var(--gold);color:#000;border-color:var(--gold);font-weight:600;}
+.fixed-row td{background:rgba(39,174,96,0.04);}
+.pp-row td{background:transparent;}
+.total-row td{background:var(--dark2)!important;}
+.fixed-badge{background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.3);color:#2ecc71;}
+.pp-badge{background:rgba(230,126,34,0.1);border:1px solid rgba(230,126,34,0.3);color:#e67e22;}
+.opt-badge{background:rgba(93,173,226,0.1);border:1px solid rgba(93,173,226,0.3);color:#5dade2;}
+.type-badge{display:inline-block;font-size:10px;letter-spacing:.6px;padding:2px 7px;border-radius:2px;font-weight:600;white-space:nowrap;}
+/* Meal schedule */
+.day-hdr-row td{background:rgba(255,255,255,0.03)!important;color:#fff;font-size:11px;font-weight:600;letter-spacing:1px;padding:9px 11px;border-bottom:1px solid var(--bdr);}
+.day-cell{color:#555;font-size:11px;white-space:nowrap;}
+.meal-cell{text-align:center;color:var(--tm);font-size:12px;font-weight:500;}
+.meal-type{display:inline-block;font-size:10px;letter-spacing:.6px;padding:3px 8px;border-radius:2px;font-weight:600;white-space:nowrap;}
+.mt-chef{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.3);color:#a569bd;}
+.mt-resto{background:rgba(231,76,60,0.1);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.mt-boat{background:rgba(41,128,185,0.1);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.mt-street{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#888;}
+.mt-white{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:var(--gold);}
+
+
+/* MEAL LEGEND */
+.meal-legend{display:inline-flex;align-items:center;font-size:12px;padding:5px 12px;border-radius:3px;font-weight:600;}
+.chef-leg{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.4);color:#b07fe0;}
+.white-leg{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.5);color:var(--gold);}
+.out-leg{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.cat-leg{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.st-leg{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--tm);}
+/* MEAL CARDS */
+.mday-wrap{margin-bottom:18px;}
+.mday-hdr{background:#222;border:1px solid var(--bdr);border-radius:5px 5px 0 0;padding:12px 16px;}
+.mday-hdr h4{color:#fff;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;}
+.mcard{border:1px solid var(--bdr);border-top:none;background:var(--cb);display:grid;grid-template-columns:90px auto 1fr;min-height:52px;}
+.mcard:last-child{border-radius:0 0 5px 5px;}
+.mcard:nth-child(even){background:#141414;}
+.mc-time{padding:13px 12px;color:var(--gold);font-size:11px;font-weight:600;letter-spacing:.5px;border-right:1px solid var(--bdr);display:flex;align-items:flex-start;padding-top:14px;}
+.mc-badge{padding:12px 10px;border-right:1px solid var(--bdr);display:flex;align-items:flex-start;min-width:96px;}
+.mc-badge span{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:4px 8px;border-radius:2px;white-space:nowrap;}
+.mc-body{padding:12px 14px;}
+.mc-body h5{color:#fff;font-size:13px;font-weight:600;margin-bottom:3px;line-height:1.4;}
+.mc-body p{color:var(--tm);font-size:12px;line-height:1.5;}
+
+  #total-boxes{grid-template-columns:1fr!important;}
+  .cost-cards{display:block;}
+  .mcard{grid-template-columns:70px 88px 1fr;}
+  .mc-time{font-size:10px;padding:12px 8px;}
+  .mc-badge{min-width:88px;padding:10px 8px;}
+  .mc-badge span{font-size:9px;padding:3px 6px;}
+  .mc-body{padding:10px 12px;}
+}
+@media(max-width:400px){
+  .mcard{grid-template-columns:1fr;border-top:none;}
+  .mcard:nth-child(odd){background:var(--cb);}
+  .mc-time{border-right:none;border-bottom:1px solid var(--bdr);padding:8px 12px;}
+  .mc-badge{min-width:unset;border-right:none;border-bottom:1px solid var(--bdr);padding:8px 12px;}
+  .mc-body{padding:10px 12px;}
+}
+
+
+/* GROUP BUTTONS */
+.gcb{background:var(--cb);border:1px solid var(--bdr);color:var(--tm);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:8px 18px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.gcb:hover{color:var(--tx);border-color:var(--gold);}
+.active-g{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold);}
+/* COST CALCULATOR TABLE */
+.calc-table-wrap{display:block;}
+.calc-cards-wrap{display:none;}
+/* COST MOBILE CARDS */
+.cost-card-mob{background:var(--cb);border:1px solid var(--bdr);border-radius:5px;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px;}
+.cost-card-mob:nth-child(odd){background:#141414;}
+.ccm-info{flex:1;min-width:0;}
+.ccm-name{color:#fff;font-size:13px;font-weight:600;margin-bottom:3px;line-height:1.3;}
+.ccm-type{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px;}
+.ccm-note{color:var(--tm);font-size:11px;line-height:1.4;}
+.ccm-price{text-align:right;flex-shrink:0;}
+.ccm-pp{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#e8c96a;line-height:1;}
+.ccm-lbl{color:var(--tm);font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
+.cost-sec-mob{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding:14px 2px 6px;font-weight:600;}
+.cost-tot-mob{background:#1a1a1a;border:1px solid var(--bdr);border-radius:5px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.cost-tot-mob h5{color:#fff;font-size:13px;font-weight:600;}
+.cost-tot-mob .ctm-amt{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);}
+/* MEAL CARDS */
+.meal-leg{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:4px 10px;border-radius:2px;letter-spacing:.5px;}
+.chef-leg{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.4);color:#b07fe0;}
+.white-leg{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.5);color:var(--gold);}
+.out-leg{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.cat-leg{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.st-leg{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--tm);}
+.mday-wrap{margin-bottom:18px;}
+.mday-hdr{background:#222;border:1px solid var(--bdr);border-radius:5px 5px 0 0;padding:12px 16px;}
+.mday-hdr h4{color:#fff;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin:0;}
+.mcard{display:grid;grid-template-columns:82px 100px 1fr;border:1px solid var(--bdr);border-top:none;background:var(--cb);}
+.mcard:nth-child(even){background:#141414;}
+.mcard:last-child{border-radius:0 0 5px 5px;}
+.mc-time{padding:13px 10px;color:var(--gold);font-size:11px;font-weight:600;letter-spacing:.3px;border-right:1px solid var(--bdr);display:flex;align-items:flex-start;padding-top:14px;}
+.mc-badge{padding:11px 8px;border-right:1px solid var(--bdr);display:flex;align-items:flex-start;padding-top:13px;}
+.mc-badge span{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:4px 7px;border-radius:2px;line-height:1.2;text-align:center;}
+.mc-body{padding:12px 14px;}
+.mc-body h5{color:#fff;font-size:13px;font-weight:600;margin-bottom:3px;line-height:1.4;}
+.mc-body p{color:var(--tm);font-size:12px;line-height:1.5;}
+/* TYPE BADGE COLORS */
+.mt-chef{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.4);color:#b07fe0;}
+.mt-white{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.5);color:var(--gold);}
+.mt-out{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.mt-cat{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.mt-street{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#888;}
+/* MOBILE BREAKPOINTS */
+@media(max-width:660px){
+  .calc-table-wrap{display:none!important;}
+  .calc-cards-wrap{display:block!important;}
+  #cost-totals{grid-template-columns:1fr!important;}
+  .mcard{grid-template-columns:68px 88px 1fr;}
+  .mc-time{font-size:10px;padding:11px 8px;}
+  .mc-badge{padding:10px 6px;}
+  .mc-badge span{font-size:9px;padding:3px 5px;}
+}
+@media(max-width:380px){
+  .mcard{grid-template-columns:1fr;}
+  .mc-time{border-right:none;border-bottom:1px solid var(--bdr);padding:8px 12px;}
+  .mc-badge{border-right:none;border-bottom:1px solid var(--bdr);padding:8px 12px;}
+}
+
 </style>
 </head>
 <body>
@@ -705,167 +956,51 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 <!-- BUDGET -->
 
 <div id="costs" class="sec">
-<div class="eyebrow">Per Person Breakdown</div>
-<h2>Cost Calculator — 5 to 8 People</h2>
-<div class="div"></div>
-<p class="desc">Fixed costs (Airbnb, boat, chef) get cheaper as the group grows. Per-person costs stay the same. Click a group size to see your number.</p>
+<div class="eyebrow">Per Person Breakdown</div><h2>Cost Calculator — 5 to 8 People</h2><div class="div"></div>
+<p class="desc">Fixed costs split more ways as the group grows. Per-person costs stay the same regardless of headcount.</p>
 
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 20px;align-items:center;">
-<span style="font-size:12px;color:var(--tm);letter-spacing:1px;text-transform:uppercase;margin-right:4px;">Group size:</span>
-<button onclick="setGroup(5)" id="g5" class="gcb active-g">5 people</button>
-<button onclick="setGroup(6)" id="g6" class="gcb">6 people</button>
-<button onclick="setGroup(7)" id="g7" class="gcb">7 people</button>
-<button onclick="setGroup(8)" id="g8" class="gcb">8 people</button>
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:22px 0 18px;">
+<span style="font-size:11px;color:var(--tm);letter-spacing:1px;text-transform:uppercase;margin-right:4px;">Group size:</span>
+<button class="gcb active-g" id="g5" onclick="setGroup(5)">5 people</button>
+<button class="gcb" id="g6" onclick="setGroup(6)">6 people</button>
+<button class="gcb" id="g7" onclick="setGroup(7)">7 people</button>
+<button class="gcb" id="g8" onclick="setGroup(8)">8 people</button>
 </div>
 
-<div class="tip info"><h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> How to read this</h4><p>Green rows = fixed shared costs that decrease per person as more people join. White rows = per-person costs the same for any group size. The totals at the bottom update when you change the group size above.</p></div>
+<div class="tip info" style="margin-bottom:18px;"><h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> How to read this</h4><p>Blue rows are fixed shared costs — cheaper per person as more people join. Gold rows are per-person costs that stay the same no matter the group size.</p></div>
 
-<div style="overflow-x:auto;margin-top:20px;">
-<table class="dtbl" id="costTable">
-<thead>
-<tr>
+<!-- Desktop table -->
+<div class="calc-table-wrap" style="overflow-x:auto;">
+<table class="dtbl" style="width:100%;min-width:480px;" id="costTable">
+<thead><tr>
 <th style="text-align:left;width:36%;">Expense</th>
-<th>Type</th>
-<th>Group Total</th>
-<th>Per Person</th>
-<th style="text-align:left;min-width:220px;">Notes</th>
-</tr>
-</thead>
-<tbody>
-<!-- FIXED COSTS -->
-<tr class="sec-row"><td colspan="5">Fixed Costs — shared equally (cheaper per person as group grows)</td></tr>
-<tr class="fixed-row">
-  <td class="exp-name">Airbnb villa — 5 nights</td>
-  <td class="type-badge fixed-badge">Fixed</td>
-  <td class="group-total" data-total="2500">$2,500</td>
-  <td class="pp-cell" data-total="2500"></td>
-  <td class="notes-cell">Av. Rachel de Queiroz, 100 — Barra da Tijuca</td>
-</tr>
-<tr class="fixed-row">
-  <td class="exp-name">Boat rental — Sun Feb 7</td>
-  <td class="type-badge fixed-badge">Fixed</td>
-  <td class="group-total" data-total="3000">$3,000</td>
-  <td class="pp-cell" data-total="3000"></td>
-  <td class="notes-cell">clickandboat.com Viverex. Captain + crew included.</td>
-</tr>
-<tr class="fixed-row">
-  <td class="exp-name">Private chef — 4 meals</td>
-  <td class="type-badge fixed-badge">Fixed</td>
-  <td class="group-total" data-total="600">$600</td>
-  <td class="pp-cell" data-total="600"></td>
-  <td class="notes-cell">Sat breakfast · Sun breakfast · Mon dinner · Tue All White Dinner</td>
-</tr>
-<tr class="fixed-row">
-  <td class="exp-name">Shared groceries</td>
-  <td class="type-badge fixed-badge">Fixed</td>
-  <td class="group-total" data-total="250">$250</td>
-  <td class="pp-cell" data-total="250"></td>
-  <td class="notes-cell">Mercado Dia a Dia Laguna — 3-min Uber from Airbnb</td>
-</tr>
-<!-- PER PERSON COSTS -->
-<tr class="sec-row"><td colspan="5">Per-Person Costs — same regardless of group size</td></tr>
-<tr class="pp-row">
-  <td class="exp-name">Flights — economy average</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="900">$900</td>
-  <td class="notes-cell">Budget: $500 (Copa). Economy: $900. Comfort+: $1,300. Business: $3,500.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Carnival tickets — Section 9</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="392">$392</td>
-  <td class="notes-cell">Sunday Feb 7. dobrazilright.com. Book April 25.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Helicopter tour — Sat Feb 6</td>
-  <td class="type-badge opt-badge">Optional</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="350">$350</td>
-  <td class="notes-cell">Optional. Skip = do Cristo on Monday instead ($164).</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Cristo + Sugarloaf tour</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="164">$164</td>
-  <td class="notes-cell">Mon Feb 8. Viator small group. Meet at Hilton Copacabana.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Brazil eVisa</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="81">$81</td>
-  <td class="notes-cell">vfsglobal.com (official only). Due May 10, 2026.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Airport transport — both ways</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="60">$60</td>
-  <td class="notes-cell">Mercedes Sprinter $30/pp each way × 2.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Ubers — full trip</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="100">$100</td>
-  <td class="notes-cell">~$80–100/day back and forth. 2 cars when 6+ people.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Skylab Rio dinner — Fri Feb 5</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="100">$100</td>
-  <td class="notes-cell">Av. Atlântica 3264. Dress code. Reserve Dec 15.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Braseiro da Gávea — Sat Feb 6</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="75">$75</td>
-  <td class="notes-cell">Praça Santos Dumont 116. Reserve Dec 15.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Travel insurance</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="80">$80</td>
-  <td class="notes-cell">Each buys own. Allianz or World Nomads. Due Nov 1.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Nightlife / drinks misc</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="150">$150</td>
-  <td class="notes-cell">Bar covers, drinks across Lapa, Pedra do Sal, Casa Black.</td>
-</tr>
-<tr class="pp-row">
-  <td class="exp-name">Street food / beach vendors</td>
-  <td class="type-badge pp-badge">Per Person</td>
-  <td class="group-total pp-label">per person</td>
-  <td class="pp-cell pp-fixed" data-pp="60">$60</td>
-  <td class="notes-cell">Blocos, Copacabana beach, Rasta Beach.</td>
-</tr>
-<!-- TOTALS -->
-<tr class="sec-row"><td colspan="5">Totals per person</td></tr>
-<tr class="total-row" id="total-with">
-  <td colspan="2" style="font-family:'Playfair Display',serif;font-size:15px;color:#fff;font-weight:700;padding:14px 12px;">TOTAL — with helicopter</td>
-  <td class="group-total" id="total-fixed-sum" style="font-size:14px;color:var(--gold);font-weight:700;text-align:right;padding:14px 12px;"></td>
-  <td class="pp-cell" id="total-pp-display" style="font-size:17px;color:var(--gold);font-weight:700;text-align:right;padding:14px 12px;"></td>
-  <td style="color:var(--tm);font-size:12px;padding:14px 12px;">All costs combined</td>
-</tr>
-<tr class="total-row" id="total-without">
-  <td colspan="2" style="font-family:'Playfair Display',serif;font-size:14px;color:#ccc;font-weight:700;padding:10px 12px;">TOTAL — without helicopter (skip, do Cristo Mon)</td>
-  <td style="background:var(--dark2);"></td>
-  <td id="total-noheli-display" style="font-size:16px;color:#aaa;font-weight:700;text-align:right;padding:10px 12px;background:var(--dark2);"></td>
-  <td style="color:var(--tm);font-size:12px;padding:10px 12px;background:var(--dark2);">Saves $350 — Cristo on Mon is $164</td>
-</tr>
-</tbody>
+<th style="width:11%;">Type</th>
+<th style="width:13%;text-align:right;">Group Total</th>
+<th style="width:13%;text-align:right;" id="pp-hdr">Per Person (5)</th>
+<th style="text-align:left;">Notes</th>
+</tr></thead>
+<tbody id="cost-tbody"></tbody>
 </table>
 </div>
+
+<!-- Mobile cards (shown below 660px only) -->
+<div class="calc-cards-wrap" id="cost-cards-mob"></div>
+
+<!-- Totals always visible -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;" id="cost-totals-grid">
+<div class="stat-box" style="border-color:rgba(201,168,76,0.5);">
+<div class="sl">Total — with helicopter</div>
+<div class="sn" id="total-w" style="font-size:26px;margin-top:6px;">—</div>
+<div style="font-size:11px;color:var(--tm);margin-top:3px;">Per person, all costs included</div>
 </div>
+<div class="stat-box">
+<div class="sl">Total — without helicopter</div>
+<div class="sn" id="total-wo" style="font-size:26px;margin-top:6px;">—</div>
+<div style="font-size:11px;color:var(--tm);margin-top:3px;">Do Cristo on Monday instead</div>
+</div>
+</div>
+</div>
+
 <div id="payments" class="sec">
 <div class="eyebrow">Exact Deadlines</div>
 <h2>Payment Schedule — Exact Dates</h2>
@@ -1032,172 +1167,26 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 <div class="tip ok" style="margin-top:24px;"><h4><svg class="i" width="14" height="14"><use href="#s-dollar"/></svg> Smart card tip</h4><p>Use a Wise card or Charles Schwab debit in Rio — zero foreign transaction fees. Save 3–5% on every purchase vs. airport exchange. Amex Platinum holders: Priority Pass lounge access at MIA on departure day.</p></div>
 </div>
 <div id="meals" class="sec">
-<div class="eyebrow">Day by Day Food</div>
-<h2>Chef &amp; Food Schedule</h2>
-<div class="div"></div>
-<p class="desc">Every meal across 6 days — 4 chef meals, 4 restaurants, 1 catered on the boat, the rest is street food and beach vendors.</p>
+<div class="eyebrow">Day by Day Food</div><h2>Meal Schedule</h2><div class="div"></div>
+<p class="desc">Every meal across 6 days — 4 chef meals, 4 restaurants, 1 catered, rest is street and beach.</p>
 
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;margin-top:18px;">
-<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.3);color:#a569bd;">
-  <svg class="i" width="11" height="11"><use href="#s-chef"/></svg> Chef Meal
-</span>
-<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(231,76,60,0.1);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;">
-  <svg class="i" width="11" height="11"><use href="#s-pin"/></svg> Restaurant
-</span>
-<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(41,128,185,0.1);border:1px solid rgba(41,128,185,0.3);color:#5dade2;">
-  <svg class="i" width="11" height="11"><use href="#s-boat"/></svg> Catered / Boat
-</span>
-<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#888;">
-  <svg class="i" width="11" height="11"><use href="#s-sun"/></svg> Street / Beach / Own
-</span>
-<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:var(--gold);">
-  <svg class="i" width="11" height="11"><use href="#s-star"/></svg> All White Dinner
-</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px;">
+<span class="meal-legend chef-leg">Chef Meal</span>
+<span class="meal-legend white-leg">All White Dinner</span>
+<span class="meal-legend out-leg">Restaurant</span>
+<span class="meal-legend cat-leg">Catered</span>
+<span class="meal-legend st-leg">Street / Beach / Own</span>
 </div>
 
-<div style="overflow-x:auto;">
-<table class="dtbl">
-<thead>
-<tr>
-<th style="text-align:left;width:17%;">Day</th>
-<th style="width:11%;">Meal</th>
-<th style="width:14%;">Type</th>
-<th style="text-align:left;">Where / What</th>
-<th style="text-align:left;min-width:200px;">Notes</th>
-</tr>
-</thead>
-<tbody>
+<div id="meal-cards"></div>
 
-<tr class="day-hdr-row"><td colspan="5">Friday Feb 5 — Arrival</td></tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Arrival</td>
-  <td><span class="meal-type mt-street">Street/Own</span></td>
-  <td class="exp-name">Travel snacks / airport food</td>
-  <td class="notes-cell">Grocery run first thing on arrival. Mercado Dia a Dia Laguna — Av. Rachel de Queiroz, 951.</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Dinner</td>
-  <td><span class="meal-type mt-resto">Restaurant</span></td>
-  <td class="exp-name">Skylab Rio Othon Palace — 30th floor rooftop</td>
-  <td class="notes-cell">7PM reservation, dress code. Av. Atlântica, 3264 - Copacabana. Reserve Dec 15, 2026.</td>
-</tr>
-
-<tr class="day-hdr-row"><td colspan="5">Saturday Feb 6 — Helicopter + Beach + Casa Black</td></tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
-  <td><span class="meal-type mt-chef">Chef Meal</span></td>
-  <td class="exp-name">Private chef at Airbnb — full Brazilian spread</td>
-  <td class="notes-cell">Açaí, tapioca crepes, eggs, juice, pão de queijo. Eat before helicopter (30-min drive).</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Lunch</td>
-  <td><span class="meal-type mt-street">Beach</span></td>
-  <td class="exp-name">Rasta Beach — drinks and snacks</td>
-  <td class="notes-cell">After helicopter. Informal beach food. Reggae vibes, strong caipirinhas.</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Dinner</td>
-  <td><span class="meal-type mt-resto">Restaurant</span></td>
-  <td class="exp-name">Braseiro da Gávea — most famous steaks in Rio</td>
-  <td class="notes-cell">~5–6PM. Praça Santos Dumont, 116 - Gávea. On the way back to Airbnb. Reserve Dec 15.</td>
-</tr>
-
-<tr class="day-hdr-row"><td colspan="5">Sunday Feb 7 — Boat Day + Carnival</td></tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
-  <td><span class="meal-type mt-chef">Chef Meal</span></td>
-  <td class="exp-name">Private chef at Airbnb — fuel up before boat day</td>
-  <td class="notes-cell">Full spread before departing for marina. Big day ahead — eat well.</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Lunch</td>
-  <td><span class="meal-type mt-boat">Catered</span></td>
-  <td class="exp-name">Catering brought aboard the yacht</td>
-  <td class="notes-cell">Arrange delivery to Marina da Glória before boarding. Sushi, shrimp, tropical fruit, cold drinks.</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Pre-night</td>
-  <td><span class="meal-type mt-street">Street</span></td>
-  <td class="exp-name">Street food / Feira da Glória on way back</td>
-  <td class="notes-cell">Quick food before Airbnb prep for Carnival. Feira da Glória Market optional stop.</td>
-</tr>
-
-<tr class="day-hdr-row"><td colspan="5">Monday Feb 8 — Selarón + Cristo + Copacabana</td></tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
-  <td><span class="meal-type mt-resto">Restaurant</span></td>
-  <td class="exp-name">Orla 21 Rooftop buffet — 5 min from Selarón</td>
-  <td class="notes-cell">Av. Alm. Silvio de Noronha, 365 - Centro. Buffet 6am–10:30am. Go right after Selarón.</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Lunch</td>
-  <td><span class="meal-type mt-street">Beach</span></td>
-  <td class="exp-name">Copacabana beach vendors</td>
-  <td class="notes-cell">After Cristo Redentor. Coconut water, local snacks, cold drinks at the beach.</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Dinner</td>
-  <td><span class="meal-type mt-chef">Chef Meal</span></td>
-  <td class="exp-name">Private chef at Airbnb — recharge after long day</td>
-  <td class="notes-cell">After Selarón + Cristo + Copacabana. Eat well, hydrate, get ready for Pedra do Sal night.</td>
-</tr>
-
-<tr class="day-hdr-row"><td colspan="5">Tuesday Feb 9 — Blocos All Day</td></tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">All day</td>
-  <td><span class="meal-type mt-street">Street</span></td>
-  <td class="exp-name">Bloco street food throughout the day</td>
-  <td class="notes-cell">Vendors at every bloco — salgados, açaí cups, drinks. Eat while moving.</td>
-</tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Afternoon</td>
-  <td><span class="meal-type mt-resto">Restaurant</span></td>
-  <td class="exp-name">Pato com Laranja — Leblon (14 min from blocos)</td>
-  <td class="notes-cell">Av. Delfim Moreira, 1746 - Leblon. Cool down after blocos. Full sit-down meal here.</td>
-</tr>
-<tr style="background:rgba(201,168,76,0.06);">
-  <td class="day-cell"></td><td class="meal-cell" style="color:var(--gold);font-weight:600;">Dinner</td>
-  <td><span class="meal-type mt-white">All White Dinner</span></td>
-  <td class="exp-name" style="color:#fff;font-weight:600;">Chef-cooked at Airbnb — EVERYONE WEARS WHITE</td>
-  <td class="notes-cell">The formal send-off dinner. Chef's most elevated meal of the trip. Dress the part. Set the table. The last moment before Rio takes you for the final night.</td>
-</tr>
-
-<tr class="day-hdr-row"><td colspan="5">Wednesday Feb 10 — Departure</td></tr>
-<tr>
-  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
-  <td><span class="meal-type mt-street">Own</span></td>
-  <td class="exp-name">Quick breakfast before checkout</td>
-  <td class="notes-cell">Light meal. Depart for airport in the afternoon. 3+ hours before international flight.</td>
-</tr>
-
-</tbody>
-</table>
-</div>
-
-<div style="margin-top:28px;background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:20px;">
-<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-chef"/></svg> Chef Summary</h3>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
-<div style="background:rgba(142,68,173,0.08);border:1px solid rgba(142,68,173,0.2);border-radius:4px;padding:14px;">
-<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a569bd;margin-bottom:6px;">Chef Meals (4)</div>
-<div style="font-size:13px;color:var(--tx);">Sat breakfast · Sun breakfast<br>Mon dinner · Tue All White Dinner</div>
-</div>
-<div style="background:rgba(231,76,60,0.07);border:1px solid rgba(231,76,60,0.2);border-radius:4px;padding:14px;">
-<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#e74c3c;margin-bottom:6px;">Restaurants (4)</div>
-<div style="font-size:13px;color:var(--tx);">Skylab Rio (Fri) · Braseiro (Sat)<br>Orla 21 (Mon) · Pato com Laranja (Tue)</div>
-</div>
-<div style="background:rgba(41,128,185,0.07);border:1px solid rgba(41,128,185,0.2);border-radius:4px;padding:14px;">
-<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#5dade2;margin-bottom:6px;">Catered (1)</div>
-<div style="font-size:13px;color:var(--tx);">Sunday lunch on the yacht<br>Arranged before boarding</div>
-</div>
-<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:14px;">
-<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:6px;">Street / Beach</div>
-<div style="font-size:13px;color:var(--tx);">Blocos · Copacabana vendors<br>Rasta Beach · Arrival day</div>
-</div>
-</div>
-<div style="margin-top:14px;padding:12px;background:rgba(201,168,76,0.07);border-radius:4px;border:1px solid var(--bdr);">
-<span style="color:#fff;font-size:13px;font-weight:500;">Grocery run on arrival:</span>
-<span style="color:var(--tm);font-size:13px;"> Mercado Dia a Dia Laguna — Av. Rachel de Queiroz, 951, Barra da Tijuca (3-min Uber from Airbnb)</span>
-</div>
+<div class="card" style="margin-top:20px;">
+<h3><span class="ico-wrap"><svg class="i" width="14" height="14" style="color:var(--gold)"><use href="#s-chef"/></svg></span> Meal Summary</h3>
+<div class="lir"><span class="arr">→</span><strong style="color:#fff;">4 Chef meals:</strong>&nbsp;<span style="color:var(--tm);">Sat breakfast · Sun breakfast · Mon dinner · Tue All White Dinner</span></div>
+<div class="lir"><span class="arr">→</span><strong style="color:#fff;">4 Restaurants:</strong>&nbsp;<span style="color:var(--tm);">Skylab Rio (Fri) · Braseiro da Gávea (Sat) · Orla 21 buffet (Mon) · Pato com Laranja (Tue)</span></div>
+<div class="lir"><span class="arr">→</span><strong style="color:#fff;">1 Catered:</strong>&nbsp;<span style="color:var(--tm);">Sunday lunch — delivered to the yacht</span></div>
+<div class="lir"><span class="arr">→</span><strong style="color:#fff;">Street / Own:</strong>&nbsp;<span style="color:var(--tm);">Arrival snacks, bloco street food, Copacabana vendors, Rasta Beach</span></div>
+<div class="lir"><span class="arr">→</span><strong style="color:#fff;">Grocery run Day 1:</strong>&nbsp;<span style="color:var(--tm);">Mercado Dia a Dia Laguna — Av. Rachel de Queiroz, 951 (3-min Uber)</span></div>
 </div>
 </div>
 <!-- FOOTER -->
@@ -1207,43 +1196,9 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 </div>
 
 
+
 <script>
-
-// Cost Calculator
-var groupSize = 5;
-function setGroup(n) {
-  groupSize = n;
-  [5,6,7,8].forEach(function(x){
-    var btn = document.getElementById('g'+x);
-    if(btn) btn.classList.toggle('active-g', x===n);
-  });
-  var fixedTotal = 0;
-  var ppTotal = 0;
-  // Update fixed rows
-  document.querySelectorAll('.pp-cell:not(.pp-fixed)').forEach(function(td){
-    var total = parseFloat(td.getAttribute('data-total'));
-    if(!isNaN(total)){
-      var pp = Math.round(total/n);
-      td.textContent = '$'+pp.toLocaleString();
-      fixedTotal += pp;
-    }
-  });
-  // Sum per-person fixed costs
-  document.querySelectorAll('.pp-cell.pp-fixed').forEach(function(td){
-    var pp = parseFloat(td.getAttribute('data-pp'));
-    if(!isNaN(pp)) ppTotal += pp;
-  });
-  var grandTotal = fixedTotal + ppTotal;
-  var totEl = document.getElementById('total-pp-display');
-  var totFixed = document.getElementById('total-fixed-sum');
-  var noHeli = document.getElementById('total-noheli-display');
-  if(totEl) totEl.textContent = '$'+grandTotal.toLocaleString();
-  if(noHeli) noHeli.textContent = '$'+(grandTotal-350).toLocaleString();
-  if(totFixed) totFixed.textContent = 'fixed: $'+fixedTotal.toLocaleString();
-}
-// Init on page load
-document.addEventListener('DOMContentLoaded', function(){ setGroup(5); });
-
+/* ── NAV ── */
 function S(id,btn){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
@@ -1252,262 +1207,275 @@ function S(id,btn){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-/* ─── COST CALCULATOR ─── */
+/* ── COST CALCULATOR ── */
 var FIXED=[
   {n:"Airbnb villa — 5 nights",  t:2500, note:"Av. Rachel de Queiroz, 100 — Barra da Tijuca"},
-  {n:"Boat rental — Sun Feb 7",  t:3000, note:"clickandboat.com Viverex. Full day, captain incl."},
+  {n:"Boat rental — Sun Feb 7",  t:3000, note:"clickandboat.com Viverex. Captain + crew included."},
+  {n:"Private chef — 4 meals",   t:600,  note:"Sat breakfast · Sun breakfast · Mon dinner · Tue All White Dinner"},
   {n:"Shared groceries",         t:250,  note:"Mercado Dia a Dia Laguna (3-min Uber from Airbnb)"},
-  {n:"Private chef (4 meals)",   t:600,  note:"Sat breakfast, Sun breakfast, Mon dinner, Tue All White Dinner"},
 ];
 var PP=[
-  {n:"Airport transport (×2 trips)", pp:60,  note:"$30/pp each way × 2 = $60/pp total"},
-  {n:"Flights — economy average",    pp:900, note:"Budget: $500 (Copa). Economy: $900. Comfort+: $1,300. Business: $3,500"},
-  {n:"Carnival tickets — Section 9", pp:392, note:"Sunday Feb 7. dobrazilright.com. Non-negotiable."},
-  {n:"Brazil eVisa",                 pp:81,  note:"vfsglobal.com. Requires $2,000 bank balance."},
-  {n:"Helicopter tour (optional)",   pp:350, note:"Sat Feb 6. Skip = do Cristo Redentor on Mon instead."},
-  {n:"Cristo + Sugarloaf tour",      pp:164, note:"Mon Feb 8. Viator small group. Meet at Hilton Copacabana."},
-  {n:"Skylab Rio dinner",            pp:100, note:"Fri Feb 5, 7PM. Dress code. Pay at restaurant."},
-  {n:"Braseiro da Gávea dinner",     pp:75,  note:"Sat Feb 6. Reservation required. Pay at restaurant."},
-  {n:"Ubers — full trip",            pp:100, note:"~$100/pp total. 2 cars when 6+ people."},
-  {n:"Travel insurance",             pp:80,  note:"Each buys own. Allianz or World Nomads."},
-  {n:"Nightlife / drinks misc",      pp:150, note:"Clubs, Lapa, Pedra do Sal, Casa Black Rio."},
-  {n:"Street food / beach vendors",  pp:60,  note:"Blocos, Copacabana, Rasta Beach."},
+  {n:"Flights — economy avg",          pp:900, note:"Budget: $500 (Copa). Economy: $900. Comfort+: $1,300. Business: $3,500"},
+  {n:"Carnival tickets — Section 9",   pp:392, note:"Sunday Feb 7. dobrazilright.com. Book April 25."},
+  {n:"Helicopter tour (optional)",      pp:350, note:"Sat Feb 6. Skip = do Cristo on Monday instead ($164)."},
+  {n:"Cristo + Sugarloaf tour",         pp:164, note:"Mon Feb 8. Viator small group. Meet at Hilton Copacabana."},
+  {n:"Brazil eVisa",                    pp:81,  note:"vfsglobal.com (official). Requires $2,000 bank balance."},
+  {n:"Airport transport — both ways",   pp:60,  note:"Mercedes Benz Sprinter $30/pp each way x2."},
+  {n:"Skylab Rio dinner (Fri)",         pp:100, note:"Av. Atlantica 3264. Dress code. Reserve Dec 15."},
+  {n:"Braseiro da Gavea dinner (Sat)",  pp:75,  note:"Praca Santos Dumont 116. Reserve Dec 15."},
+  {n:"Ubers — full trip",               pp:100, note:"~$100/pp total. 2 cars when 6+ people."},
+  {n:"Travel insurance",                pp:80,  note:"Each buys own. Allianz or World Nomads."},
+  {n:"Nightlife / drinks misc",         pp:150, note:"Clubs, Lapa, Pedra do Sal, Casa Black Rio."},
+  {n:"Street food / beach vendors",     pp:60,  note:"Blocos, Copacabana, Rasta Beach."},
 ];
 
-var curGroup=5;
 function fmt(n){return '$'+Math.round(n).toLocaleString();}
 
-function setGroup(n,btn){
-  curGroup=n;
-  document.querySelectorAll('.grp-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('pp-hdr').textContent='Per Person ('+n+')';
+function setGroup(n){
+  [5,6,7,8].forEach(function(x){
+    var b=document.getElementById('g'+x);
+    if(b) b.className=x===n?'gcb active-g':'gcb';
+  });
+  var ph=document.getElementById('pp-hdr');
+  if(ph) ph.textContent='Per Person ('+n+')';
   renderCosts(n);
 }
 
 function renderCosts(n){
-  var tb=document.getElementById('cost-tbody'); tb.innerHTML='';
-  // Section header - fixed
-  var r=document.createElement('tr'); r.className='sec-row';
-  r.innerHTML='<td colspan="5">Fixed costs — split equally (cheaper per person as group grows)</td>';
-  tb.appendChild(r);
-  FIXED.forEach(function(e){
-    var tr=document.createElement('tr');
-    tr.innerHTML='<td class="exp-name">'+e.n+'</td>'
-      +'<td class="type-fixed" style="text-align:center;">Fixed / Split</td>'
-      +'<td class="amt">'+fmt(e.t)+'</td>'
-      +'<td class="amt">'+fmt(e.t/n)+'</td>'
-      +'<td class="notes-col">'+e.note+'</td>';
-    tb.appendChild(tr);
-  });
-  // Section header - per person
-  var r2=document.createElement('tr'); r2.className='sec-row';
-  r2.innerHTML='<td colspan="5">Per-person costs — same regardless of group size</td>';
-  tb.appendChild(r2);
-  PP.forEach(function(e){
-    var tr=document.createElement('tr');
-    tr.innerHTML='<td class="exp-name">'+e.n+'</td>'
-      +'<td class="type-pp" style="text-align:center;">Per Person</td>'
-      +'<td style="text-align:center;color:var(--tm);font-size:12px;">= per person</td>'
-      +'<td class="amt">'+fmt(e.pp)+'</td>'
-      +'<td class="notes-col">'+e.note+'</td>';
-    tb.appendChild(tr);
-  });
-  // Totals
   var fixedPP=FIXED.reduce(function(s,e){return s+e.t/n;},0);
   var ppTotal=PP.reduce(function(s,e){return s+e.pp;},0);
-  var withHeli=fixedPP+ppTotal;
-  var withoutHeli=withHeli-350;
-  var r3=document.createElement('tr'); r3.className='tot-row';
-  r3.innerHTML='<td colspan="3" style="color:var(--gold);">TOTAL WITH HELICOPTER</td>'
-    +'<td class="amt" style="color:var(--gold);font-size:15px;">'+fmt(withHeli)+'</td>'
-    +'<td class="notes-col" style="color:var(--tm);">Helicopter ($350) included</td>';
-  tb.appendChild(r3);
-  var r4=document.createElement('tr'); r4.className='tot-row';
-  r4.innerHTML='<td colspan="3" style="color:#aaa;">TOTAL WITHOUT HELICOPTER</td>'
-    +'<td class="amt" style="color:#aaa;font-size:15px;">'+fmt(withoutHeli)+'</td>'
-    +'<td class="notes-col" style="color:var(--tm);">Skip heli — Cristo Redentor on Monday instead</td>';
-  tb.appendChild(r4);
-  document.getElementById('total-with').textContent=fmt(withHeli);
-  document.getElementById('total-without').textContent=fmt(withoutHeli);
+  var withH=Math.round(fixedPP+ppTotal);
+  var noH=withH-350;
+
+  /* ── Desktop table ── */
+  var tb=document.getElementById('cost-tbody');
+  if(tb){
+    tb.innerHTML='';
+    var sh1=document.createElement('tr'); sh1.className='sec-row';
+    sh1.innerHTML='<td colspan="5">Fixed costs — split equally, cheaper per person as group grows</td>';
+    tb.appendChild(sh1);
+    FIXED.forEach(function(e){
+      var tr=document.createElement('tr');
+      tr.className='fixed-row';
+      tr.innerHTML='<td class="exp-name">'+e.n+'</td>'
+        +'<td class="type-badge fixed-badge" style="text-align:center;">Fixed</td>'
+        +'<td style="text-align:right;color:var(--tm);font-size:13px;">'+fmt(e.t)+'</td>'
+        +'<td style="text-align:right;color:#e8c96a;font-weight:700;font-size:14px;">'+fmt(e.t/n)+'</td>'
+        +'<td class="notes-cell">'+e.note+'</td>';
+      tb.appendChild(tr);
+    });
+    var sh2=document.createElement('tr'); sh2.className='sec-row';
+    sh2.innerHTML='<td colspan="5">Per-person costs — same regardless of group size</td>';
+    tb.appendChild(sh2);
+    PP.forEach(function(e){
+      var tr=document.createElement('tr');
+      tr.className='pp-row';
+      tr.innerHTML='<td class="exp-name">'+e.n+'</td>'
+        +'<td class="type-badge pp-badge" style="text-align:center;">Per Person</td>'
+        +'<td style="text-align:center;color:var(--tm);font-size:11px;font-style:italic;">= per person</td>'
+        +'<td style="text-align:right;color:#e8c96a;font-weight:700;font-size:14px;">'+fmt(e.pp)+'</td>'
+        +'<td class="notes-cell">'+e.note+'</td>';
+      tb.appendChild(tr);
+    });
+    var sh3=document.createElement('tr'); sh3.className='sec-row';
+    sh3.innerHTML='<td colspan="5">Totals per person</td>';
+    tb.appendChild(sh3);
+    var tw=document.createElement('tr'); tw.className='total-row';
+    tw.innerHTML='<td colspan="2" style="color:#fff;font-weight:700;font-size:15px;font-family:Playfair Display,serif;">TOTAL — with helicopter</td>'
+      +'<td></td>'
+      +'<td style="text-align:right;color:var(--gold);font-weight:700;font-size:17px;">'+fmt(withH)+'</td>'
+      +'<td class="notes-cell">All costs combined</td>';
+    tb.appendChild(tw);
+    var tnh=document.createElement('tr'); tnh.className='total-row';
+    tnh.style.opacity='0.75';
+    tnh.innerHTML='<td colspan="2" style="color:#bbb;font-weight:700;font-size:14px;font-family:Playfair Display,serif;">TOTAL — without helicopter</td>'
+      +'<td></td>'
+      +'<td style="text-align:right;color:#bbb;font-weight:700;font-size:16px;">'+fmt(noH)+'</td>'
+      +'<td class="notes-cell">Saves $350 — Cristo on Mon is $164</td>';
+    tb.appendChild(tnh);
+  }
+
+  /* ── Mobile cards ── */
+  var mob=document.getElementById('cost-cards-mob');
+  if(mob){
+    mob.innerHTML='';
+    var l1=document.createElement('div'); l1.className='cost-sec-mob';
+    l1.textContent='Fixed costs — split equally';
+    mob.appendChild(l1);
+    FIXED.forEach(function(e){
+      var d=document.createElement('div'); d.className='cost-card-mob';
+      d.innerHTML='<div class="ccm-info"><div class="ccm-name">'+e.n+'</div>'
+        +'<div class="ccm-type" style="color:#5dade2;">Fixed / Split</div>'
+        +'<div class="ccm-note">'+e.note+'</div></div>'
+        +'<div class="ccm-price"><div class="ccm-pp">'+fmt(e.t/n)+'</div>'
+        +'<div class="ccm-lbl">per person</div></div>';
+      mob.appendChild(d);
+    });
+    var l2=document.createElement('div'); l2.className='cost-sec-mob';
+    l2.textContent='Per-person costs — same any size';
+    mob.appendChild(l2);
+    PP.forEach(function(e){
+      var d=document.createElement('div'); d.className='cost-card-mob';
+      d.innerHTML='<div class="ccm-info"><div class="ccm-name">'+e.n+'</div>'
+        +'<div class="ccm-type" style="color:#e67e22;">Per Person</div>'
+        +'<div class="ccm-note">'+e.note+'</div></div>'
+        +'<div class="ccm-price"><div class="ccm-pp">'+fmt(e.pp)+'</div>'
+        +'<div class="ccm-lbl">per person</div></div>';
+      mob.appendChild(d);
+    });
+    var t1=document.createElement('div'); t1.className='cost-tot-mob';
+    t1.style.marginTop='12px';
+    t1.innerHTML='<h5>Total — with helicopter</h5><div class="ctm-amt">'+fmt(withH)+'</div>';
+    mob.appendChild(t1);
+    var t2=document.createElement('div'); t2.className='cost-tot-mob';
+    t2.style.cssText='opacity:.75;margin-bottom:0;';
+    t2.innerHTML='<h5 style="color:#bbb;">Total — no helicopter</h5>'
+      +'<div style="font-family:Playfair Display,serif;font-size:22px;font-weight:700;color:#bbb;">'+fmt(noH)+'</div>';
+    mob.appendChild(t2);
+  }
+
+  /* ── Stat boxes ── */
+  var tw2=document.getElementById('total-w');
+  var tnw=document.getElementById('total-wo');
+  if(tw2) tw2.textContent=fmt(withH);
+  if(tnw) tnw.textContent=fmt(noH);
 }
 renderCosts(5);
 
-/* ─── PAYMENT SCHEDULE ─── */
-var curPayGroup=5;
-var PAY_SECTIONS=[
-  {
-    label:"Book Now — April 25, 2026",
-    urgency:"now",
-    items:[
-      {n:"Airbnb deposit (50%)",           fixed:true, total:1250, type:"50% Deposit",    note:"Book on Airbnb. Av. Rachel de Queiroz, 100. Balance due Jan 5, 2027."},
-      {n:"Carnival tickets — Section 9",   fixed:true, total:2744, type:"Full Payment",   note:"dobrazilright.com — all tickets at once. Sunday Feb 7. Section 9 only."},
-    ]
-  },
-  {
-    label:"May 2026",
-    urgency:"now",
-    items:[
-      {n:"Brazil eVisa — all members apply same day", fixed:true, total:567, type:"Full Payment", note:"vfsglobal.com (official only). 2-month bank stmts showing $2,000."},
-      {n:"Flights — book by May 15",       fixed:false, pp:900,  type:"Per Person",       note:"MIA nonstop: AA or LATAM. Tampa/Orlando: Delta via ATL. Copa = budget ($500)."},
-    ]
-  },
-  {
-    label:"July 15, 2026",
-    urgency:"soon",
-    items:[
-      {n:"Boat rental deposit (50%)",      fixed:true, total:1500, type:"50% Deposit",    note:"clickandboat.com — Viverex or 8h catamaran. Balance due Jan 20, 2027."},
-    ]
-  },
-  {
-    label:"September 15, 2026",
-    urgency:"soon",
-    items:[
-      {n:"Private chef — deposit",         fixed:true, total:180, type:"30% Deposit",     note:"takeachef.com — 4 meals: Sat breakfast, Sun breakfast, Mon dinner, Tue All White Dinner."},
-    ]
-  },
-  {
-    label:"October 1, 2026",
-    urgency:"soon",
-    items:[
-      {n:"Helicopter tour",                fixed:true, total:2450, type:"Full Payment",   note:"Viator or rio2fly.com.br. Sat Feb 6. R. Dom Bosco, 644 - Vargem Grande."},
-    ]
-  },
-  {
-    label:"November 1, 2026",
-    urgency:"later",
-    items:[
-      {n:"Travel insurance",               fixed:false, pp:80,  type:"Per Person",        note:"Each person buys own. Allianz or World Nomads. Covers cancel + medical."},
-    ]
-  },
-  {
-    label:"December 1, 2026",
-    urgency:"later",
-    items:[
-      {n:"Airport transport — both ways",  fixed:true, total:420, type:"Full Payment",    note:"Mercedes Benz Sprinter $30/pp. Book arrival (Feb 5) + departure (Feb 10) together."},
-    ]
-  },
-  {
-    label:"December 15, 2026",
-    urgency:"later",
-    items:[
-      {n:"Skylab Rio — dinner reservation",     fixed:false, pp:0, type:"Reserve Only",  note:"Av. Atlântica, 3264 - Copacabana. 7PM Fri Feb 5. No deposit — pay in Rio."},
-      {n:"Braseiro da Gávea — reservation",     fixed:false, pp:0, type:"Reserve Only",  note:"Praça Santos Dumont, 116 - Gávea. Sat Feb 6, ~5–6PM. No deposit."},
-    ]
-  },
-  {
-    label:"January 5, 2027",
-    urgency:"later",
-    items:[
-      {n:"Airbnb balance (50%)",           fixed:true, total:1250, type:"50% Balance",   note:"Final payment — 30 days before Feb 5 check-in."},
-    ]
-  },
-  {
-    label:"January 10, 2027",
-    urgency:"later",
-    items:[
-      {n:"Cristo Redentor + Sugarloaf tour", fixed:true, total:1148, type:"Full Payment", note:"Viator small group — 7×$164. Meet at Hilton Copacabana, Av. Atlântica 1020."},
-    ]
-  },
-  {
-    label:"January 20, 2027",
-    urgency:"later",
-    items:[
-      {n:"Boat rental balance (50%)",      fixed:true, total:1500, type:"50% Balance",   note:"Final boat payment — 2 weeks before Sunday Feb 7 charter."},
-    ]
-  },
-  {
-    label:"February 10, 2027 — At Completion",
-    urgency:"later",
-    items:[
-      {n:"Chef balance + tip",             fixed:true, total:420, type:"Pay in Rio",     note:"Pay chef on departure morning. Tip generously — 4 elevated meals."},
-    ]
-  },
+/* ── PAYMENT SCHEDULE ── */
+var PAY=[
+  {sec:"Book Now — April 25, 2026",   urg:"now",  items:[
+    {n:"Airbnb deposit (50%)",           f:true,  t:1250, type:"50% Deposit",   note:"Airbnb — Av. Rachel de Queiroz, 100. Balance due Jan 5, 2027."},
+    {n:"Carnival tickets x7 (Section 9)",f:true,  t:2744, type:"Full Payment",  note:"dobrazilright.com — all at once. Sunday Feb 7. Section 9 only."},
+  ]},
+  {sec:"May 2026",                     urg:"now",  items:[
+    {n:"Brazil eVisa — all members same day",f:true,t:567,type:"Full Payment",  note:"vfsglobal.com (official). 2-month bank stmts showing $2,000 balance."},
+    {n:"Flights — book by May 15",      f:false, pp:900, type:"Per Person",     note:"MIA nonstop: AA or LATAM. Tampa/Orlando: Delta via ATL. Copa = budget."},
+  ]},
+  {sec:"July 15, 2026",                urg:"soon", items:[
+    {n:"Boat rental deposit (50%)",      f:true,  t:1500, type:"50% Deposit",   note:"clickandboat.com — Viverex. Balance due Jan 20, 2027."},
+  ]},
+  {sec:"September 15, 2026",           urg:"soon", items:[
+    {n:"Private chef — deposit",         f:true,  t:180,  type:"30% Deposit",   note:"takeachef.com — 4 meals: Sat+Sun breakfast, Mon dinner, Tue All White Dinner."},
+  ]},
+  {sec:"October 1, 2026",              urg:"soon", items:[
+    {n:"Helicopter tour",                f:true,  t:2450, type:"Full Payment",  note:"Viator or rio2fly.com.br. Sat Feb 6. R. Dom Bosco, 644 - Vargem Grande."},
+  ]},
+  {sec:"November 1, 2026",             urg:"later",items:[
+    {n:"Travel insurance",               f:false, pp:80,  type:"Per Person",    note:"Each buys own. Allianz or World Nomads. Covers cancel + medical."},
+  ]},
+  {sec:"December 1, 2026",             urg:"later",items:[
+    {n:"Airport transport — both ways",  f:true,  t:420,  type:"Full Payment",  note:"Mercedes Benz Sprinter $30/pp. Book arrival Feb 5 and departure Feb 10 together."},
+  ]},
+  {sec:"December 15, 2026",            urg:"later",items:[
+    {n:"Skylab Rio — reservation",       f:false, pp:0,   type:"Reserve Only",  note:"Av. Atlantica 3264. 7PM Fri Feb 5. Dress code. No deposit — pay in Rio."},
+    {n:"Braseiro da Gavea — reservation",f:false, pp:0,   type:"Reserve Only",  note:"Praca Santos Dumont 116. Sat 5-6PM. No deposit — pay in Rio."},
+  ]},
+  {sec:"January 5, 2027",              urg:"later",items:[
+    {n:"Airbnb balance (50%)",           f:true,  t:1250, type:"50% Balance",   note:"30 days before Feb 5 check-in."},
+  ]},
+  {sec:"January 10, 2027",             urg:"later",items:[
+    {n:"Cristo + Sugarloaf tour",        f:true,  t:1148, type:"Full Payment",  note:"Viator — 7x$164. Meet at Hilton Copacabana, Av. Atlantica 1020."},
+  ]},
+  {sec:"January 20, 2027",             urg:"later",items:[
+    {n:"Boat rental balance (50%)",      f:true,  t:1500, type:"50% Balance",   note:"2 weeks before Sunday Feb 7 charter."},
+  ]},
+  {sec:"February 10, 2027 — In Rio",   urg:"later",items:[
+    {n:"Chef balance + tip",             f:true,  t:420,  type:"Pay in Rio",    note:"Pay on departure morning. Tip well — 4 elevated meals."},
+  ]},
 ];
 
+var curPG=5;
 function setPayGroup(n,btn){
-  curPayGroup=n;
-  document.querySelectorAll('#payments .grp-btn').forEach(b=>b.classList.remove('active'));
+  curPG=n;
+  document.querySelectorAll('#payments .grp-btn').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
   renderPayments(n);
 }
 
 function renderPayments(n){
-  var container=document.getElementById('pay-sections'); container.innerHTML='';
-  PAY_SECTIONS.forEach(function(sec){
-    var div=document.createElement('div'); div.className='pay-section';
-    var urgClass=sec.urgency==='now'?'due-now':(sec.urgency==='soon'?'due-soon':'due-later');
-    var urgTxt=sec.urgency==='now'?'URGENT NOW':(sec.urgency==='soon'?'BOOK SOON':'PLAN AHEAD');
-    div.innerHTML='<div class="pay-section-hdr"><h4>'+sec.label+'</h4><span class="due-badge '+urgClass+'">'+urgTxt+'</span></div>';
+  var con=document.getElementById('pay-sections');
+  if(!con) return;
+  con.innerHTML='';
+  PAY.forEach(function(sec){
+    var uc=sec.urg==='now'?'due-now':(sec.urg==='soon'?'due-soon':'due-later');
+    var ut=sec.urg==='now'?'URGENT NOW':(sec.urg==='soon'?'BOOK SOON':'PLAN AHEAD');
+    var wrap=document.createElement('div'); wrap.className='pay-section';
+    wrap.innerHTML='<div class="pay-section-hdr"><h4>'+sec.sec+'</h4><span class="due-badge '+uc+'">'+ut+'</span></div>';
     sec.items.forEach(function(item){
-      var ppAmt, ppDisp;
+      var ppHTML;
       if(item.type==='Reserve Only'){
-        ppDisp='<span style="color:var(--tm);font-size:12px;font-style:italic;">Reserve only — no payment</span>';
-      } else if(item.fixed){
-        ppAmt=item.total/n;
-        ppDisp=fmt(ppAmt)+'<small>per person (÷'+n+')</small>';
+        ppHTML='<span style="color:var(--tm);font-size:12px;font-style:italic;">Reserve only</span>';
+      } else if(item.f){
+        ppHTML=fmt(item.t/n)+'<small>per person (÷'+n+')</small>';
       } else {
-        ppAmt=item.pp; ppDisp=item.pp>0?fmt(item.pp)+'<small>per person</small>':'<span style="color:var(--tm);font-size:12px;font-style:italic;">Reserve only</span>';
+        ppHTML=item.pp>0?fmt(item.pp)+'<small>per person</small>':'<span style="color:var(--tm);font-size:12px;font-style:italic;">Reserve only</span>';
       }
-      var totalDisp=item.fixed?fmt(item.total):(item.pp>0?'= per person':'—');
       var row=document.createElement('div'); row.className='pay-item';
       row.innerHTML='<div class="pay-item-name">'+item.n+'<small>'+item.note+'</small></div>'
-        +'<div class="pay-item-pp">'+ppDisp+'</div>'
+        +'<div class="pay-item-pp">'+ppHTML+'</div>'
         +'<div class="pay-item-type">'+item.type+'</div>';
-      div.appendChild(row);
+      wrap.appendChild(row);
     });
-    container.appendChild(div);
+    con.appendChild(wrap);
   });
 }
 renderPayments(5);
 
-/* ─── MEAL SCHEDULE ─── */
+/* ── MEAL SCHEDULE ── */
+var TM={
+  chef:  {cls:'mt-chef',  lbl:'Chef'},
+  white: {cls:'mt-white', lbl:'All White'},
+  out:   {cls:'mt-out',   lbl:'Restaurant'},
+  cat:   {cls:'mt-cat',   lbl:'Catered'},
+  street:{cls:'mt-street',lbl:'Street/Own'},
+};
 var MEALS=[
-  {day:"Friday Feb 5 — Arrival", meals:[
-    {time:"Arrival",  type:"street",  label:"Own", what:"Travel snacks / airport food", note:"Stock up on arrival — grocery run first thing at Mercado Dia a Dia Laguna."},
-    {time:"7 PM",     type:"out",     label:"Restaurant", what:"Skylab Rio Othon Palace — 30th floor rooftop", note:"Av. Atlântica, 3264 - Copacabana. 7PM reservation. Dress code enforced. Reserve Dec 15."},
+  {day:"Friday Feb 5 — Arrival",meals:[
+    {t:"Arrival",   type:"street",what:"Travel snacks / airport food",         note:"Stock up on arrival — grocery run at Mercado Dia a Dia Laguna, Av. Rachel de Queiroz 951."},
+    {t:"Dinner",    type:"out",   what:"Skylab Rio Othon Palace — 30th floor", note:"7PM reservation. Dress code. Av. Atlantica, 3264 - Copacabana. Reserve Dec 15, 2026."},
   ]},
-  {day:"Saturday Feb 6 — Heli + Beach", meals:[
-    {time:"Morning",  type:"chef",    label:"Chef", what:"Private chef at Airbnb — full Brazilian spread", note:"Eat before helicopter. takeachef.com — book by Sept 15."},
-    {time:"Midday",   type:"street",  label:"Beach", what:"Rasta Beach — drinks and snacks", note:"Informal beach food after helicopter tour."},
-    {time:"5–6 PM",   type:"out",     label:"Restaurant", what:"Braseiro da Gávea — most famous steaks in Rio", note:"Praça Santos Dumont, 116 - Gávea. On way back to Airbnb. Reserve Dec 15."},
+  {day:"Saturday Feb 6 — Helicopter + Beach + Casa Black",meals:[
+    {t:"Breakfast", type:"chef",  what:"Private chef at Airbnb — full Brazilian spread", note:"Eat before helicopter. takeachef.com — book by Sept 15."},
+    {t:"Lunch",     type:"street",what:"Rasta Beach — drinks and snacks",       note:"Informal beach food after helicopter tour."},
+    {t:"Dinner",    type:"out",   what:"Braseiro da Gavea — famous steaks",    note:"Praca Santos Dumont, 116 - Gavea. On way back to Airbnb. Reserve Dec 15."},
   ]},
-  {day:"Sunday Feb 7 — Boat + Carnival", meals:[
-    {time:"Morning",  type:"chef",    label:"Chef", what:"Private chef at Airbnb — full spread before boat day", note:"Eat before leaving for Marina da Glória. Full day + Carnival night ahead."},
-    {time:"Midday",   type:"cat",     label:"Catered", what:"Catering delivered to the yacht", note:"Pre-arrange with charter or order delivery to Marina da Glória."},
-    {time:"Pre-night",type:"street",  label:"Street", what:"Street food / Feira da Glória on way back", note:"Quick local food. Transition from boat to Carnival night."},
+  {day:"Sunday Feb 7 — Boat Day + Carnival",meals:[
+    {t:"Breakfast", type:"chef",  what:"Private chef at Airbnb before boat",   note:"Full spread before leaving for Marina da Gloria. Big day ahead."},
+    {t:"Lunch",     type:"cat",   what:"Catering delivered to the yacht",      note:"Pre-arrange with charter or order delivery to Marina da Gloria."},
+    {t:"Pre-night", type:"street",what:"Street food / Feira da Gloria",        note:"Quick local food on way back. Transition from boat to Carnival night."},
   ]},
-  {day:"Monday Feb 8 — Selarón + Cristo", meals:[
-    {time:"6–10:30 AM",type:"out",   label:"Restaurant", what:"Orla 21 Rooftop buffet (5-min from Selarón)", note:"Av. Alm. Silvio de Noronha, 365 - Centro. Buffet 6am–10:30am. Go right after Selarón."},
-    {time:"Afternoon", type:"street", label:"Beach", what:"Copacabana beach vendors — food and drinks", note:"After Cristo. Coconut water, cold drinks, local snacks."},
-    {time:"Evening",   type:"chef",   label:"Chef", what:"Private chef at Airbnb — recharge dinner", note:"After Selarón + Cristo + Copacabana. Eat well, hydrate, get ready for Pedra do Sal."},
+  {day:"Monday Feb 8 — Selarón + Cristo + Copacabana",meals:[
+    {t:"Breakfast", type:"out",   what:"Orla 21 Rooftop buffet (5-min from Selarao)", note:"Av. Alm. Silvio de Noronha, 365 - Centro. Buffet 6am–10:30am."},
+    {t:"Lunch",     type:"street",what:"Copacabana beach vendors",             note:"After Cristo. Coconut water, cold drinks, local snacks."},
+    {t:"Dinner",    type:"chef",  what:"Private chef at Airbnb — recharge dinner", note:"After long day. Eat well, hydrate, rest before Pedra do Sal night."},
   ]},
-  {day:"Tuesday Feb 9 — Blocos", meals:[
-    {time:"All day",   type:"street", label:"Street", what:"Bloco street food throughout the day", note:"Vendors at every bloco. Salgados, açaí, cold drinks. Eat while moving."},
-    {time:"Afternoon", type:"out",    label:"Restaurant", what:"Pato com Laranja — Leblon (14-min from blocos)", note:"Av. Delfim Moreira, 1746 - Leblon. Sit-down meal to cool down after blocos."},
-    {time:"Evening",   type:"white",  label:"All White Dinner", what:"CHEF: All White Dinner at Airbnb — everyone wears white", note:"Chef's most elevated meal of the trip. The formal send-off before the spontaneous final night."},
+  {day:"Tuesday Feb 9 — Blocos All Day",meals:[
+    {t:"All day",   type:"street",what:"Bloco street food throughout the day", note:"Vendors at every bloco. Eat while moving."},
+    {t:"Afternoon", type:"out",   what:"Pato com Laranja — Leblon",           note:"Av. Delfim Moreira, 1746. 14-min from blocos. Sit-down meal to cool down."},
+    {t:"Dinner",    type:"white", what:"All White Dinner at Airbnb — everyone wears white", note:"Chef's most elevated meal. The formal send-off before the spontaneous final night."},
   ]},
-  {day:"Wednesday Feb 10 — Departure", meals:[
-    {time:"Morning",   type:"street", label:"Own", what:"Quick breakfast before checkout", note:"Keep it light. Pack up and depart for airport."},
+  {day:"Wednesday Feb 10 — Departure",meals:[
+    {t:"Breakfast", type:"street",what:"Quick breakfast before checkout",      note:"Keep it light. Pack up. Depart for airport."},
   ]},
 ];
 
-var typeClass={chef:'mt-chef',white:'mt-white',out:'mt-out',cat:'mt-cat',street:'mt-street'};
-
 function renderMeals(){
-  var container=document.getElementById('meal-table'); container.innerHTML='';
+  var con=document.getElementById('meal-cards');
+  if(!con) return;
+  con.innerHTML='';
   MEALS.forEach(function(day){
-    var div=document.createElement('div'); div.className='meal-day';
-    div.innerHTML='<div class="meal-day-hdr"><h4>'+day.day+'</h4></div>';
+    var wrap=document.createElement('div'); wrap.className='mday-wrap';
+    wrap.innerHTML='<div class="mday-hdr"><h4>'+day.day+'</h4></div>';
     day.meals.forEach(function(m){
-      var tc=typeClass[m.type]||'mt-street';
-      var row=document.createElement('div'); row.className='meal-row';
-      row.innerHTML='<div class="meal-time">'+m.time+'</div>'
-        +'<div class="meal-type-badge"><span class="'+tc+'">'+m.label+'</span></div>'
-        +'<div class="meal-content"><h5>'+m.what+'</h5><p>'+m.note+'</p></div>';
-      div.appendChild(row);
+      var tm=TM[m.type]||{cls:'mt-street',lbl:'Other'};
+      var card=document.createElement('div'); card.className='mcard';
+      card.innerHTML='<div class="mc-time">'+m.t+'</div>'
+        +'<div class="mc-badge"><span class="'+tm.cls+'">'+tm.lbl+'</span></div>'
+        +'<div class="mc-body"><h5>'+m.what+'</h5><p>'+m.note+'</p></div>';
+      wrap.appendChild(card);
     });
-    container.appendChild(div);
+    con.appendChild(wrap);
   });
 }
 renderMeals();
