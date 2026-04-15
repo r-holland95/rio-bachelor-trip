@@ -191,18 +191,106 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
   .g3{grid-template-columns:repeat(3,1fr);}
 }
 
-/* PICK CARDS */
-.picks-h3{font-family:'Playfair Display',serif;color:#fff;font-size:18px;margin:26px 0 12px;display:flex;align-items:center;gap:8px;}
-.pick-card{background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:8px;}
-.pick-card.featured{border-color:rgba(201,168,76,0.5);}
-.pick-card h4{color:#fff;font-size:15px;font-family:'Playfair Display',serif;font-weight:700;}
-.pick-card p{color:var(--tm);font-size:13px;line-height:1.6;}
-.pick-meta{color:var(--tm);font-size:12px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
-.pick-label{display:inline-block;background:rgba(93,173,226,0.12);border:1px solid rgba(93,173,226,0.3);color:#5dade2;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:2px;align-self:flex-start;}
-.pick-label.alt{background:rgba(201,168,76,0.1);border-color:var(--bdr);color:var(--tm);}
-.pick-label.gold-label{background:rgba(201,168,76,0.15);border-color:rgba(201,168,76,0.4);color:var(--gold);}
-.pick-link{display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-size:12px;font-weight:500;text-decoration:none;border:1px solid var(--bdr);border-radius:3px;padding:6px 11px;background:rgba(201,168,76,0.07);transition:background .2s,border-color .2s;align-self:flex-start;}
-.pick-link:hover{background:rgba(201,168,76,0.15);border-color:rgba(201,168,76,0.5);}
+
+
+
+/* COST CALCULATOR & TABLES */
+.grp-btn{background:var(--cb);border:1px solid var(--bdr);color:var(--tm);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:10px 22px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.grp-btn:hover{color:var(--tx);border-color:var(--gold);}
+.grp-btn.active{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold);}
+.ctab{border-collapse:collapse;font-family:'DM Sans',sans-serif;}
+.ctab thead tr{background:#1a1a1a;}
+.ctab th{padding:11px 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);}
+.ctab td{padding:11px 14px;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top;}
+.ctab tr:hover td{background:rgba(255,255,255,0.02);}
+.ctab .sec-row td{background:rgba(201,168,76,0.06);color:var(--gold);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;padding:8px 14px;}
+.ctab .tot-row td{background:#1a1a1a;border-top:1px solid var(--bdr);font-weight:700;}
+.ctab .exp-name{color:#fff;font-weight:500;}
+.ctab .type-fixed{color:#5dade2;font-size:11px;}
+.ctab .type-pp{color:#e67e22;font-size:11px;}
+.ctab .amt{text-align:right;color:#e8c96a;font-weight:600;}
+.ctab .notes-col{color:var(--tm);font-size:12px;}
+/* PAYMENT TABLE */
+.pay-section{margin-bottom:22px;}
+.pay-section-hdr{background:#2c2c2c;padding:10px 16px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border:1px solid var(--bdr);}
+.pay-section-hdr h4{color:#fff;font-family:'Playfair Display',serif;font-size:16px;font-weight:700;}
+.pay-section-hdr .due-badge{font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:2px;}
+.due-now{background:rgba(231,76,60,0.2);border:1px solid rgba(231,76,60,0.4);color:#e74c3c;}
+.due-soon{background:rgba(230,126,34,0.2);border:1px solid rgba(230,126,34,0.4);color:#e67e22;}
+.due-later{background:rgba(41,128,185,0.2);border:1px solid rgba(41,128,185,0.4);color:#5dade2;}
+.pay-item{display:flex;gap:0;border:1px solid var(--bdr);border-top:none;background:var(--cb);}
+.pay-item:last-child{border-radius:0 0 4px 4px;}
+.pay-item:nth-child(even){background:#141414;}
+.pay-item-name{flex:2;padding:13px 16px;color:#fff;font-size:13px;font-weight:500;border-right:1px solid var(--bdr);}
+.pay-item-name small{display:block;color:var(--tm);font-size:12px;font-weight:400;margin-top:3px;}
+.pay-item-pp{flex:1;padding:13px 14px;text-align:right;color:#e8c96a;font-size:14px;font-weight:700;border-right:1px solid var(--bdr);}
+.pay-item-pp small{display:block;color:var(--tm);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:400;margin-top:2px;}
+.pay-item-type{flex:1;padding:13px 14px;font-size:11px;color:var(--tm);display:flex;align-items:center;}
+/* MEAL TABLE */
+.meal-day{margin-bottom:18px;}
+.meal-day-hdr{background:#2c2c2c;padding:12px 18px;border-radius:4px 4px 0 0;border:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.meal-day-hdr h4{color:#fff;font-family:'Playfair Display',serif;font-size:16px;}
+.meal-row{display:flex;border:1px solid var(--bdr);border-top:none;background:var(--cb);}
+.meal-row:nth-child(even){background:#141414;}
+.meal-row:last-child{border-radius:0 0 4px 4px;}
+.meal-time{width:110px;flex-shrink:0;padding:12px 14px;color:var(--gold);font-size:12px;font-weight:600;border-right:1px solid var(--bdr);}
+.meal-type-badge{width:110px;flex-shrink:0;padding:12px 14px;display:flex;align-items:flex-start;border-right:1px solid var(--bdr);}
+.meal-type-badge span{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:2px;}
+.mt-chef{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.4);color:#b07fe0;}
+.mt-white{background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.5);color:var(--gold);}
+.mt-out{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.mt-cat{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.mt-street{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--tm);}
+.meal-content{flex:1;padding:12px 16px;}
+.meal-content h5{color:#fff;font-size:13px;font-weight:500;margin-bottom:3px;}
+.meal-content p{color:var(--tm);font-size:12px;}
+@media(max-width:480px){.pay-item{flex-wrap:wrap;}.pay-item-name{flex:1 0 100%;border-right:none;border-bottom:1px solid var(--bdr);}.pay-item-pp,.pay-item-type{flex:1;}.meal-row{flex-wrap:wrap;}.meal-time,.meal-type-badge{width:50%;}.meal-content{flex:1 0 100%;}}
+
+
+/* DATA TABLES */
+.dtbl{width:100%;border-collapse:collapse;font-size:13px;}
+.dtbl thead tr{background:rgba(201,168,76,0.08);}
+.dtbl th{padding:9px 11px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-align:center;border-bottom:1px solid var(--bdr);}
+.dtbl td{padding:10px 11px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top;}
+.dtbl tbody tr:hover td{background:rgba(255,255,255,0.02);}
+.sec-row td{background:rgba(201,168,76,0.06)!important;color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 11px;font-weight:600;}
+.exp-name{color:#fff;font-weight:500;}
+.notes-cell{color:var(--tm);font-size:12px;}
+.money-cell{text-align:right;color:#5dade2;font-weight:600;white-space:nowrap;}
+.pp-label{text-align:center;color:#666;font-size:11px;font-style:italic;}
+.res-only{color:#555;font-style:italic;}
+.type-cell{text-align:center;}
+/* Date urgency */
+.date-urgent{text-align:center;color:#e74c3c;font-weight:700;font-size:12px;background:rgba(231,76,60,0.08);}
+.date-med{text-align:center;color:#e67e22;font-weight:700;font-size:12px;background:rgba(230,126,34,0.08);}
+.date-low{text-align:center;color:#5dade2;font-weight:600;font-size:12px;background:rgba(41,128,185,0.06);}
+/* Payment badges */
+.pay-badge{display:inline-block;font-size:10px;letter-spacing:.8px;padding:3px 8px;border-radius:2px;font-weight:600;white-space:nowrap;}
+.dep{background:rgba(230,126,34,0.15);border:1px solid rgba(230,126,34,0.4);color:#e67e22;}
+.full{background:rgba(231,76,60,0.12);border:1px solid rgba(231,76,60,0.35);color:#e74c3c;}
+.bal{background:rgba(41,128,185,0.12);border:1px solid rgba(41,128,185,0.35);color:#5dade2;}
+.res{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);color:#888;}
+/* Cost Calculator */
+.gcb{background:var(--cb);border:1px solid var(--bdr);color:var(--tm);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:8px 18px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.gcb:hover{color:var(--tx);border-color:rgba(201,168,76,0.5);}
+.gcb.active-g{background:var(--gold);color:#000;border-color:var(--gold);font-weight:600;}
+.fixed-row td{background:rgba(39,174,96,0.04);}
+.pp-row td{background:transparent;}
+.total-row td{background:var(--dark2)!important;}
+.fixed-badge{background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.3);color:#2ecc71;}
+.pp-badge{background:rgba(230,126,34,0.1);border:1px solid rgba(230,126,34,0.3);color:#e67e22;}
+.opt-badge{background:rgba(93,173,226,0.1);border:1px solid rgba(93,173,226,0.3);color:#5dade2;}
+.type-badge{display:inline-block;font-size:10px;letter-spacing:.6px;padding:2px 7px;border-radius:2px;font-weight:600;white-space:nowrap;}
+/* Meal schedule */
+.day-hdr-row td{background:rgba(255,255,255,0.03)!important;color:#fff;font-size:11px;font-weight:600;letter-spacing:1px;padding:9px 11px;border-bottom:1px solid var(--bdr);}
+.day-cell{color:#555;font-size:11px;white-space:nowrap;}
+.meal-cell{text-align:center;color:var(--tm);font-size:12px;font-weight:500;}
+.meal-type{display:inline-block;font-size:10px;letter-spacing:.6px;padding:3px 8px;border-radius:2px;font-weight:600;white-space:nowrap;}
+.mt-chef{background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.3);color:#a569bd;}
+.mt-resto{background:rgba(231,76,60,0.1);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;}
+.mt-boat{background:rgba(41,128,185,0.1);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.mt-street{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:#888;}
+.mt-white{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:var(--gold);}
 
 </style>
 </head>
@@ -258,65 +346,92 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 <button class="nb" onclick="S('nightlife',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-moon"/></svg>Nightlife</button>
 <button class="nb" onclick="S('tips',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-flag"/></svg>Travel Tips</button>
 <button class="nb" onclick="S('packing',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-bag"/></svg>Packing</button>
-<button class="nb" onclick="S('budget',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-dollar"/></svg>Budget &amp; Payment</button>
-
-<button class="nb" onclick="S('picks',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-star"/></svg>Tommy's Picks</button>
+<button class="nb" onclick="S('costs',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-dollar"/></svg>Cost Calculator</button>
+<button class="nb" onclick="S('payments',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-warn"/></svg>Payment Dates</button>
+<button class="nb" onclick="S('meals',this)"><svg class="i" width="13" height="13" style="color:var(--gold)"><use href="#s-chef"/></svg>Meal Schedule</button>
 </nav>
 <!-- ITINERARY -->
 <div id="itin" class="sec active">
 <div class="eyebrow">Day by Day</div><h2>The Full Experience</h2><div class="div"></div>
-<p class="desc">6 days of luxury, culture, and celebration — timed perfectly with Rio's pre-Carnival energy.</p>
+<p class="desc">February 5–10, 2027 · Barra da Tijuca base · 6 nights · Everything planned, nothing left to chance.</p>
+
 <div class="stats" style="margin-top:20px;">
-<div class="sb"><div class="sn">6</div><div class="sl">Days in Rio</div></div>
-<div class="sb"><div class="sn">~84°F</div><div class="sl">Avg Temp</div></div>
-<div class="sb"><div class="sn">Pre-Carnival</div><div class="sl">Season</div></div>
+<div class="sb"><div class="sn">6</div><div class="sl">Days</div></div>
+<div class="sb"><div class="sn">Barra</div><div class="sl">da Tijuca</div></div>
+<div class="sb"><div class="sn">Carnival</div><div class="sl">Season</div></div>
 <div class="sb"><div class="sn">GMT-3</div><div class="sl">Time Zone</div></div>
 </div>
-<div class="tip ok"><h4><svg class="i" width="14" height="14"><use href="#s-check"/></svg> Why Feb 5–10 is PERFECT</h4><p>Carnival 2027 peaks Feb 13–17. Your window hits pre-Carnival blocos, Sambadrome rehearsals, and full city energy — WITHOUT insane peak crowds and price surges. Best of both worlds.</p></div>
 
-<div class="iday"><div class="ihd"><h3>Arrival Day — Touchdown in Rio</h3><span class="dn">Day 1 · Feb 5</span></div><div class="iitems">
-<div class="ii"><div class="it">Morning</div><div class="ic"><h4>Flights depart Miami / Tampa / Orlando</h4><p>MIA boards overnight or early AM. Tampa and Orlando connect through MIA. All land at Galeão International Airport (GIG).</p></div></div>
-<div class="ii"><div class="it">3–4 PM</div><div class="ic"><h4>Private Transfer — GIG to Villa/Hotel</h4><p>Luxury SUV or sprinter van awaits. 40-min drive to Ipanema or Leblon. Or: helicopter transfer ($250/person, 15 min, fly over Cristo on arrival).</p></div></div>
-<div class="ii"><div class="it">8 PM</div><div class="ic"><h4>Welcome Dinner — Rooftop or Private Terrace</h4><p>Private chef serves churrasco: picanha steak, linguiça, pão de queijo, farofa. Cold Brahma beers and caipirinhas all night.</p></div></div>
-<div class="ii"><div class="it">10 PM+</div><div class="ic"><h4>Easy First Night — Ipanema Bar Crawl</h4><p>Jet lag is real. Bar Astor or Devassa for drinks, feel the city, early night — the real fun starts tomorrow.</p></div></div>
+<div class="tip info"><h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> Airbnb is in Barra da Tijuca — Know Your Drive Times</h4><p>The villa is in Barra da Tijuca (Av. Rachel de Queiroz, 100). Ipanema and Copacabana are 30+ min away. Lapa is 35–40 min. Budget ~$80–100/day in Ubers (2 cars if 6+ people). That's roughly $100/person for the entire trip in transport.</p></div>
+
+<!-- DAY 1 — FRIDAY FEB 5 -->
+<div class="iday">
+<div class="ihd"><h3>Arrival Day — First Night in Rio</h3><span class="dn">Day 1 · Fri Feb 5</span></div>
+<div class="iitems">
+<div class="ii"><div class="it">Afternoon</div><div class="ic"><h4>Land at GIG → Mercedes Benz Sprinter airport transfer ($30/person)</h4><p>Pre-booked private bus. Everyone on one vehicle. Drop directly at the Airbnb: Av. Rachel de Queiroz, 100 — Barra da Tijuca.</p></div></div>
+<div class="ii"><div class="it">Arrive</div><div class="ic"><h4>Check in, unpack, chill at the Airbnb</h4><p>Take a breath. Everyone's been traveling. Relax, explore the space. Get oriented before the night starts.</p></div></div>
+<div class="ii"><div class="it">After arrival</div><div class="ic"><h4>Grocery run — Mercado Dia a Dia Laguna (3 min Uber or 12 min walk)</h4><p>Av. Rachel de Queiroz, 951 - loja 101 - Barra da Tijuca. Stock up on drinks, snacks, breakfast items, and caipirinha supplies. Do this before getting dressed for dinner.</p></div></div>
+<div class="ii"><div class="it">Afternoon</div><div class="ic"><h4>Change into dinner-ready outfit (dress code tonight)</h4><p>No shorts, no flip-flops, no athletic gear. Stylish jeans or slacks with a collared shirt. Set the tone for the week.</p></div></div>
+<div class="ii"><div class="it">~5–6 PM</div><div class="ic"><h4>Ipanema or Copacabana beach — pre-dinner drinks and vibes (30 min drive)</h4><p>Walk the beach, get drinks, feel Rio for the first time. Optional stop: Sel d'Ipanema Beach Club (Av. Vieira Souto) for a proper beach club setup before dinner.</p></div></div>
+<div class="ii"><div class="it">7 PM</div><div class="ic"><h4>DINNER: Skylab Rio Othon Palace — 30th floor rooftop restaurant</h4><p>Av. Atlântica, 3264 - Copacabana. Reservation at 7PM. Dress code enforced. 5-min drive from Ipanema beach. Views of Copacabana and the full coastline. This is the welcome dinner for the trip.</p></div></div>
+<div class="ii"><div class="it">After dinner</div><div class="ic"><h4>Lapa nightlife — bars and clubs (15 min from restaurant)</h4><p>Rio's iconic nightlife district. Multiple bars and clubs all within walking distance of each other. Streets are alive until sunrise.</p></div></div>
+<div class="ii"><div class="it">Later</div><div class="ic"><h4>Pedra do Sal — Friday samba night (25 min from restaurant)</h4><p>Historic birthplace of samba. Free outdoor party every Friday night. Afro-Brazilian roots. Locals and visitors together. This is the cultural heartbeat of Rio.</p></div></div>
 </div></div>
 
-<div class="iday"><div class="ihd"><h3>City Icons and Nightlife</h3><span class="dn">Day 2 · Feb 6</span></div><div class="iitems">
-<div class="ii"><div class="it">8–9 AM</div><div class="ic"><h4>Chef's Breakfast</h4><p>Açaí bowls, tapioca crepes, fresh juice, pão de queijo, strong Brazilian coffee.</p></div></div>
-<div class="ii"><div class="it">10 AM</div><div class="ic"><h4>Christ the Redeemer (Cristo Redentor)</h4><p>Pre-book VIP access. Arrive early. Views of the entire city from 2,300 ft — one of the most breathtaking sights on earth.</p></div></div>
-<div class="ii"><div class="it">12:30 PM</div><div class="ic"><h4>Lunch — Aprazível Restaurant, Santa Teresa</h4><p>Gorgeous hillside restaurant. Traditional moqueca and grilled meats with panoramic views. One of Rio's best kept secrets.</p></div></div>
-<div class="ii"><div class="it">3 PM</div><div class="ic"><h4>Sugarloaf Mountain (Pão de Açúcar)</h4><p>Cable car to the summit. Views of Guanabara Bay and Copacabana. Sunset from here is elite.</p></div></div>
-<div class="ii"><div class="it">10:30 PM</div><div class="ic"><h4>Lapa Nightlife — Samba and the Streets</h4><p>Rio Scenarium (3-story samba club inside an antique building) or Carioca da Gema. Live music until sunrise.</p></div></div>
+<!-- DAY 2 — SATURDAY FEB 6 -->
+<div class="iday">
+<div class="ihd"><h3>Helicopter + Beach + Casa Black</h3><span class="dn">Day 2 · Sat Feb 6</span></div>
+<div class="iitems">
+<div class="ii"><div class="it">Morning</div><div class="ic"><h4>CHEF: Private breakfast at the Airbnb</h4><p>Get quote at takeachef.com/en-br/private-chef/rio-de-janeiro. Full Brazilian spread. First chef meal of the trip. Eat before the helicopter — 30-min drive to the launch site.</p></div></div>
+<div class="ii"><div class="it">Morning</div><div class="ic"><h4>Helicopter tour — $350/person (30 min drive: R. Dom Bosco, 644 - Vargem Grande)</h4><p>Book on Viator or rio2fly.com.br. Those who skip can go to Cristo Redentor on Monday instead — two separate experiences, no one misses out. Both are bucket-list level.</p></div></div>
+<div class="ii"><div class="it">After heli</div><div class="ic"><h4>Rasta Beach — chill, drinks, beach vibes</h4><p>Right after the helicopter. Full beach setup, reggae vibes, strong caipirinhas. Perfect decompression spot before dinner.</p></div></div>
+<div class="ii"><div class="it">5–6 PM</div><div class="ic"><h4>DINNER: Braseiro da Gávea — most famous steaks in Rio</h4><p>Praça Santos Dumont, 116 - Loja A - Gávea. On the way back to the Airbnb — not out of the way. Reservation required. Rodízio-style cuts, legendary picanha. Arrive early so everyone is back and changed for the night.</p></div></div>
+<div class="ii"><div class="it">Evening</div><div class="ic"><h4>Back to Airbnb — relax and change for the night</h4><p>Get dressed. Hydrate. Pre-game caipirinhas at the villa before heading out.</p></div></div>
+<div class="ii"><div class="it">Night</div><div class="ic"><h4>Casa Black Rio — Afro-Brazilian nightclub</h4><p>Popular club specifically tailored to Afro-Brazilians. Black Brazilian music, culture, and community. The cultural nightlife experience of the trip. This one is non-negotiable for the crew.</p></div></div>
 </div></div>
 
-<div class="iday"><div class="ihd"><h3>Yacht Day — Sun, Sea and Luxury</h3><span class="dn">Day 3 · Feb 7</span></div><div class="iitems">
-<div class="ii"><div class="it">9 AM</div><div class="ic"><h4>Chef's Recovery Brunch</h4><p>After last night, you need it. Full spread. Take your time.</p></div></div>
-<div class="ii"><div class="it">11 AM</div><div class="ic"><h4>Board Yacht — Marina da Glória</h4><p>Private yacht charter. Cruise Guanabara Bay, anchor in calm blue waters, snorkeling gear, paddleboards, Bluetooth system, champagne on deck.</p></div></div>
-<div class="ii"><div class="it">1 PM</div><div class="ic"><h4>Catered Lunch on the Water</h4><p>Fresh sushi, grilled shrimp, fruits, ice-cold drinks brought aboard.</p></div></div>
-<div class="ii"><div class="it">9 PM</div><div class="ic"><h4>Dinner — Fasano al Mare or Olympe</h4><p>Rio's finest restaurants. Dress sharp. Reserve 6 weeks in advance.</p></div></div>
-<div class="ii"><div class="it">11 PM+</div><div class="ic"><h4>The Week Rio — Club Night of the Trip</h4><p>World-class DJs, incredible production, electric crowd. Book VIP tables. This is THE night.</p></div></div>
+<!-- DAY 3 — SUNDAY FEB 7 -->
+<div class="iday">
+<div class="ihd" style="background:rgba(201,168,76,0.15);"><h3 style="color:var(--gold);">Boat Day + Carnival Night at the Sambadrome</h3><span class="dn" style="color:var(--gold);border-color:var(--gold);">Day 3 · Sun Feb 7 — THE BIGGEST DAY</span></div>
+<div class="iitems">
+<div class="ii"><div class="it">Morning</div><div class="ic"><h4>Boat day — time TBD once charter is booked ($430/person, $3,000 total)</h4><p>Primary option: Viverex motor yacht on clickandboat.com. Alternative: luxury catamaran 8h tour (also on Click&amp;Boat). Or GetMyBoat. Note: Foreign Lux Yacht Party records for YouTube — not ideal. Once booked, the rest of the day schedules around the boat return time.</p></div></div>
+<div class="ii"><div class="it">All day</div><div class="ic"><h4>On the water — Guanabara Bay, swimming, paddleboards, music, drinks</h4><p>Captain + crew included. Request: Bluetooth system, snorkeling gear, ice coolers with drinks. Catered lunch or bring supplies from grocery run. English-speaking captain — request explicitly.</p></div></div>
+<div class="ii"><div class="it">Late afternoon</div><div class="ic"><h4>Off the boat → street food, walk the beach</h4><p>Optional stop: Feira da Glória Market on the way back. Local food vendors, art, street energy. Good transition from boat day to Carnival night.</p></div></div>
+<div class="ii"><div class="it">Before Carnival</div><div class="ic"><h4>CHEF: Breakfast at Airbnb before boat day</h4><p>Chef cooks Sunday morning. Eat before boarding the yacht. Hydrate well — full day on the water followed by Carnival night. Big one.</p></div></div>
+<div class="ii"><div class="it">Night</div><div class="ic"><h4>CARNIVAL — Sambadrome Marquês de Sapucaí, Section 9 ($392/person)</h4><p>dobrazilright.com for tickets. Section 9 ONLY — flexible arrival, show up any time. Sunday night = main parade. The most spectacular live show on earth. This is what the whole trip is built around. Stay for the full parade.</p></div></div>
 </div></div>
 
-<div class="iday"><div class="ihd"><h3>Beach Day and Helicopter Views</h3><span class="dn">Day 4 · Feb 8</span></div><div class="iitems">
-<div class="ii"><div class="it">12 PM</div><div class="ic"><h4>Ipanema or Leblon Beach</h4><p>VIP beach setup via concierge. Post 5 in Ipanema is the spot. Beach vendors come to you: drinks, coconuts, sunglasses.</p></div></div>
-<div class="ii"><div class="it">3 PM</div><div class="ic"><h4>Helicopter Tour of Rio</h4><p>30-min tour over Cristo, Sugarloaf, Maracanã, and Copacabana. Book through Helisight Rio. $150–$200/person. Pure bucket list.</p></div></div>
-<div class="ii"><div class="it">8 PM</div><div class="ic"><h4>Private Chef Dinner — Bachelor Celebration Night</h4><p>Carpaccio, dry-aged steak, lobster, decadent desserts. Pop bottles. This is the moment.</p></div></div>
-<div class="ii"><div class="it">11 PM+</div><div class="ic"><h4>Barra da Tijuca Club Scene</h4><p>Nuth Lounge or Cave Club. High-end crowd, bottle service, electronic music.</p></div></div>
+<!-- DAY 4 — MONDAY FEB 8 -->
+<div class="iday">
+<div class="ihd"><h3>Selarón + Cristo + Copacabana + Pedra do Sal</h3><span class="dn">Day 4 · Mon Feb 8</span></div>
+<div class="iitems">
+<div class="ii"><div class="it">VERY early</div><div class="ic"><h4>Escadaria Selarón — arrive before the crowds (5 min from breakfast spot)</h4><p>Go as early as possible. This staircase gets flooded with tourists by 9am. Early = empty photos with the full mosaic. Non-negotiable early start — this is the one chance.</p></div></div>
+<div class="ii"><div class="it">6–10:30 AM</div><div class="ic"><h4>Breakfast: Orla 21 Rooftop buffet (5 min from Selarón)</h4><p>Av. Alm. Silvio de Noronha, 365 - Centro. Buffet served 6am–10:30am. Rooftop views, full Brazilian spread. Go right after Selarón while you're already downtown.</p></div></div>
+<div class="ii"><div class="it">Morning</div><div class="ic"><h4>Christ the Redeemer — rack railway from Rua Cosme Velho 513</h4><p>Meeting point: Hilton Rio de Janeiro Copacabana (Av. Atlântica, 1020). Small group tour option: Viator $164/person includes Cristo + Sugarloaf. Arrive 30 min early for the rack railway. Subway to Largo do Machado, then bus/taxi to Cosme Velho.</p></div></div>
+<div class="ii"><div class="it">Afternoon</div><div class="ic"><h4>Copacabana Beach — food, drinks, beach time</h4><p>Walk the famous mosaic sidewalk. Beach vendors for drinks and food. Decompress after the busy morning. No agenda — just be at Copacabana.</p></div></div>
+<div class="ii"><div class="it">Evening</div><div class="ic"><h4>Back to Airbnb — relax and get ready</h4><p>Long day. Eat at the Airbnb or order in. Hydrate. The night is worth preserving energy for.</p></div></div>
+<div class="ii"><div class="it">Night</div><div class="ic"><h4>Pedra do Sal — Monday samba night</h4><p>Free outdoor samba party every Friday AND Monday. After Sunday's Carnival Sambadrome, Monday night at Pedra do Sal is a completely different experience — raw, local, and intimate. The contrast is what makes it special.</p></div></div>
 </div></div>
 
-<div class="iday"><div class="ihd"><h3>Culture, Sports and Pre-Carnival Blocos</h3><span class="dn">Day 5 · Feb 9</span></div><div class="iitems">
-<div class="ii"><div class="it">10:30 AM</div><div class="ic"><h4>Maracanã Stadium Tour</h4><p>One of the most famous football stadiums in the world. Walk the pitch. Feel the history. Check for a Feb 2027 match and go.</p></div></div>
-<div class="ii"><div class="it">1 PM</div><div class="ic"><h4>Lunch — Churrascaria Rodízio</h4><p>All-you-can-eat Brazilian steakhouse. Waiters bring endless cuts of meat to your table. Definitive lunch experience.</p></div></div>
-<div class="ii"><div class="it">3 PM</div><div class="ic"><h4>Tijuca National Forest — Zip-lining or Waterfall Hike</h4><p>World's largest urban rainforest inside Rio. Incredible contrast from the beach vibe.</p></div></div>
-<div class="ii"><div class="it">8 PM+</div><div class="ic"><h4>Pre-Carnival Bloco Street Party</h4><p>Massive free street parties in full swing by early February. Cordão do Bola Preta is legendary. Grab a fantasia (costume) and experience Rio's soul.</p></div></div>
+<!-- DAY 5 — TUESDAY FEB 9 -->
+<div class="iday">
+<div class="ihd"><h3>Blocos All Day + Spontaneous Final Night</h3><span class="dn">Day 5 · Tue Feb 9</span></div>
+<div class="iitems">
+<div class="ii"><div class="it">Morning</div><div class="ic"><h4>Blocos (block parties) starting ~9am — Cardosão de Laranjeiras first</h4><p>Cardosão de Laranjeiras, 9:00 AM, Laranjeiras neighborhood (35 min drive from Airbnb). This is the starting point — ask people at each bloco where the next one is. Do NOT overplan this day. Move with the energy.</p></div></div>
+<div class="ii"><div class="it">All day</div><div class="ic"><h4>3–4 Blocos throughout the day — mobile, spontaneous, all over the city</h4><p>2026 Tuesday blocos (subject to change 2027): Bloco das Carmelitas 8am Santa Teresa · Vagalume O Verde 8am Jardim Botânico · Cardosão de Laranjeiras 9am Laranjeiras · Vamo ET 10am Glória · Orquestra Voadora 1pm Glória. Move from bloco to bloco with the crowds.</p></div></div>
+<div class="ii"><div class="it">Afternoon</div><div class="ic"><h4>Pato com Laranja to cool down — food and drinks (14 min from blocos)</h4><p>Av. Delfim Moreira, 1746 - Leblon. Beachside spot in Leblon. Eat here — come back from the blocos and decompress. Good food, great views, calmer energy before the final night.</p></div></div>
+<div class="ii"><div class="it">Evening</div><div class="ic"><h4>Back to Airbnb — relax and get ready for final night</h4><p>Last night in Rio. Get dressed properly. This is the night with no plan — the best kind.</p></div></div>
+<div class="ii"><div class="it">Night</div><div class="ic"><h4>Spontaneous night — find out what's going on locally or Favela party</h4><p>No bookings, no reservations. Ask locals, ask the Airbnb host, ask people at Pato com Laranja. The final night should be a discovery. Favela party if the opportunity comes up — some of the best nightlife in Rio happens in the favelas.</p></div></div>
 </div></div>
 
-<div class="iday"><div class="ihd"><h3>Final Day — Last Moments in Paradise</h3><span class="dn">Day 6 · Feb 10</span></div><div class="iitems">
-<div class="ii"><div class="it">9 AM</div><div class="ic"><h4>Final Chef Breakfast and Check-Out</h4><p>Last big breakfast. Chef makes it memorable. Pack up and settle final bills.</p></div></div>
-<div class="ii"><div class="it">11 AM</div><div class="ic"><h4>Final Ipanema Beach Walk and Souvenirs</h4><p>One last time on those iconic mosaic sidewalks. Feira de Ipanema for gifts. One more coconut water from a beach vendor.</p></div></div>
-<div class="ii"><div class="it">1 PM</div><div class="ic"><h4>Farewell Lunch — CT Boucherie or Zaza Bistrô</h4><p>One final proper meal. Upscale but relaxed — close the trip on a high note.</p></div></div>
-<div class="ii"><div class="it">3 PM</div><div class="ic"><h4>Private Transfer to GIG Airport</h4><p>Pre-booked luxury SUV. Leave 3+ hours before international departure. Arrive home changed men.</p></div></div>
+<!-- DAY 6 — WEDNESDAY FEB 10 -->
+<div class="iday">
+<div class="ihd"><h3>Final Day — Departure</h3><span class="dn">Day 6 · Wed Feb 10</span></div>
+<div class="iitems">
+<div class="ii"><div class="it">Morning</div><div class="ic"><h4>Final morning at the Airbnb — pack up, check out</h4><p>Last caipirinha on the rooftop. Take it in. Thank the host. Leave the place how you found it.</p></div></div>
+<div class="ii"><div class="it">Departure</div><div class="ic"><h4>Mercedes Benz Sprinter to GIG Airport ($30/person)</h4><p>Same private bus as arrival. Book both trips at the same time. Depart for airport 3+ hours before international flight. Brazilian customs is thorough — do not cut it close.</p></div></div>
 </div></div>
+
 </div>
 <!-- FLIGHTS -->
 <div id="flights" class="sec">
@@ -588,295 +703,547 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 <div class="tip" style="margin-top:18px;"><h4><svg class="i" width="14" height="14"><use href="#s-bag"/></svg> Leave Space in Your Bag</h4><p>You WILL buy things in Rio — cachaça, art, jewelry, Havaianas, São Tomé chocolate. The collapsible duffel bag trick is your best friend for return shopping.</p></div>
 </div>
 <!-- BUDGET -->
-<div id="budget" class="sec">
-<div class="eyebrow">Financial Planning</div><h2>Budget and Payment Plan</h2><div class="div"></div>
-<div class="tip info" style="margin-top:16px;"><h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> Group Size: 6 People — Adjust to Your Actual Group</h4><p>Larger groups (8–10 people) bring per-person costs down significantly. All figures in USD.</p></div>
-<div class="card"><h3><span class="ico-wrap"><svg class="i" width="14" height="14" style="color:var(--gold)"><use href="#s-dollar"/></svg></span> Full Cost Breakdown Per Person</h3>
-<table class="costtbl" style="margin-top:12px;">
-<thead><tr><th>Category</th><th>Group Total</th><th>Per Person (6)</th><th>Notes</th></tr></thead>
+
+<div id="costs" class="sec">
+<div class="eyebrow">Per Person Breakdown</div>
+<h2>Cost Calculator — 5 to 8 People</h2>
+<div class="div"></div>
+<p class="desc">Fixed costs (Airbnb, boat, chef) get cheaper as the group grows. Per-person costs stay the same. Click a group size to see your number.</p>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 20px;align-items:center;">
+<span style="font-size:12px;color:var(--tm);letter-spacing:1px;text-transform:uppercase;margin-right:4px;">Group size:</span>
+<button onclick="setGroup(5)" id="g5" class="gcb active-g">5 people</button>
+<button onclick="setGroup(6)" id="g6" class="gcb">6 people</button>
+<button onclick="setGroup(7)" id="g7" class="gcb">7 people</button>
+<button onclick="setGroup(8)" id="g8" class="gcb">8 people</button>
+</div>
+
+<div class="tip info"><h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> How to read this</h4><p>Green rows = fixed shared costs that decrease per person as more people join. White rows = per-person costs the same for any group size. The totals at the bottom update when you change the group size above.</p></div>
+
+<div style="overflow-x:auto;margin-top:20px;">
+<table class="dtbl" id="costTable">
+<thead>
+<tr>
+<th style="text-align:left;width:36%;">Expense</th>
+<th>Type</th>
+<th>Group Total</th>
+<th>Per Person</th>
+<th style="text-align:left;min-width:220px;">Notes</th>
+</tr>
+</thead>
 <tbody>
-<tr class="sec"><td colspan="4">Flights</td></tr>
-<tr><td>Budget RT — Copa or LATAM sale</td><td>$500 × 6</td><td>$500</td><td>Economy sale fare MIA → GIG</td></tr>
-<tr><td>Economy RT — American or Delta</td><td>$900 × 6</td><td>$900</td><td>Standard economy, direct or 1-stop</td></tr>
-<tr><td>Comfort+ / Premium Economy upgrade</td><td>$1,300 × 6</td><td>$1,300</td><td>Worth it for 9.5-hr overnight</td></tr>
-<tr><td>Business Class RT (Flagship/Delta One)</td><td>$3,500 × 6</td><td>$3,500</td><td>Full luxury arrival — highly recommended</td></tr>
-<tr><td>Brazil eVisa fee</td><td>$81 × 6</td><td>$81</td><td>Per person — apply 4–6 weeks early</td></tr>
-<tr><td>Airport transfer (van)</td><td>$120 each way</td><td>$40</td><td>Split by group</td></tr>
-<tr class="sec"><td colspan="4">Accommodation (5 nights)</td></tr>
-<tr><td>Luxury Penthouse (Airbnb Luxe)</td><td>$1,800/night × 5</td><td>$1,500</td><td>Entire villa split 6 ways — best value</td></tr>
-<tr><td>OR Hotel (Fasano/Belmond)</td><td>$700/room × 3 × 5</td><td>$1,750</td><td>2 per room, 3 rooms</td></tr>
-<tr class="sec"><td colspan="4">Food and Chef</td></tr>
-<tr><td>Private chef (4 full days)</td><td>$500/day × 4</td><td>$333</td><td>All meals handled</td></tr>
-<tr><td>Chef ingredients daily</td><td>$150/day × 4</td><td>$100</td><td>Fresh market daily</td></tr>
-<tr><td>Dining out (2 dinners + lunches)</td><td>—</td><td>$400</td><td>Upscale restaurants</td></tr>
-<tr class="sec"><td colspan="4">Activities and Experiences</td></tr>
-<tr><td>Yacht charter (full day)</td><td>$3,500 total</td><td>$583</td><td>Marina da Glória</td></tr>
-<tr><td>Helicopter city tour</td><td>$200/person</td><td>$200</td><td>Helisight Rio</td></tr>
-<tr><td>Cristo + Sugarloaf VIP tickets</td><td>$65/person</td><td>$65</td><td>Pre-book online</td></tr>
-<tr><td>Activities (Tijuca, Maracanã, etc.)</td><td>$115/person</td><td>$115</td><td>Stadium tour + forest zip</td></tr>
-<tr class="sec"><td colspan="4">Transport and Nightlife</td></tr>
-<tr><td>Private driver (4 days)</td><td>$275/day × 4</td><td>$183</td><td>Split by group</td></tr>
-<tr><td>Club entry and VIP table share</td><td>—</td><td>$400</td><td>2–3 big nights out</td></tr>
-<tr><td>Drinks (non-chef nights)</td><td>—</td><td>$300</td><td>Bars, beach kiosks, Lapa</td></tr>
-<tr class="sec"><td colspan="4">Insurance and Misc</td></tr>
-<tr><td>Travel insurance</td><td>—</td><td>$80</td><td>Do not skip</td></tr>
-<tr><td>Tips, souvenirs, misc cash</td><td>—</td><td>$200</td><td>Cash Reais on hand</td></tr>
-<tr class="tot"><td><strong>TOTAL — Budget (Copa + villa)</strong></td><td>—</td><td>~$4,200</td><td>Most affordable full trip</td></tr>
-<tr class="tot"><td><strong>TOTAL — Mid-Range (economy + villa)</strong></td><td>—</td><td>~$5,000</td><td>Standard economy + penthouse</td></tr>
-<tr class="tot"><td><strong>TOTAL — Premium (Comfort+ + villa)</strong></td><td>—</td><td>~$5,600</td><td>Recommended sweet spot</td></tr>
-<tr class="tot"><td><strong>TOTAL — Full Bougie (Business + hotel)</strong></td><td>—</td><td>~$8,900</td><td>Business class + Fasano</td></tr>
-</tbody></table></div>
+<!-- FIXED COSTS -->
+<tr class="sec-row"><td colspan="5">Fixed Costs — shared equally (cheaper per person as group grows)</td></tr>
+<tr class="fixed-row">
+  <td class="exp-name">Airbnb villa — 5 nights</td>
+  <td class="type-badge fixed-badge">Fixed</td>
+  <td class="group-total" data-total="2500">$2,500</td>
+  <td class="pp-cell" data-total="2500"></td>
+  <td class="notes-cell">Av. Rachel de Queiroz, 100 — Barra da Tijuca</td>
+</tr>
+<tr class="fixed-row">
+  <td class="exp-name">Boat rental — Sun Feb 7</td>
+  <td class="type-badge fixed-badge">Fixed</td>
+  <td class="group-total" data-total="3000">$3,000</td>
+  <td class="pp-cell" data-total="3000"></td>
+  <td class="notes-cell">clickandboat.com Viverex. Captain + crew included.</td>
+</tr>
+<tr class="fixed-row">
+  <td class="exp-name">Private chef — 4 meals</td>
+  <td class="type-badge fixed-badge">Fixed</td>
+  <td class="group-total" data-total="600">$600</td>
+  <td class="pp-cell" data-total="600"></td>
+  <td class="notes-cell">Sat breakfast · Sun breakfast · Mon dinner · Tue All White Dinner</td>
+</tr>
+<tr class="fixed-row">
+  <td class="exp-name">Shared groceries</td>
+  <td class="type-badge fixed-badge">Fixed</td>
+  <td class="group-total" data-total="250">$250</td>
+  <td class="pp-cell" data-total="250"></td>
+  <td class="notes-cell">Mercado Dia a Dia Laguna — 3-min Uber from Airbnb</td>
+</tr>
+<!-- PER PERSON COSTS -->
+<tr class="sec-row"><td colspan="5">Per-Person Costs — same regardless of group size</td></tr>
+<tr class="pp-row">
+  <td class="exp-name">Flights — economy average</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="900">$900</td>
+  <td class="notes-cell">Budget: $500 (Copa). Economy: $900. Comfort+: $1,300. Business: $3,500.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Carnival tickets — Section 9</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="392">$392</td>
+  <td class="notes-cell">Sunday Feb 7. dobrazilright.com. Book April 25.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Helicopter tour — Sat Feb 6</td>
+  <td class="type-badge opt-badge">Optional</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="350">$350</td>
+  <td class="notes-cell">Optional. Skip = do Cristo on Monday instead ($164).</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Cristo + Sugarloaf tour</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="164">$164</td>
+  <td class="notes-cell">Mon Feb 8. Viator small group. Meet at Hilton Copacabana.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Brazil eVisa</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="81">$81</td>
+  <td class="notes-cell">vfsglobal.com (official only). Due May 10, 2026.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Airport transport — both ways</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="60">$60</td>
+  <td class="notes-cell">Mercedes Sprinter $30/pp each way × 2.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Ubers — full trip</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="100">$100</td>
+  <td class="notes-cell">~$80–100/day back and forth. 2 cars when 6+ people.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Skylab Rio dinner — Fri Feb 5</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="100">$100</td>
+  <td class="notes-cell">Av. Atlântica 3264. Dress code. Reserve Dec 15.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Braseiro da Gávea — Sat Feb 6</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="75">$75</td>
+  <td class="notes-cell">Praça Santos Dumont 116. Reserve Dec 15.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Travel insurance</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="80">$80</td>
+  <td class="notes-cell">Each buys own. Allianz or World Nomads. Due Nov 1.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Nightlife / drinks misc</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="150">$150</td>
+  <td class="notes-cell">Bar covers, drinks across Lapa, Pedra do Sal, Casa Black.</td>
+</tr>
+<tr class="pp-row">
+  <td class="exp-name">Street food / beach vendors</td>
+  <td class="type-badge pp-badge">Per Person</td>
+  <td class="group-total pp-label">per person</td>
+  <td class="pp-cell pp-fixed" data-pp="60">$60</td>
+  <td class="notes-cell">Blocos, Copacabana beach, Rasta Beach.</td>
+</tr>
+<!-- TOTALS -->
+<tr class="sec-row"><td colspan="5">Totals per person</td></tr>
+<tr class="total-row" id="total-with">
+  <td colspan="2" style="font-family:'Playfair Display',serif;font-size:15px;color:#fff;font-weight:700;padding:14px 12px;">TOTAL — with helicopter</td>
+  <td class="group-total" id="total-fixed-sum" style="font-size:14px;color:var(--gold);font-weight:700;text-align:right;padding:14px 12px;"></td>
+  <td class="pp-cell" id="total-pp-display" style="font-size:17px;color:var(--gold);font-weight:700;text-align:right;padding:14px 12px;"></td>
+  <td style="color:var(--tm);font-size:12px;padding:14px 12px;">All costs combined</td>
+</tr>
+<tr class="total-row" id="total-without">
+  <td colspan="2" style="font-family:'Playfair Display',serif;font-size:14px;color:#ccc;font-weight:700;padding:10px 12px;">TOTAL — without helicopter (skip, do Cristo Mon)</td>
+  <td style="background:var(--dark2);"></td>
+  <td id="total-noheli-display" style="font-size:16px;color:#aaa;font-weight:700;text-align:right;padding:10px 12px;background:var(--dark2);"></td>
+  <td style="color:var(--tm);font-size:12px;padding:10px 12px;background:var(--dark2);">Saves $350 — Cristo on Mon is $164</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="payments" class="sec">
+<div class="eyebrow">Exact Deadlines</div>
+<h2>Payment Schedule — Exact Dates</h2>
+<div class="div"></div>
+<p class="desc">No ranges. Every payment has a specific due date. Miss a date and spots disappear — especially the Airbnb and Carnival tickets.</p>
 
-<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:20px;margin:28px 0 14px;">12-Month Payment Plan</h3>
-<p style="color:var(--tm);font-size:14px;margin-bottom:22px;">Starting March/April 2026 through February 2027. Mid-range budget ~$5,600 per person = ~$560/month savings.</p>
-<div class="tl">
-<div class="tli"><div class="tl-mo">March – April 2026</div><div class="tl-ti">Lock In Commitments and Budget Tiers</div><div class="tl-de">Everyone formally commits. Set up a shared trip fund via Splitwise or Zelle. Decide group size, budget tier (budget vs. bougie), and accommodation style.</div><div class="tl-am">$0 out yet — just commitment</div></div>
-<div class="tli"><div class="tl-mo">May 2026</div><div class="tl-ti">Book Flights and Apply for eVisa</div><div class="tl-de">Book all flights now — prices climb fast. Everyone applies for the Brazil eVisa ($80.90) with 2 months of bank statements showing $2,000 balance. Do both at the same time as a group.</div><div class="tl-am">$580–$3,600 per person (flights + visa)</div></div>
-<div class="tli"><div class="tl-mo">June 2026</div><div class="tl-ti">Book Accommodation</div><div class="tl-de">Secure the Airbnb penthouse or hotel rooms with deposit. Luxury Feb properties fill up 8–10 months in advance. Pay 25–50% deposit.</div><div class="tl-am">~$300–$500 per person deposit</div></div>
-<div class="tli"><div class="tl-mo">July – August 2026</div><div class="tl-ti">Book Chef and Private Driver</div><div class="tl-de">Contact chef services, book private driver for trip duration. Start researching yacht charter companies and pricing.</div><div class="tl-am">~$150 deposit per person</div></div>
-<div class="tli"><div class="tl-mo">September 2026</div><div class="tl-ti">Book Yacht Charter and Restaurants</div><div class="tl-de">Confirm yacht for Day 3, pay deposit. Book helicopter experience. Make dinner reservations for Fasano al Mare and Olympe — both fill months ahead.</div><div class="tl-am">~$200 deposit per person</div></div>
-<div class="tli"><div class="tl-mo">October 2026</div><div class="tl-ti">Book Activities and Health Prep</div><div class="tl-de">Book Cristo Redentor, Sugarloaf, and Tijuca tours. Visit a travel health clinic for yellow fever vaccine. Renew passports NOW if needed.</div><div class="tl-am">~$200 per person activities</div></div>
-<div class="tli"><div class="tl-mo">November 2026</div><div class="tl-ti">Purchase Travel Insurance</div><div class="tl-de">Buy comprehensive travel insurance (Allianz, World Nomads, or through credit card). Share itinerary with a trusted person at home.</div><div class="tl-am">~$80 per person</div></div>
-<div class="tli"><div class="tl-mo">December 2026</div><div class="tl-ti">Settle Final Balances</div><div class="tl-de">Pay remaining accommodation balance. Confirm ALL bookings in writing. Group trip sync call to make sure nothing is missed.</div><div class="tl-am">~$700 remaining per person</div></div>
-<div class="tli"><div class="tl-mo">January 2027</div><div class="tl-ti">Final Month — Polish Everything</div><div class="tl-de">Reconfirm all reservations. Notify bank of international travel. Download offline Google Maps of Rio. Activate trip group WhatsApp. Print eVisa confirmations.</div><div class="tl-am">~$200 spending money buffer</div></div>
-<div class="tli"><div class="tl-mo">February 5, 2027</div><div class="tl-ti">Rio de Janeiro, Baby</div><div class="tl-de">You planned it right. You saved smart. Tommy deserves this. The whole crew shows up, shows out, and makes it legendary.</div><div class="tl-am">Cheers, kings — Boa viagem</div></div>
-</div>
-<div class="tip ok" style="margin-top:24px;"><h4><svg class="i" width="14" height="14"><use href="#s-dollar"/></svg> Smart Money Tips</h4><p>Use a Wise card or Charles Schwab debit — both have zero foreign transaction fees, saving 3–5% on every purchase. Wise lets you hold Brazilian Reais and convert at the best rate. Also: Amex Platinum cardholders get Priority Pass lounge access at MIA — makes the departure experience significantly better.</p></div>
+<div class="tip warn" style="margin-top:18px;margin-bottom:8px;"><h4><svg class="i" width="14" height="14"><use href="#s-warn"/></svg> April 25, 2026 is the most important date on this list</h4><p>Airbnb deposit and Carnival tickets need to be secured the same day. These two items will disappear before anything else. Everything else follows from having those locked.</p></div>
+
+<div style="overflow-x:auto;margin-top:20px;">
+<table class="dtbl">
+<thead>
+<tr>
+<th style="text-align:left;width:26%;">Expense</th>
+<th style="min-width:130px;">Due Date</th>
+<th>Group Total</th>
+<th>5 ppl / pp</th>
+<th>6 ppl / pp</th>
+<th>7 ppl / pp</th>
+<th>8 ppl / pp</th>
+<th>Type</th>
+<th style="text-align:left;min-width:200px;">Action</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="sec-row"><td colspan="9">Book Now — April 25, 2026</td></tr>
+<tr>
+  <td class="exp-name">Airbnb deposit (50%)</td>
+  <td class="date-urgent">April 25, 2026</td>
+  <td class="money-cell">$1,250</td>
+  <td class="money-cell">$250</td><td class="money-cell">$208</td><td class="money-cell">$179</td><td class="money-cell">$156</td>
+  <td><span class="pay-badge dep">50% Deposit</span></td>
+  <td class="notes-cell">Airbnb — Av. Rachel de Queiroz, 100. Balance due Jan 5, 2027.</td>
+</tr>
+<tr>
+  <td class="exp-name">Carnival tickets — Section 9 × group</td>
+  <td class="date-urgent">April 25, 2026</td>
+  <td class="money-cell" id="carnival-total">$2,744</td>
+  <td class="money-cell">$392</td><td class="money-cell">$392</td><td class="money-cell">$392</td><td class="money-cell">$392</td>
+  <td><span class="pay-badge full">Full Payment</span></td>
+  <td class="notes-cell">dobrazilright.com — $392 × group size. Section 9. Sunday Feb 7.</td>
+</tr>
+
+<tr class="sec-row"><td colspan="9">May 2026</td></tr>
+<tr>
+  <td class="exp-name">Brazil eVisa — all members</td>
+  <td class="date-urgent">May 10, 2026</td>
+  <td class="money-cell">$81 pp</td>
+  <td class="money-cell">$81</td><td class="money-cell">$81</td><td class="money-cell">$81</td><td class="money-cell">$81</td>
+  <td><span class="pay-badge full">Full / Individual</span></td>
+  <td class="notes-cell">All apply same day at vfsglobal.com. Need $2,000 bank statement.</td>
+</tr>
+<tr>
+  <td class="exp-name">Flights — book by this date</td>
+  <td class="date-urgent">May 15, 2026</td>
+  <td class="money-cell">per person</td>
+  <td class="money-cell">$900</td><td class="money-cell">$900</td><td class="money-cell">$900</td><td class="money-cell">$900</td>
+  <td><span class="pay-badge full">Individual</span></td>
+  <td class="notes-cell">Budget: $500 (Copa). Economy: $900. Comfort+: $1,300. Business: $3,500.</td>
+</tr>
+
+<tr class="sec-row"><td colspan="9">Summer 2026 — July–September</td></tr>
+<tr>
+  <td class="exp-name">Boat rental deposit (50%)</td>
+  <td class="date-med">July 15, 2026</td>
+  <td class="money-cell">$1,500</td>
+  <td class="money-cell">$300</td><td class="money-cell">$250</td><td class="money-cell">$214</td><td class="money-cell">$188</td>
+  <td><span class="pay-badge dep">50% Deposit</span></td>
+  <td class="notes-cell">clickandboat.com. Balance due Jan 20, 2027.</td>
+</tr>
+<tr>
+  <td class="exp-name">Private chef — 4 meals deposit</td>
+  <td class="date-med">September 15, 2026</td>
+  <td class="money-cell">$180</td>
+  <td class="money-cell">$36</td><td class="money-cell">$30</td><td class="money-cell">$26</td><td class="money-cell">$23</td>
+  <td><span class="pay-badge dep">30% Deposit</span></td>
+  <td class="notes-cell">takeachef.com — Sat breakfast, Sun breakfast, Mon dinner, Tue All White Dinner.</td>
+</tr>
+
+<tr class="sec-row"><td colspan="9">Fall 2026 — October–November</td></tr>
+<tr>
+  <td class="exp-name">Helicopter tour — Sat Feb 6</td>
+  <td class="date-med">October 1, 2026</td>
+  <td class="money-cell" id="heli-total">$2,450</td>
+  <td class="money-cell">$350</td><td class="money-cell">$350</td><td class="money-cell">$350</td><td class="money-cell">$350</td>
+  <td><span class="pay-badge full">Full Payment</span></td>
+  <td class="notes-cell">viator.com or rio2fly.com.br. R. Dom Bosco, 644 - Vargem Grande (30-min drive).</td>
+</tr>
+<tr>
+  <td class="exp-name">Travel insurance — each buys own</td>
+  <td class="date-low">November 1, 2026</td>
+  <td class="money-cell">~$80 pp</td>
+  <td class="money-cell">$80</td><td class="money-cell">$80</td><td class="money-cell">$80</td><td class="money-cell">$80</td>
+  <td><span class="pay-badge full">Individual</span></td>
+  <td class="notes-cell">Allianz or World Nomads. Covers cancellation + medical + baggage.</td>
+</tr>
+
+<tr class="sec-row"><td colspan="9">December 2026</td></tr>
+<tr>
+  <td class="exp-name">Airport transport — both ways</td>
+  <td class="date-low">December 1, 2026</td>
+  <td class="money-cell">$420</td>
+  <td class="money-cell">$84</td><td class="money-cell">$70</td><td class="money-cell">$60</td><td class="money-cell">$53</td>
+  <td><span class="pay-badge full">Full Payment</span></td>
+  <td class="notes-cell">Mercedes Benz Sprinter — $30/pp each way. Book arrival + departure together.</td>
+</tr>
+<tr>
+  <td class="exp-name">Skylab Rio reservation</td>
+  <td class="date-low">December 15, 2026</td>
+  <td class="money-cell res-only">Reserve only</td>
+  <td class="money-cell res-only">No deposit</td><td class="money-cell res-only">—</td><td class="money-cell res-only">—</td><td class="money-cell res-only">—</td>
+  <td><span class="pay-badge res">Reserve Only</span></td>
+  <td class="notes-cell">Av. Atlântica, 3264 - Copacabana. 7PM Fri Feb 5. Dress code. Pay night of.</td>
+</tr>
+<tr>
+  <td class="exp-name">Braseiro da Gávea reservation</td>
+  <td class="date-low">December 15, 2026</td>
+  <td class="money-cell res-only">Reserve only</td>
+  <td class="money-cell res-only">No deposit</td><td class="money-cell res-only">—</td><td class="money-cell res-only">—</td><td class="money-cell res-only">—</td>
+  <td><span class="pay-badge res">Reserve Only</span></td>
+  <td class="notes-cell">Praça Santos Dumont, 116 - Gávea. Sat Feb 6, ~5–6PM. Pay night of.</td>
+</tr>
+
+<tr class="sec-row"><td colspan="9">January 2027</td></tr>
+<tr>
+  <td class="exp-name">Airbnb balance (50%)</td>
+  <td class="date-low">January 5, 2027</td>
+  <td class="money-cell">$1,250</td>
+  <td class="money-cell">$250</td><td class="money-cell">$208</td><td class="money-cell">$179</td><td class="money-cell">$156</td>
+  <td><span class="pay-badge bal">50% Balance</span></td>
+  <td class="notes-cell">Final Airbnb payment — 30 days before check-in Feb 5.</td>
+</tr>
+<tr>
+  <td class="exp-name">Cristo + Sugarloaf tour</td>
+  <td class="date-low">January 10, 2027</td>
+  <td class="money-cell" id="cristo-total">$1,148</td>
+  <td class="money-cell">$164</td><td class="money-cell">$164</td><td class="money-cell">$164</td><td class="money-cell">$164</td>
+  <td><span class="pay-badge full">Full Payment</span></td>
+  <td class="notes-cell">Viator small group. Meet: Hilton Copacabana, Av. Atlântica, 1020. Mon Feb 8.</td>
+</tr>
+<tr>
+  <td class="exp-name">Boat rental balance (50%)</td>
+  <td class="date-low">January 20, 2027</td>
+  <td class="money-cell">$1,500</td>
+  <td class="money-cell">$300</td><td class="money-cell">$250</td><td class="money-cell">$214</td><td class="money-cell">$188</td>
+  <td><span class="pay-badge bal">50% Balance</span></td>
+  <td class="notes-cell">Final boat payment — 2 weeks before Sun Feb 7 charter.</td>
+</tr>
+
+<tr class="sec-row"><td colspan="9">In Rio — At Completion</td></tr>
+<tr>
+  <td class="exp-name">Chef balance + tip</td>
+  <td class="date-low">February 10, 2027</td>
+  <td class="money-cell">$420</td>
+  <td class="money-cell">$84</td><td class="money-cell">$70</td><td class="money-cell">$60</td><td class="money-cell">$53</td>
+  <td><span class="pay-badge bal">Balance + Tip</span></td>
+  <td class="notes-cell">Pay chef on departure morning. Tip well — 4 elevated meals.</td>
+</tr>
+
+</tbody>
+</table>
 </div>
 
-<!-- TOMMY'S PICKS -->
-<div id="picks" class="sec">
-<div class="eyebrow">Curated by Tommy</div><h2>Tommy's Picks</h2><div class="div"></div>
-<p class="desc">Real links, real options — everything researched and handpicked for this trip.</p>
+<div class="tip ok" style="margin-top:24px;"><h4><svg class="i" width="14" height="14"><use href="#s-dollar"/></svg> Smart card tip</h4><p>Use a Wise card or Charles Schwab debit in Rio — zero foreign transaction fees. Save 3–5% on every purchase vs. airport exchange. Amex Platinum holders: Priority Pass lounge access at MIA on departure day.</p></div>
+</div>
+<div id="meals" class="sec">
+<div class="eyebrow">Day by Day Food</div>
+<h2>Chef &amp; Food Schedule</h2>
+<div class="div"></div>
+<p class="desc">Every meal across 6 days — 4 chef meals, 4 restaurants, 1 catered on the boat, the rest is street food and beach vendors.</p>
 
-<!-- ACCOMMODATION -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-bed"/></svg> Airbnb Options
-</h3>
-<div class="g2">
-<div class="pick-card">
-<div class="pick-label">Option 1</div>
-<h4>Villa in Rio de Janeiro</h4>
-<div class="pick-meta"><svg class="i" width="12" height="12" style="color:var(--gold)"><use href="#s-star"/></svg> 4.83 &nbsp;&middot;&nbsp; 6 bedrooms &nbsp;&middot;&nbsp; 11 beds &nbsp;&middot;&nbsp; 8 baths</div>
-<p>Top-rated luxury villa with full capacity for the crew. High rating means reliable quality and a host who delivers.</p>
-<a href="https://www.airbnb.com" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Airbnb</a>
-</div>
-<div class="pick-card">
-<div class="pick-label alt">Option 2</div>
-<h4>Home in Rio de Janeiro</h4>
-<div class="pick-meta"><svg class="i" width="12" height="12" style="color:var(--gold)"><use href="#s-star"/></svg> New listing &nbsp;&middot;&nbsp; 5 bedrooms &nbsp;&middot;&nbsp; 8 beds &nbsp;&middot;&nbsp; 7 baths</div>
-<p>Brand new listing — no reviews yet but strong specs. Good backup if Option 1 is booked. Worth messaging the host for details.</p>
-<a href="https://www.airbnb.com" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Airbnb</a>
-</div>
-</div>
-
-<!-- CARNIVAL -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-music"/></svg> Carnival Grandstand Tickets
-</h3>
-<div class="tip ok"><h4><svg class="i" width="14" height="14"><use href="#s-check"/></svg> Section 9 is the BEST Section</h4><p>Section 9 lets you arrive at any time — no strict entry window. Sunday or Monday are the best nights. $392 per ticket. We will decide which night makes most sense based on the full schedule.</p></div>
-<div class="pick-card" style="margin-bottom:18px;">
-<h4>Carnival Sambadrome Grandstand Tickets</h4>
-<div class="pick-meta">$392 per person &nbsp;&middot;&nbsp; Section 9 recommended &nbsp;&middot;&nbsp; Sunday or Monday nights</div>
-<p>Official grandstand seats at the Sambadrome for the main Carnival parade. Section 9 is the move — flexible arrival, great sightlines, and the most relaxed experience of all sections.</p>
-<a href="https://www.dobrazilright.com/rio-carnival-grandstand-tickets/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> dobrazilright.com — Buy Tickets</a>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;margin-top:18px;">
+<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(142,68,173,0.15);border:1px solid rgba(142,68,173,0.3);color:#a569bd;">
+  <svg class="i" width="11" height="11"><use href="#s-chef"/></svg> Chef Meal
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(231,76,60,0.1);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;">
+  <svg class="i" width="11" height="11"><use href="#s-pin"/></svg> Restaurant
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(41,128,185,0.1);border:1px solid rgba(41,128,185,0.3);color:#5dade2;">
+  <svg class="i" width="11" height="11"><use href="#s-boat"/></svg> Catered / Boat
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#888;">
+  <svg class="i" width="11" height="11"><use href="#s-sun"/></svg> Street / Beach / Own
+</span>
+<span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:3px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:var(--gold);">
+  <svg class="i" width="11" height="11"><use href="#s-star"/></svg> All White Dinner
+</span>
 </div>
 
-<!-- ACTIVITIES -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-sun"/></svg> Activities and Experiences
-</h3>
-<div class="g2">
-<div class="pick-card">
-<div class="pick-label">Must-Do</div>
-<h4>Hang Gliding over Rio</h4>
-<p>Launch from Pedra Bonita and soar over the city, Ipanema beach, and Leblon below. One of the most unique things you can do in any city on earth. Tandem jumps — no experience needed.</p>
-<a href="https://www.instagram.com/reel/C-X_LjLujbV/?igsh=bndpaTA3cHBhZ2Z4" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch the vibe on Instagram</a>
-</div>
-<div class="pick-card">
-<div class="pick-label">Pro Tip</div>
-<h4>Escadaria Selarón</h4>
-<p>The famous mosaic staircase of Rio — one of the most photographed spots in the city. Go very early morning (before 8am) to get photos without hundreds of tourists in frame. Worth the early wake-up call.</p>
-<a href="https://youtu.be/_FE194VN6c4?si=K6Lw0nITVMb0zR1K" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on YouTube</a>
-</div>
-<div class="pick-card">
-<div class="pick-label">Beach Day</div>
-<h4>Ipanema Beach on Sunday</h4>
-<p>Sunday at Ipanema is the event. The entire city comes out — music, vendors, beach sports, and an incredible atmosphere. Post 9 is the social hub. Make sure Day 4 or 5 falls on a Sunday.</p>
-<a href="https://www.instagram.com/reel/DTglMPyEVM6/?igsh=cHpyMDRnM3l1NnVn" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch the vibe on Instagram</a>
-</div>
-<div class="pick-card">
-<div class="pick-label">Culture</div>
-<h4>Pedra do Sal — Samba at the Source</h4>
-<p>Historic Afro-Brazilian square where samba was literally born. Free samba party every Friday and Monday night. Outdoor, authentic, locals and visitors together. This is the cultural heartbeat of Rio.</p>
-<a href="https://www.instagram.com/reel/DTtvsVrDM4H/?igsh=MWZwMzcxMjdvYmlmYw==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-<a href="https://youtu.be/TJPtopDvsQk?si=USJvSZJqUwtyY5LL" class="pick-link" target="_blank" style="margin-top:6px;"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Full video on YouTube</a>
-</div>
+<div style="overflow-x:auto;">
+<table class="dtbl">
+<thead>
+<tr>
+<th style="text-align:left;width:17%;">Day</th>
+<th style="width:11%;">Meal</th>
+<th style="width:14%;">Type</th>
+<th style="text-align:left;">Where / What</th>
+<th style="text-align:left;min-width:200px;">Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="day-hdr-row"><td colspan="5">Friday Feb 5 — Arrival</td></tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Arrival</td>
+  <td><span class="meal-type mt-street">Street/Own</span></td>
+  <td class="exp-name">Travel snacks / airport food</td>
+  <td class="notes-cell">Grocery run first thing on arrival. Mercado Dia a Dia Laguna — Av. Rachel de Queiroz, 951.</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Dinner</td>
+  <td><span class="meal-type mt-resto">Restaurant</span></td>
+  <td class="exp-name">Skylab Rio Othon Palace — 30th floor rooftop</td>
+  <td class="notes-cell">7PM reservation, dress code. Av. Atlântica, 3264 - Copacabana. Reserve Dec 15, 2026.</td>
+</tr>
+
+<tr class="day-hdr-row"><td colspan="5">Saturday Feb 6 — Helicopter + Beach + Casa Black</td></tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
+  <td><span class="meal-type mt-chef">Chef Meal</span></td>
+  <td class="exp-name">Private chef at Airbnb — full Brazilian spread</td>
+  <td class="notes-cell">Açaí, tapioca crepes, eggs, juice, pão de queijo. Eat before helicopter (30-min drive).</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Lunch</td>
+  <td><span class="meal-type mt-street">Beach</span></td>
+  <td class="exp-name">Rasta Beach — drinks and snacks</td>
+  <td class="notes-cell">After helicopter. Informal beach food. Reggae vibes, strong caipirinhas.</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Dinner</td>
+  <td><span class="meal-type mt-resto">Restaurant</span></td>
+  <td class="exp-name">Braseiro da Gávea — most famous steaks in Rio</td>
+  <td class="notes-cell">~5–6PM. Praça Santos Dumont, 116 - Gávea. On the way back to Airbnb. Reserve Dec 15.</td>
+</tr>
+
+<tr class="day-hdr-row"><td colspan="5">Sunday Feb 7 — Boat Day + Carnival</td></tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
+  <td><span class="meal-type mt-chef">Chef Meal</span></td>
+  <td class="exp-name">Private chef at Airbnb — fuel up before boat day</td>
+  <td class="notes-cell">Full spread before departing for marina. Big day ahead — eat well.</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Lunch</td>
+  <td><span class="meal-type mt-boat">Catered</span></td>
+  <td class="exp-name">Catering brought aboard the yacht</td>
+  <td class="notes-cell">Arrange delivery to Marina da Glória before boarding. Sushi, shrimp, tropical fruit, cold drinks.</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Pre-night</td>
+  <td><span class="meal-type mt-street">Street</span></td>
+  <td class="exp-name">Street food / Feira da Glória on way back</td>
+  <td class="notes-cell">Quick food before Airbnb prep for Carnival. Feira da Glória Market optional stop.</td>
+</tr>
+
+<tr class="day-hdr-row"><td colspan="5">Monday Feb 8 — Selarón + Cristo + Copacabana</td></tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
+  <td><span class="meal-type mt-resto">Restaurant</span></td>
+  <td class="exp-name">Orla 21 Rooftop buffet — 5 min from Selarón</td>
+  <td class="notes-cell">Av. Alm. Silvio de Noronha, 365 - Centro. Buffet 6am–10:30am. Go right after Selarón.</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Lunch</td>
+  <td><span class="meal-type mt-street">Beach</span></td>
+  <td class="exp-name">Copacabana beach vendors</td>
+  <td class="notes-cell">After Cristo Redentor. Coconut water, local snacks, cold drinks at the beach.</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Dinner</td>
+  <td><span class="meal-type mt-chef">Chef Meal</span></td>
+  <td class="exp-name">Private chef at Airbnb — recharge after long day</td>
+  <td class="notes-cell">After Selarón + Cristo + Copacabana. Eat well, hydrate, get ready for Pedra do Sal night.</td>
+</tr>
+
+<tr class="day-hdr-row"><td colspan="5">Tuesday Feb 9 — Blocos All Day</td></tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">All day</td>
+  <td><span class="meal-type mt-street">Street</span></td>
+  <td class="exp-name">Bloco street food throughout the day</td>
+  <td class="notes-cell">Vendors at every bloco — salgados, açaí cups, drinks. Eat while moving.</td>
+</tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Afternoon</td>
+  <td><span class="meal-type mt-resto">Restaurant</span></td>
+  <td class="exp-name">Pato com Laranja — Leblon (14 min from blocos)</td>
+  <td class="notes-cell">Av. Delfim Moreira, 1746 - Leblon. Cool down after blocos. Full sit-down meal here.</td>
+</tr>
+<tr style="background:rgba(201,168,76,0.06);">
+  <td class="day-cell"></td><td class="meal-cell" style="color:var(--gold);font-weight:600;">Dinner</td>
+  <td><span class="meal-type mt-white">All White Dinner</span></td>
+  <td class="exp-name" style="color:#fff;font-weight:600;">Chef-cooked at Airbnb — EVERYONE WEARS WHITE</td>
+  <td class="notes-cell">The formal send-off dinner. Chef's most elevated meal of the trip. Dress the part. Set the table. The last moment before Rio takes you for the final night.</td>
+</tr>
+
+<tr class="day-hdr-row"><td colspan="5">Wednesday Feb 10 — Departure</td></tr>
+<tr>
+  <td class="day-cell"></td><td class="meal-cell">Breakfast</td>
+  <td><span class="meal-type mt-street">Own</span></td>
+  <td class="exp-name">Quick breakfast before checkout</td>
+  <td class="notes-cell">Light meal. Depart for airport in the afternoon. 3+ hours before international flight.</td>
+</tr>
+
+</tbody>
+</table>
 </div>
 
-<!-- NIGHTLIFE -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-moon"/></svg> Nightlife and Bars
-</h3>
-<div class="g2">
-<div class="pick-card featured">
-<div class="pick-label gold-label">Black-Owned</div>
-<h4>Casa Black Rio</h4>
-<p>Popular club in Rio tailored specifically to Afro-Brazilians. This is the cultural nightlife experience — Black Brazilian music, energy, and community. A must-attend for the crew. Cannot be replicated anywhere else.</p>
-<div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
-<a href="https://www.instagram.com/reel/DVrVHmvAcVA/?igsh=MW84dW96ajlsMjczOA==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-<a href="https://www.youtube.com/live/VtMkR2VWk1c?si=5G9b2GFG3P6qwjNE" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Full livestream on YouTube</a>
+<div style="margin-top:28px;background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:20px;">
+<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-chef"/></svg> Chef Summary</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+<div style="background:rgba(142,68,173,0.08);border:1px solid rgba(142,68,173,0.2);border-radius:4px;padding:14px;">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a569bd;margin-bottom:6px;">Chef Meals (4)</div>
+<div style="font-size:13px;color:var(--tx);">Sat breakfast · Sun breakfast<br>Mon dinner · Tue All White Dinner</div>
+</div>
+<div style="background:rgba(231,76,60,0.07);border:1px solid rgba(231,76,60,0.2);border-radius:4px;padding:14px;">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#e74c3c;margin-bottom:6px;">Restaurants (4)</div>
+<div style="font-size:13px;color:var(--tx);">Skylab Rio (Fri) · Braseiro (Sat)<br>Orla 21 (Mon) · Pato com Laranja (Tue)</div>
+</div>
+<div style="background:rgba(41,128,185,0.07);border:1px solid rgba(41,128,185,0.2);border-radius:4px;padding:14px;">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#5dade2;margin-bottom:6px;">Catered (1)</div>
+<div style="font-size:13px;color:var(--tx);">Sunday lunch on the yacht<br>Arranged before boarding</div>
+</div>
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:14px;">
+<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:6px;">Street / Beach</div>
+<div style="font-size:13px;color:var(--tx);">Blocos · Copacabana vendors<br>Rasta Beach · Arrival day</div>
 </div>
 </div>
-<div class="pick-card featured">
-<div class="pick-label gold-label">Yacht Party</div>
-<h4>Foreign Lux Yacht Party</h4>
-<p>Upscale yacht party experience in Rio — dressed up, on the water, the full luxury vibe. Check dates and availability around Feb 5–10 to see if this lines up with the trip.</p>
-<a href="https://www.instagram.com/reel/DE0aba9ygYS/?igsh=bW5xcmRqb3owcXR3" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-</div>
-<div class="pick-card">
-<div class="pick-label">Rooftop</div>
-<h4>Sky Leme Rooftop</h4>
-<p>Rooftop bar with sweeping views over Leme and Copacabana. Great for drinks, sunset, and getting the night started right. Chic crowd, good cocktails, incredible backdrop.</p>
-<a href="https://www.instagram.com/reel/DTk7UflgMcj/?igsh=ZzM3bHB4YTBoZWh6" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-</div>
-<div class="pick-card">
-<div class="pick-label">Bar</div>
-<h4>Bar da Laje</h4>
-<p>Iconic elevated bar in Rio with panoramic hillside views. Known for a lively crowd, great caipirinhas, and an energy that captures exactly what Rio nightlife feels like.</p>
-<a href="https://www.instagram.com/reel/DU4NUscEZd4/?igsh=MTFxNWVjNmxnM3duOA==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-</div>
-<div class="pick-card">
-<div class="pick-label">Rooftop Bar</div>
-<h4>Skylab Rio — Orthon Palace</h4>
-<p>Rooftop bar at the top of the historic Othon Palace hotel on Copacabana. One of the most famous rooftop views in the city — Cristo on one side, the beach on the other.</p>
-<a href="https://www.instagram.com/reel/DWL8Ik7imvG/?igsh=eHdydTJyZ3JpcjQ4" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-</div>
-<div class="pick-card">
-<div class="pick-label">Neighborhood</div>
-<h4>Lapa — Bars and Clubs District</h4>
-<p>Lapa is Rio's historic nightlife epicenter — arched aqueducts, dozens of bars and clubs, live samba spilling into the streets. This is where you go at midnight and stay until sunrise.</p>
-<a href="https://www.instagram.com/reel/DI_qUcEpIQK/?igsh=d2pocXZtczZpejFm" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Most visited places in Rio</a>
+<div style="margin-top:14px;padding:12px;background:rgba(201,168,76,0.07);border-radius:4px;border:1px solid var(--bdr);">
+<span style="color:#fff;font-size:13px;font-weight:500;">Grocery run on arrival:</span>
+<span style="color:var(--tm);font-size:13px;"> Mercado Dia a Dia Laguna — Av. Rachel de Queiroz, 951, Barra da Tijuca (3-min Uber from Airbnb)</span>
 </div>
 </div>
-
-<!-- RESTAURANTS -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-chef"/></svg> Restaurants
-</h3>
-<div class="g2">
-<div class="pick-card">
-<div class="pick-label gold-label">Famous</div>
-<h4>Braseiro da Gávea</h4>
-<p>One of Rio's most famous restaurants, known specifically for their steaks. Legendary status among locals and visitors alike. A proper Brazilian churrasqueira experience — not touristy, not overhyped, just genuinely great.</p>
-<div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
-<a href="https://www.instagram.com/reel/C2A_1NxO8a6/?igsh=MTR2ZTVlNjEyYm1wNg==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-<a href="https://www.instagram.com/reel/DVv0tVgDU2r/?igsh=MWx1eGZ3aTV3azZkdg==" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> More on Instagram</a>
 </div>
-</div>
-<div class="pick-card">
-<div class="pick-label">Dinner and Dance</div>
-<h4>Roxy and Dinner Brazil</h4>
-<p>A dinner and entertainment experience — Brazilian food combined with live music and samba performance. Great option for one of the group dinners where you want more than just a meal.</p>
-<a href="https://www.viator.com/search/5531248P1?mcid=70066" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book on Viator</a>
-</div>
-</div>
-
-<!-- HELICOPTER -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-heli"/></svg> Helicopter Tours
-</h3>
-<div class="g2">
-<div class="pick-card">
-<h4>Option 1 — Viator Helicopter Tour</h4>
-<p>Vetted tour operator on Viator with verified reviews. Easy booking, confirmation handled through the platform. Good option if you want the safety net of a major booking site.</p>
-<a href="https://www.viator.com/search/410016P4?mcid=70066" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book on Viator</a>
-</div>
-<div class="pick-card">
-<h4>Option 2 — Rio2Fly</h4>
-<p>Rio-based helicopter company, local operator. Potentially better pricing by booking direct. Multiple flight routes available including Carnival special flights. Worth getting a quote.</p>
-<a href="https://rio2fly.com.br/en/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Visit rio2fly.com.br</a>
-</div>
-</div>
-
-<!-- PRIVATE CHEF -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-chef"/></svg> Private Chef
-</h3>
-<div class="pick-card" style="margin-bottom:18px;">
-<h4>Take a Chef — Rio de Janeiro</h4>
-<p>Vetted private chefs in Rio. Browse profiles, view menus, and get a quote directly for your dates (Feb 5–10). Filter by cuisine type — request Brazilian, seafood, or international depending on what the crew wants each day. Book 4–6 weeks ahead minimum.</p>
-<a href="https://www.takeachef.com/en-br/private-chef/rio-de-janeiro" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Get a quote — takeachef.com</a>
-</div>
-
-<!-- AIRPORT TRANSPORT -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-car"/></svg> Airport Transportation
-</h3>
-<div class="g2">
-<div class="pick-card">
-<h4>Option 1 — GetYourGuide Shuttle</h4>
-<p>GIG airport shuttle transfer to and from hotels. Vetted and pre-bookable. Great for coordinating group pickup with a fixed price — no surge pricing surprises after a long international flight.</p>
-<a href="https://www.getyourguide.com/rio-de-janeiro-l9/rio-galeao-airport-gig-shuttle-transfer-tofrom-hotels-t385548?date_from=2027-02-05&date_to=2027-02-05" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book on GetYourGuide</a>
-</div>
-<div class="pick-card">
-<h4>Option 2 — Rio Airport Transfer</h4>
-<p>Dedicated private transfer service from GIG to Copacabana and other Rio neighborhoods. Private vehicles, fixed pricing, English-speaking drivers. Book your exact pickup time in advance.</p>
-<a href="https://rioairporttransfer.com/transfers/copacabana/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Book at rioairporttransfer.com</a>
-</div>
-</div>
-
-<!-- BOAT / YACHT -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-boat"/></svg> Boat and Yacht Rentals
-</h3>
-<div class="g2">
-<div class="pick-card featured">
-<div class="pick-label gold-label">Luxury</div>
-<h4>Yacht Viverex — Click &amp; Boat</h4>
-<p>Private motor yacht rental in Rio de Janeiro. Full self-charter or with skipper. Peer-reviewed platform with transparent pricing. Book for Day 3 (Feb 7) for the full yacht day experience.</p>
-<a href="https://www.clickandboat.com/us/boat-rental/rio-de-janeiro/motor-yacht/yacht-viverex-yb7kjdk" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Click &amp; Boat</a>
-</div>
-<div class="pick-card">
-<div class="pick-label alt">Alternative</div>
-<h4>GetMyBoat — Rio Charter</h4>
-<p>Another vetted boat rental marketplace. Compare options, read captain reviews, and message directly. Good if the Viverex is unavailable on your dates — multiple Rio operators are listed here.</p>
-<a href="https://www.getmyboat.com/trips/2NJx0ljY/" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on GetMyBoat</a>
-</div>
-</div>
-
-<!-- MISC -->
-<h3 class="picks-h3">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-globe"/></svg> Good to Know
-</h3>
-<div class="g2">
-<div class="pick-card">
-<h4>Most Visited Places in Rio</h4>
-<p>A full overview reel of the top spots across the city — good reference for the crew to watch before the trip so everyone has the same visual of what to expect.</p>
-<a href="https://www.instagram.com/reel/DI_qUcEpIQK/?igsh=d2pocXZtczZpejFm" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> Watch on Instagram</a>
-</div>
-<div class="pick-card">
-<h4>Brazilian Slang Words</h4>
-<p>Learn the words Cariocas actually use. Goes way beyond "obrigado." Knowing even 5–10 of these will get you respect from locals and make every interaction better. Study before you land.</p>
-<a href="https://www.instagram.com/p/DVwlnVnEanr/?img_index=5&igsh=ZHJqYzh2cnQ0Nmg2" class="pick-link" target="_blank"><svg class="i" width="12" height="12"><use href="#s-link"/></svg> View on Instagram</a>
-</div>
-<div class="pick-card">
-<h4>Caipirinhas</h4>
-<p>Brazil's national cocktail — cachaça, lime, sugar, and ice. Made properly it is one of the best drinks in the world. Learn the difference between a real caipirinha and a tourist version before you go.</p>
-<span class="tag g">National Drink</span><span class="tag">Cachaça + Lime + Sugar</span>
-</div>
-</div>
-
-</div>
-
-
 <!-- FOOTER -->
 <div class="footer">
   <p><span>Rio de Janeiro, Brazil &nbsp;&middot;&nbsp; February 5–10, 2027</span></p>
   <p style="margin-top:5px;">Boa viagem — have the trip of a lifetime.</p>
 </div>
 
+
 <script>
+
+// Cost Calculator
+var groupSize = 5;
+function setGroup(n) {
+  groupSize = n;
+  [5,6,7,8].forEach(function(x){
+    var btn = document.getElementById('g'+x);
+    if(btn) btn.classList.toggle('active-g', x===n);
+  });
+  var fixedTotal = 0;
+  var ppTotal = 0;
+  // Update fixed rows
+  document.querySelectorAll('.pp-cell:not(.pp-fixed)').forEach(function(td){
+    var total = parseFloat(td.getAttribute('data-total'));
+    if(!isNaN(total)){
+      var pp = Math.round(total/n);
+      td.textContent = '$'+pp.toLocaleString();
+      fixedTotal += pp;
+    }
+  });
+  // Sum per-person fixed costs
+  document.querySelectorAll('.pp-cell.pp-fixed').forEach(function(td){
+    var pp = parseFloat(td.getAttribute('data-pp'));
+    if(!isNaN(pp)) ppTotal += pp;
+  });
+  var grandTotal = fixedTotal + ppTotal;
+  var totEl = document.getElementById('total-pp-display');
+  var totFixed = document.getElementById('total-fixed-sum');
+  var noHeli = document.getElementById('total-noheli-display');
+  if(totEl) totEl.textContent = '$'+grandTotal.toLocaleString();
+  if(noHeli) noHeli.textContent = '$'+(grandTotal-350).toLocaleString();
+  if(totFixed) totFixed.textContent = 'fixed: $'+fixedTotal.toLocaleString();
+}
+// Init on page load
+document.addEventListener('DOMContentLoaded', function(){ setGroup(5); });
+
 function S(id,btn){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
@@ -884,5 +1251,265 @@ function S(id,btn){
   btn.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
+
+/* ─── COST CALCULATOR ─── */
+var FIXED=[
+  {n:"Airbnb villa — 5 nights",  t:2500, note:"Av. Rachel de Queiroz, 100 — Barra da Tijuca"},
+  {n:"Boat rental — Sun Feb 7",  t:3000, note:"clickandboat.com Viverex. Full day, captain incl."},
+  {n:"Shared groceries",         t:250,  note:"Mercado Dia a Dia Laguna (3-min Uber from Airbnb)"},
+  {n:"Private chef (4 meals)",   t:600,  note:"Sat breakfast, Sun breakfast, Mon dinner, Tue All White Dinner"},
+];
+var PP=[
+  {n:"Airport transport (×2 trips)", pp:60,  note:"$30/pp each way × 2 = $60/pp total"},
+  {n:"Flights — economy average",    pp:900, note:"Budget: $500 (Copa). Economy: $900. Comfort+: $1,300. Business: $3,500"},
+  {n:"Carnival tickets — Section 9", pp:392, note:"Sunday Feb 7. dobrazilright.com. Non-negotiable."},
+  {n:"Brazil eVisa",                 pp:81,  note:"vfsglobal.com. Requires $2,000 bank balance."},
+  {n:"Helicopter tour (optional)",   pp:350, note:"Sat Feb 6. Skip = do Cristo Redentor on Mon instead."},
+  {n:"Cristo + Sugarloaf tour",      pp:164, note:"Mon Feb 8. Viator small group. Meet at Hilton Copacabana."},
+  {n:"Skylab Rio dinner",            pp:100, note:"Fri Feb 5, 7PM. Dress code. Pay at restaurant."},
+  {n:"Braseiro da Gávea dinner",     pp:75,  note:"Sat Feb 6. Reservation required. Pay at restaurant."},
+  {n:"Ubers — full trip",            pp:100, note:"~$100/pp total. 2 cars when 6+ people."},
+  {n:"Travel insurance",             pp:80,  note:"Each buys own. Allianz or World Nomads."},
+  {n:"Nightlife / drinks misc",      pp:150, note:"Clubs, Lapa, Pedra do Sal, Casa Black Rio."},
+  {n:"Street food / beach vendors",  pp:60,  note:"Blocos, Copacabana, Rasta Beach."},
+];
+
+var curGroup=5;
+function fmt(n){return '$'+Math.round(n).toLocaleString();}
+
+function setGroup(n,btn){
+  curGroup=n;
+  document.querySelectorAll('.grp-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('pp-hdr').textContent='Per Person ('+n+')';
+  renderCosts(n);
+}
+
+function renderCosts(n){
+  var tb=document.getElementById('cost-tbody'); tb.innerHTML='';
+  // Section header - fixed
+  var r=document.createElement('tr'); r.className='sec-row';
+  r.innerHTML='<td colspan="5">Fixed costs — split equally (cheaper per person as group grows)</td>';
+  tb.appendChild(r);
+  FIXED.forEach(function(e){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td class="exp-name">'+e.n+'</td>'
+      +'<td class="type-fixed" style="text-align:center;">Fixed / Split</td>'
+      +'<td class="amt">'+fmt(e.t)+'</td>'
+      +'<td class="amt">'+fmt(e.t/n)+'</td>'
+      +'<td class="notes-col">'+e.note+'</td>';
+    tb.appendChild(tr);
+  });
+  // Section header - per person
+  var r2=document.createElement('tr'); r2.className='sec-row';
+  r2.innerHTML='<td colspan="5">Per-person costs — same regardless of group size</td>';
+  tb.appendChild(r2);
+  PP.forEach(function(e){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td class="exp-name">'+e.n+'</td>'
+      +'<td class="type-pp" style="text-align:center;">Per Person</td>'
+      +'<td style="text-align:center;color:var(--tm);font-size:12px;">= per person</td>'
+      +'<td class="amt">'+fmt(e.pp)+'</td>'
+      +'<td class="notes-col">'+e.note+'</td>';
+    tb.appendChild(tr);
+  });
+  // Totals
+  var fixedPP=FIXED.reduce(function(s,e){return s+e.t/n;},0);
+  var ppTotal=PP.reduce(function(s,e){return s+e.pp;},0);
+  var withHeli=fixedPP+ppTotal;
+  var withoutHeli=withHeli-350;
+  var r3=document.createElement('tr'); r3.className='tot-row';
+  r3.innerHTML='<td colspan="3" style="color:var(--gold);">TOTAL WITH HELICOPTER</td>'
+    +'<td class="amt" style="color:var(--gold);font-size:15px;">'+fmt(withHeli)+'</td>'
+    +'<td class="notes-col" style="color:var(--tm);">Helicopter ($350) included</td>';
+  tb.appendChild(r3);
+  var r4=document.createElement('tr'); r4.className='tot-row';
+  r4.innerHTML='<td colspan="3" style="color:#aaa;">TOTAL WITHOUT HELICOPTER</td>'
+    +'<td class="amt" style="color:#aaa;font-size:15px;">'+fmt(withoutHeli)+'</td>'
+    +'<td class="notes-col" style="color:var(--tm);">Skip heli — Cristo Redentor on Monday instead</td>';
+  tb.appendChild(r4);
+  document.getElementById('total-with').textContent=fmt(withHeli);
+  document.getElementById('total-without').textContent=fmt(withoutHeli);
+}
+renderCosts(5);
+
+/* ─── PAYMENT SCHEDULE ─── */
+var curPayGroup=5;
+var PAY_SECTIONS=[
+  {
+    label:"Book Now — April 25, 2026",
+    urgency:"now",
+    items:[
+      {n:"Airbnb deposit (50%)",           fixed:true, total:1250, type:"50% Deposit",    note:"Book on Airbnb. Av. Rachel de Queiroz, 100. Balance due Jan 5, 2027."},
+      {n:"Carnival tickets — Section 9",   fixed:true, total:2744, type:"Full Payment",   note:"dobrazilright.com — all tickets at once. Sunday Feb 7. Section 9 only."},
+    ]
+  },
+  {
+    label:"May 2026",
+    urgency:"now",
+    items:[
+      {n:"Brazil eVisa — all members apply same day", fixed:true, total:567, type:"Full Payment", note:"vfsglobal.com (official only). 2-month bank stmts showing $2,000."},
+      {n:"Flights — book by May 15",       fixed:false, pp:900,  type:"Per Person",       note:"MIA nonstop: AA or LATAM. Tampa/Orlando: Delta via ATL. Copa = budget ($500)."},
+    ]
+  },
+  {
+    label:"July 15, 2026",
+    urgency:"soon",
+    items:[
+      {n:"Boat rental deposit (50%)",      fixed:true, total:1500, type:"50% Deposit",    note:"clickandboat.com — Viverex or 8h catamaran. Balance due Jan 20, 2027."},
+    ]
+  },
+  {
+    label:"September 15, 2026",
+    urgency:"soon",
+    items:[
+      {n:"Private chef — deposit",         fixed:true, total:180, type:"30% Deposit",     note:"takeachef.com — 4 meals: Sat breakfast, Sun breakfast, Mon dinner, Tue All White Dinner."},
+    ]
+  },
+  {
+    label:"October 1, 2026",
+    urgency:"soon",
+    items:[
+      {n:"Helicopter tour",                fixed:true, total:2450, type:"Full Payment",   note:"Viator or rio2fly.com.br. Sat Feb 6. R. Dom Bosco, 644 - Vargem Grande."},
+    ]
+  },
+  {
+    label:"November 1, 2026",
+    urgency:"later",
+    items:[
+      {n:"Travel insurance",               fixed:false, pp:80,  type:"Per Person",        note:"Each person buys own. Allianz or World Nomads. Covers cancel + medical."},
+    ]
+  },
+  {
+    label:"December 1, 2026",
+    urgency:"later",
+    items:[
+      {n:"Airport transport — both ways",  fixed:true, total:420, type:"Full Payment",    note:"Mercedes Benz Sprinter $30/pp. Book arrival (Feb 5) + departure (Feb 10) together."},
+    ]
+  },
+  {
+    label:"December 15, 2026",
+    urgency:"later",
+    items:[
+      {n:"Skylab Rio — dinner reservation",     fixed:false, pp:0, type:"Reserve Only",  note:"Av. Atlântica, 3264 - Copacabana. 7PM Fri Feb 5. No deposit — pay in Rio."},
+      {n:"Braseiro da Gávea — reservation",     fixed:false, pp:0, type:"Reserve Only",  note:"Praça Santos Dumont, 116 - Gávea. Sat Feb 6, ~5–6PM. No deposit."},
+    ]
+  },
+  {
+    label:"January 5, 2027",
+    urgency:"later",
+    items:[
+      {n:"Airbnb balance (50%)",           fixed:true, total:1250, type:"50% Balance",   note:"Final payment — 30 days before Feb 5 check-in."},
+    ]
+  },
+  {
+    label:"January 10, 2027",
+    urgency:"later",
+    items:[
+      {n:"Cristo Redentor + Sugarloaf tour", fixed:true, total:1148, type:"Full Payment", note:"Viator small group — 7×$164. Meet at Hilton Copacabana, Av. Atlântica 1020."},
+    ]
+  },
+  {
+    label:"January 20, 2027",
+    urgency:"later",
+    items:[
+      {n:"Boat rental balance (50%)",      fixed:true, total:1500, type:"50% Balance",   note:"Final boat payment — 2 weeks before Sunday Feb 7 charter."},
+    ]
+  },
+  {
+    label:"February 10, 2027 — At Completion",
+    urgency:"later",
+    items:[
+      {n:"Chef balance + tip",             fixed:true, total:420, type:"Pay in Rio",     note:"Pay chef on departure morning. Tip generously — 4 elevated meals."},
+    ]
+  },
+];
+
+function setPayGroup(n,btn){
+  curPayGroup=n;
+  document.querySelectorAll('#payments .grp-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPayments(n);
+}
+
+function renderPayments(n){
+  var container=document.getElementById('pay-sections'); container.innerHTML='';
+  PAY_SECTIONS.forEach(function(sec){
+    var div=document.createElement('div'); div.className='pay-section';
+    var urgClass=sec.urgency==='now'?'due-now':(sec.urgency==='soon'?'due-soon':'due-later');
+    var urgTxt=sec.urgency==='now'?'URGENT NOW':(sec.urgency==='soon'?'BOOK SOON':'PLAN AHEAD');
+    div.innerHTML='<div class="pay-section-hdr"><h4>'+sec.label+'</h4><span class="due-badge '+urgClass+'">'+urgTxt+'</span></div>';
+    sec.items.forEach(function(item){
+      var ppAmt, ppDisp;
+      if(item.type==='Reserve Only'){
+        ppDisp='<span style="color:var(--tm);font-size:12px;font-style:italic;">Reserve only — no payment</span>';
+      } else if(item.fixed){
+        ppAmt=item.total/n;
+        ppDisp=fmt(ppAmt)+'<small>per person (÷'+n+')</small>';
+      } else {
+        ppAmt=item.pp; ppDisp=item.pp>0?fmt(item.pp)+'<small>per person</small>':'<span style="color:var(--tm);font-size:12px;font-style:italic;">Reserve only</span>';
+      }
+      var totalDisp=item.fixed?fmt(item.total):(item.pp>0?'= per person':'—');
+      var row=document.createElement('div'); row.className='pay-item';
+      row.innerHTML='<div class="pay-item-name">'+item.n+'<small>'+item.note+'</small></div>'
+        +'<div class="pay-item-pp">'+ppDisp+'</div>'
+        +'<div class="pay-item-type">'+item.type+'</div>';
+      div.appendChild(row);
+    });
+    container.appendChild(div);
+  });
+}
+renderPayments(5);
+
+/* ─── MEAL SCHEDULE ─── */
+var MEALS=[
+  {day:"Friday Feb 5 — Arrival", meals:[
+    {time:"Arrival",  type:"street",  label:"Own", what:"Travel snacks / airport food", note:"Stock up on arrival — grocery run first thing at Mercado Dia a Dia Laguna."},
+    {time:"7 PM",     type:"out",     label:"Restaurant", what:"Skylab Rio Othon Palace — 30th floor rooftop", note:"Av. Atlântica, 3264 - Copacabana. 7PM reservation. Dress code enforced. Reserve Dec 15."},
+  ]},
+  {day:"Saturday Feb 6 — Heli + Beach", meals:[
+    {time:"Morning",  type:"chef",    label:"Chef", what:"Private chef at Airbnb — full Brazilian spread", note:"Eat before helicopter. takeachef.com — book by Sept 15."},
+    {time:"Midday",   type:"street",  label:"Beach", what:"Rasta Beach — drinks and snacks", note:"Informal beach food after helicopter tour."},
+    {time:"5–6 PM",   type:"out",     label:"Restaurant", what:"Braseiro da Gávea — most famous steaks in Rio", note:"Praça Santos Dumont, 116 - Gávea. On way back to Airbnb. Reserve Dec 15."},
+  ]},
+  {day:"Sunday Feb 7 — Boat + Carnival", meals:[
+    {time:"Morning",  type:"chef",    label:"Chef", what:"Private chef at Airbnb — full spread before boat day", note:"Eat before leaving for Marina da Glória. Full day + Carnival night ahead."},
+    {time:"Midday",   type:"cat",     label:"Catered", what:"Catering delivered to the yacht", note:"Pre-arrange with charter or order delivery to Marina da Glória."},
+    {time:"Pre-night",type:"street",  label:"Street", what:"Street food / Feira da Glória on way back", note:"Quick local food. Transition from boat to Carnival night."},
+  ]},
+  {day:"Monday Feb 8 — Selarón + Cristo", meals:[
+    {time:"6–10:30 AM",type:"out",   label:"Restaurant", what:"Orla 21 Rooftop buffet (5-min from Selarón)", note:"Av. Alm. Silvio de Noronha, 365 - Centro. Buffet 6am–10:30am. Go right after Selarón."},
+    {time:"Afternoon", type:"street", label:"Beach", what:"Copacabana beach vendors — food and drinks", note:"After Cristo. Coconut water, cold drinks, local snacks."},
+    {time:"Evening",   type:"chef",   label:"Chef", what:"Private chef at Airbnb — recharge dinner", note:"After Selarón + Cristo + Copacabana. Eat well, hydrate, get ready for Pedra do Sal."},
+  ]},
+  {day:"Tuesday Feb 9 — Blocos", meals:[
+    {time:"All day",   type:"street", label:"Street", what:"Bloco street food throughout the day", note:"Vendors at every bloco. Salgados, açaí, cold drinks. Eat while moving."},
+    {time:"Afternoon", type:"out",    label:"Restaurant", what:"Pato com Laranja — Leblon (14-min from blocos)", note:"Av. Delfim Moreira, 1746 - Leblon. Sit-down meal to cool down after blocos."},
+    {time:"Evening",   type:"white",  label:"All White Dinner", what:"CHEF: All White Dinner at Airbnb — everyone wears white", note:"Chef's most elevated meal of the trip. The formal send-off before the spontaneous final night."},
+  ]},
+  {day:"Wednesday Feb 10 — Departure", meals:[
+    {time:"Morning",   type:"street", label:"Own", what:"Quick breakfast before checkout", note:"Keep it light. Pack up and depart for airport."},
+  ]},
+];
+
+var typeClass={chef:'mt-chef',white:'mt-white',out:'mt-out',cat:'mt-cat',street:'mt-street'};
+
+function renderMeals(){
+  var container=document.getElementById('meal-table'); container.innerHTML='';
+  MEALS.forEach(function(day){
+    var div=document.createElement('div'); div.className='meal-day';
+    div.innerHTML='<div class="meal-day-hdr"><h4>'+day.day+'</h4></div>';
+    day.meals.forEach(function(m){
+      var tc=typeClass[m.type]||'mt-street';
+      var row=document.createElement('div'); row.className='meal-row';
+      row.innerHTML='<div class="meal-time">'+m.time+'</div>'
+        +'<div class="meal-type-badge"><span class="'+tc+'">'+m.label+'</span></div>'
+        +'<div class="meal-content"><h5>'+m.what+'</h5><p>'+m.note+'</p></div>';
+      div.appendChild(row);
+    });
+    container.appendChild(div);
+  });
+}
+renderMeals();
 </script>
 </body></html>
