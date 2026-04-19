@@ -1008,7 +1008,9 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 <div class="div"></div>
 <p class="desc">No ranges. Every payment has a specific due date. Miss a date and spots disappear — especially the Airbnb and Carnival tickets.</p>
 
-<div class="tip warn" style="margin-top:18px;margin-bottom:8px;"><h4><svg class="i" width="14" height="14"><use href="#s-warn"/></svg> April 25, 2026 is the most important date on this list</h4><p>Airbnb deposit and Carnival tickets need to be secured the same day. These two items will disappear before anything else. Everything else follows from having those locked.</p></div>
+<div class="tip warn" style="margin-top:18px;margin-bottom:12px;"><h4><svg class="i" width="14" height="14"><use href="#s-warn"/></svg> April 25, 2026 is the most important date on this list</h4><p>Airbnb deposit and Carnival tickets need to be secured the same day. These two items will disappear before anything else. Everything else follows from having those locked.</p></div>
+
+<div class="tip info" style="margin-bottom:8px;"><h4><svg class="i" width="14" height="14"><use href="#s-boat"/></svg> Boat Tip — Book by July 15, 2026</h4><p>The boat is the centerpiece of Sunday Feb 7 and pre-Carnival Barra da Tijuca is extremely popular. The Viverex on clickandboat.com is the primary pick — deposit is typically 50% at booking with the balance due closer to the date. The moment the boat is confirmed, the entire Sunday schedule locks in around the return time, which then sets when you need to be back for Carnival prep and Sambadrome. Do not leave this one until fall — good boats in this area for that weekend will be gone.</p></div>
 
 <div style="overflow-x:auto;margin-top:20px;">
 <table class="dtbl">
@@ -1217,8 +1219,8 @@ Windsor Oceanico — Do Not Book for This Group
 </h3>
 
 <div class="tip info" style="margin-bottom:18px;">
-<h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> Tommy gets his own room</h4>
-<p>Tommy has a solo room. The rest of the crew splits 2 per room (standard) or 3 per room (optional savings). Enter your group size below and see the full hotel cost breakdown.</p>
+<h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> What does my share cost?</h4>
+<p>Each column shows your share of a room for 5 nights. Solo = you cover the whole room. 2 per room is the standard for this trip. 3 per room is an option to save. Tommy will likely have a solo room, so he uses the Solo column. Select the group size to see how many rooms you'll need total.</p>
 </div>
 
 <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:20px;">
@@ -1790,12 +1792,11 @@ renderMeals();
 
 
 /* ── HOTEL PRICING CALCULATOR ── */
-// Tommy always gets solo room. Rest split 2/room (standard) or 3/room (save)
-// RATES: Windsor Barra ~$346/night, Laghetto ~$136/night avg, Marapendi ~$346/night, Oceanico ~$319/night, Marriott ~$277/night
+// Simple: per-room rate × 5 nights ÷ occupancy = cost per person per stay
 var HOTELS_DATA = [
-  {name:"Windsor Barra Hotel",    rate:346, color:"var(--gold)"},
-  {name:"Laghetto Stilo Barra",   rate:136, color:"#2ECC71"},
-  {name:"Windsor Marapendi",      rate:346, color:"var(--tm)"},
+  {name:"Windsor Barra Hotel",  rate:346, color:"var(--gold)"},
+  {name:"Laghetto Stilo Barra", rate:136, color:"#2ECC71"},
+  {name:"Windsor Marapendi",    rate:346, color:"var(--tm)"},
 ];
 var NIGHTS = 5;
 
@@ -1809,40 +1810,44 @@ function renderHotelPrices(n) {
   var con = document.getElementById('hotel-price-cards');
   var note = document.getElementById('hotel-price-note');
   if(!con) return;
-  con.innerHTML = '';
-  // Tommy solo = 1 room. Remaining crew = (n-1) people. Split 2/room.
-  var crew = n - 1;
-  var roomsWith2 = Math.ceil(crew / 2);
-  var roomsWith3 = Math.ceil(crew / 3);
-  var totalRooms2 = 1 + roomsWith2; // Tommy + crew rooms (2/room)
-  var totalRooms3 = 1 + roomsWith3; // Tommy + crew rooms (3/room)
-
+  con.innerHTML='';
+  // Group size drives how many rooms needed, split evenly
+  var roomsNeeded = Math.ceil(n / 2); // default 2/room
+  
   HOTELS_DATA.forEach(function(h) {
-    var total2 = h.rate * NIGHTS * totalRooms2;
-    var total3 = h.rate * NIGHTS * totalRooms3;
-    var pp2 = Math.round(total2 / n);
-    var pp3 = Math.round(total3 / n);
+    var pp1 = h.rate * NIGHTS;           // 1 person per room — solo room cost
+    var pp2 = (h.rate * NIGHTS) / 2;     // 2 per room — your share
+    var pp3 = (h.rate * NIGHTS) / 3;     // 3 per room — your share
 
     var card = document.createElement('div');
-    card.style.cssText = 'background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:16px;';
-    card.innerHTML = '<div style="font-weight:600;color:#fff;font-size:13px;margin-bottom:12px;">'+h.name+'</div>'
-      + '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">'
-      + '<div style="background:#111;border-radius:4px;padding:10px;">'
-      + '<div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:4px;">2 per room</div>'
-      + '<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+pp2.toLocaleString()+'</div>'
-      + '<div style="font-size:10px;color:var(--tm);margin-top:2px;">per person</div>'
-      + '<div style="font-size:11px;color:var(--tm);margin-top:4px;">'+totalRooms2+' rooms · $'+total2.toLocaleString()+' total</div>'
-      + '</div>'
-      + '<div style="background:#111;border-radius:4px;padding:10px;">'
-      + '<div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:4px;">3 per room</div>'
-      + '<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+pp3.toLocaleString()+'</div>'
-      + '<div style="font-size:10px;color:var(--tm);margin-top:2px;">per person</div>'
-      + '<div style="font-size:11px;color:var(--tm);margin-top:4px;">'+totalRooms3+' rooms · $'+total3.toLocaleString()+' total</div>'
-      + '</div></div>';
+    card.style.cssText='background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:16px;';
+    card.innerHTML='<div style="font-weight:600;color:#fff;font-size:13px;margin-bottom:12px;">'+h.name+'</div>'
+      +'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">'
+      // 1 per room
+      +'<div style="background:#111;border-radius:4px;padding:10px;">'
+      +'<div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tm);margin-bottom:4px;">Solo room</div>'
+      +'<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+Math.round(pp1).toLocaleString()+'</div>'
+      +'<div style="font-size:10px;color:var(--tm);margin-top:3px;">1 person · 5 nights</div>'
+      +'</div>'
+      // 2 per room
+      +'<div style="background:#111;border-radius:4px;padding:10px;border:1px solid rgba(201,168,76,0.3);">'
+      +'<div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">2 per room</div>'
+      +'<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+Math.round(pp2).toLocaleString()+'</div>'
+      +'<div style="font-size:10px;color:var(--tm);margin-top:3px;">your share · 5 nights</div>'
+      +'</div>'
+      // 3 per room
+      +'<div style="background:#111;border-radius:4px;padding:10px;">'
+      +'<div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tm);margin-bottom:4px;">3 per room</div>'
+      +'<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+Math.round(pp3).toLocaleString()+'</div>'
+      +'<div style="font-size:10px;color:var(--tm);margin-top:3px;">your share · 5 nights</div>'
+      +'</div>'
+      +'</div>';
     con.appendChild(card);
   });
 
-  note.textContent = 'Based on '+n+' people (Tommy in solo room + '+crew+' crew). 2/room = '+totalRooms2+' rooms total. 3/room = '+totalRooms3+' rooms total. Rates are per-room estimates for Feb 5–10, 2027 — book early, Carnival week prices rise.';
+  var rooms2 = Math.ceil(n/2);
+  var rooms3 = Math.ceil(n/3);
+  note.textContent = n+' people total. Standard 2/room = '+rooms2+' rooms. 3/room option = '+rooms3+' rooms. Rates are per-room estimates for Feb 5–10, 2027. Carnival week — book early.';
 }
 renderHotelPrices(5);
 
