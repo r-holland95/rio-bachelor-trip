@@ -543,6 +543,77 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
   .mc-badge{border-right:none;border-bottom:1px solid var(--bdr);padding:8px 12px;}
 }
 
+
+/* ── HOTEL ANALYSIS ── */
+.h-card{background:var(--cb);border:1px solid var(--bdr);border-radius:7px;overflow:hidden;margin-bottom:16px;}
+.h-top{border:2px solid rgba(201,168,76,0.5);}
+.h-danger{background:rgba(231,76,60,0.05);border-color:rgba(231,76,60,0.5);}
+.h-dim{opacity:.85;}
+.h-head{padding:16px 18px;border-bottom:1px solid var(--bdr);background:#1a1a1a;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.h-top .h-head{background:rgba(201,168,76,0.07);}
+.h-danger .h-head{background:rgba(231,76,60,0.08);}
+.h-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px;}
+.hbdg{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:2px;}
+.hbdg-rec{background:var(--gold);color:#000;}
+.hbdg-stars{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:var(--gold);}
+.hbdg-green{background:rgba(46,204,113,0.15);border:1px solid rgba(46,204,113,0.4);color:#2ECC71;}
+.hbdg-blue{background:rgba(41,128,185,0.1);border:1px solid rgba(41,128,185,0.3);color:#5dade2;}
+.hbdg-dim{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--tm);}
+.hbdg-danger{background:rgba(231,76,60,0.2);border:1px solid rgba(231,76,60,0.4);color:#e74c3c;}
+.h-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;font-weight:700;line-height:1.2;}
+.h-addr{color:var(--tm);font-size:12px;margin-top:4px;}
+.h-price-block{text-align:right;flex-shrink:0;}
+.h-rate{font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);font-weight:700;line-height:1;}
+.h-rate.green{color:#2ECC71;}
+.h-rate-lbl{color:var(--tm);font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-top:3px;}
+.h-rate-sub{color:var(--tm);font-size:11px;margin-top:2px;}
+.h-body{padding:16px 18px;}
+.h-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
+.h-stat{background:#111;border-radius:4px;padding:9px 10px;}
+.h-stat-l{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;}
+.h-stat-v{font-size:14px;font-weight:700;color:#fff;}
+.h-stat-v.green{color:#2ECC71;}
+.h-stat-v.gold{color:var(--gold);}
+.h-pc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+.h-pros,.h-cons{background:#111;border-radius:4px;padding:11px 13px;}
+.h-pc-hdr{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.h-pc-hdr.pros{color:#2ECC71;}
+.h-pc-hdr.cons{color:#e74c3c;}
+.h-pc-item{display:flex;align-items:flex-start;gap:7px;font-size:12px;color:var(--tm);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.04);line-height:1.4;}
+.h-pc-item:last-child{border-bottom:none;}
+.h-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px;}
+.pros-dot{background:#2ECC71;}
+.cons-dot{background:#e74c3c;}
+.h-verdict{border-radius:4px;padding:11px 14px;font-size:13px;line-height:1.55;margin-top:4px;}
+.gold-verdict{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);color:var(--gl);}
+.green-verdict{background:rgba(46,204,113,0.06);border:1px solid rgba(46,204,113,0.2);color:#a8e6bf;}
+.dim-verdict{background:#111;color:var(--tm);}
+.danger-verdict{background:rgba(231,76,60,0.08);border:1px solid rgba(231,76,60,0.2);color:#f0a89e;}
+/* Hotel price cards - 3 columns on desktop */
+.h-price-card{background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:14px;}
+.h-price-card-name{font-weight:600;color:#fff;font-size:13px;margin-bottom:10px;}
+.h-occ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.h-occ-col{background:#111;border-radius:4px;padding:9px 10px;}
+.h-occ-col.standard{border:1px solid rgba(201,168,76,0.35);}
+.h-occ-lbl{font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;}
+.h-occ-lbl.std{color:var(--gold);}
+.h-occ-amt{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1;}
+.h-occ-sub{font-size:10px;color:var(--tm);margin-top:3px;}
+/* MOBILE */
+@media(max-width:620px){
+  .h-head{flex-direction:column;gap:10px;}
+  .h-price-block{text-align:left;}
+  .h-stats{grid-template-columns:repeat(2,1fr);}
+  .h-pc{grid-template-columns:1fr;}
+  .h-occ-grid{grid-template-columns:repeat(3,1fr);gap:6px;}
+  .h-occ-col{padding:8px;}
+  .h-occ-amt{font-size:15px;}
+}
+@media(max-width:380px){
+  .h-occ-grid{grid-template-columns:1fr;}
+  .h-rate{font-size:18px;}
+}
+
 </style>
 </head>
 <body>
@@ -1195,308 +1266,293 @@ svg.i{display:inline-block;vertical-align:middle;flex-shrink:0;}
 <div id="hotels" class="sec">
 <div class="eyebrow">Cost Analysis &amp; Recommendation</div>
 <h2>Hotel Comparison</h2><div class="div"></div>
-<p class="desc">Five hotels analyzed against your actual itinerary, activities, and group — with pricing broken down by room occupancy.</p>
+<p class="desc">Five hotels analyzed against your actual itinerary and activities — with pricing by room occupancy.</p>
 
 <!-- RECOMMENDATION BANNER -->
-<div style="background:linear-gradient(135deg,rgba(201,168,76,0.13),rgba(201,168,76,0.04));border:1px solid rgba(201,168,76,0.45);border-radius:7px;padding:22px 26px;margin:20px 0 24px;">
-<div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Our Recommendation</div>
-<div style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;margin-bottom:10px;">Windsor Barra Hotel — 5-Star Beachfront</div>
-<p style="color:var(--tm);font-size:14px;line-height:1.7;">The Windsor Barra is the right call for this trip. 5-star, directly beachfront, rooftop pool, world-class service across thousands of reviews, and ocean-view rooms with balconies. The experience matches everything else you have planned — the boat, the chef, the Carnival tickets, the helicopter. The hotel needs to be at that same level. The Laghetto Stilo Barra is also a strong property and a legitimate alternative, but if you're building a premier bachelor trip, the Windsor Barra is where the crew should be staying.</p>
+<div style="background:linear-gradient(135deg,rgba(201,168,76,0.13),rgba(201,168,76,0.04));border:1px solid rgba(201,168,76,0.45);border-radius:7px;padding:20px 22px;margin:20px 0 20px;">
+<div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Our Recommendation</div>
+<div style="font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:8px;">Windsor Barra Hotel — 5-Star Beachfront</div>
+<p style="color:var(--tm);font-size:13px;line-height:1.7;">The Windsor Barra is the right call for this trip. 5-star, directly beachfront, rooftop pool, world-class service across thousands of reviews, ocean-view rooms with balconies. The experience matches everything else you have planned — the boat, the chef, the Carnival tickets, the helicopter. The hotel should be at that same level. The Laghetto Stilo Barra is a legitimate alternative, but if you're building a premier bachelor trip, the Windsor Barra is where the crew should be staying.</p>
 </div>
 
 <!-- CRITICAL WARNING -->
-<div style="background:rgba(231,76,60,0.09);border:1px solid rgba(231,76,60,0.45);border-radius:6px;padding:18px 22px;margin-bottom:28px;">
-<h4 style="color:#e74c3c;font-size:14px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px;">
-<svg width="15" height="15" viewBox="0 0 24 24" fill="#e74c3c"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+<div style="background:rgba(231,76,60,0.09);border:1px solid rgba(231,76,60,0.45);border-radius:6px;padding:16px 20px;margin-bottom:24px;">
+<h4 style="color:#e74c3c;font-size:13px;font-weight:600;margin-bottom:6px;display:flex;align-items:flex-start;gap:8px;line-height:1.4;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#e74c3c" style="flex-shrink:0;margin-top:2px;"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
 Windsor Oceanico — Do Not Book for This Group
 </h4>
-<p style="color:#f0a89e;font-size:13px;line-height:1.6;">Multiple TripAdvisor reviews from Black travelers document being denied service at the pool bar while white guests were served, a Black guest being blocked from the elevator, and a group waiting 40+ minutes to be acknowledged with a bill over 1,000 reais. The Windsor Barra Hotel is literally connected via a catwalk and is significantly better in every category. There is no reason to choose the Oceanico.</p>
+<p style="color:#f0a89e;font-size:13px;line-height:1.6;">Multiple TripAdvisor reviews from Black travelers document being denied service at the pool bar while white guests were served, a Black guest being blocked from the elevator, and a group waiting 40+ minutes to be acknowledged with a bill over 1,000 reais. The Windsor Barra Hotel is literally connected via a catwalk and is better in every category. There is no reason to choose the Oceanico.</p>
 </div>
 
 <!-- ROOM PRICING CALCULATOR -->
-<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:19px;margin:0 0 14px;display:flex;align-items:center;gap:8px;">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-dollar"/></svg> Price by Room Setup (5 nights)
+<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:18px;margin:0 0 12px;display:flex;align-items:center;gap:8px;">
+<svg class="i" width="14" height="14" style="color:var(--gold)"><use href="#s-dollar"/></svg> Price Per Person — 5 Nights
 </h3>
-
-<div class="tip info" style="margin-bottom:18px;">
+<div class="tip info" style="margin-bottom:16px;">
 <h4><svg class="i" width="14" height="14"><use href="#s-info"/></svg> What does my share cost?</h4>
-<p>Each column shows your share of a room for 5 nights. Solo = you cover the whole room. 2 per room is the standard for this trip. 3 per room is an option to save. Tommy will likely have a solo room, so he uses the Solo column. Select the group size to see how many rooms you'll need total.</p>
+<p>Each column shows your share of a room for 5 nights. Solo = you cover the full room (Tommy's situation). 2/room is standard. 3/room saves money. Select your group size to see how many rooms you'd need total.</p>
 </div>
-
-<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:20px;">
-<span style="font-size:11px;color:var(--tm);letter-spacing:1px;text-transform:uppercase;">Group size (including Tommy):</span>
-<button class="gcb active-g" id="hs5" onclick="setHotelGroup(5,this)">5 people</button>
-<button class="gcb" id="hs6" onclick="setHotelGroup(6,this)">6 people</button>
-<button class="gcb" id="hs7" onclick="setHotelGroup(7,this)">7 people</button>
-<button class="gcb" id="hs8" onclick="setHotelGroup(8,this)">8 people</button>
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px;">
+<span style="font-size:11px;color:var(--tm);letter-spacing:1px;text-transform:uppercase;">Group size:</span>
+<button class="gcb active-g" id="hs5" onclick="setHotelGroup(5,this)">5</button>
+<button class="gcb" id="hs6" onclick="setHotelGroup(6,this)">6</button>
+<button class="gcb" id="hs7" onclick="setHotelGroup(7,this)">7</button>
+<button class="gcb" id="hs8" onclick="setHotelGroup(8,this)">8</button>
 </div>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px;" id="hotel-price-cards"></div>
-<p style="color:var(--tm);font-size:12px;margin-bottom:28px;" id="hotel-price-note"></p>
+<div id="hotel-price-cards" style="display:flex;flex-direction:column;gap:10px;"></div>
+<p style="color:var(--tm);font-size:12px;margin:10px 0 28px;line-height:1.5;" id="hotel-price-note"></p>
 
 <!-- HOTEL CARDS -->
-<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:19px;margin:24px 0 16px;display:flex;align-items:center;gap:8px;">
-<svg class="i" width="15" height="15" style="color:var(--gold)"><use href="#s-bed"/></svg> Full Hotel Breakdown
+<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:18px;margin:8px 0 14px;display:flex;align-items:center;gap:8px;">
+<svg class="i" width="14" height="14" style="color:var(--gold)"><use href="#s-bed"/></svg> Full Hotel Breakdown
 </h3>
 
 <!-- WINDSOR BARRA -->
-<div style="background:var(--cb);border:2px solid rgba(201,168,76,0.5);border-radius:7px;overflow:hidden;margin-bottom:18px;">
-<div style="background:rgba(201,168,76,0.08);padding:18px 22px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+<div class="h-card h-top">
+<div class="h-head">
 <div>
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
-<span style="background:var(--gold);color:#000;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">Recommended</span>
-<span style="background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.3);color:#2ECC71;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">5-Star</span>
-<span style="background:rgba(41,128,185,0.1);border:1px solid rgba(41,128,185,0.3);color:#5dade2;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">Beachfront</span>
+<div class="h-badges">
+<span class="hbdg hbdg-rec">Recommended</span>
+<span class="hbdg hbdg-stars">5-Star</span>
+<span class="hbdg hbdg-blue">Beachfront</span>
 </div>
-<div style="font-family:'Playfair Display',serif;font-size:21px;color:#fff;font-weight:700;">Windsor Barra Hotel</div>
-<div style="color:var(--tm);font-size:12px;margin-top:3px;">Av. Lúcio Costa, 2630 · Barra da Tijuca · Directly on the beach</div>
+<div class="h-name">Windsor Barra Hotel</div>
+<div class="h-addr">Av. Lúcio Costa, 2630 · Barra da Tijuca · Directly on the beach</div>
 </div>
-<div style="text-align:right;">
-<div style="font-family:'Playfair Display',serif;font-size:26px;color:var(--gold);font-weight:700;">~$346</div>
-<div style="color:var(--tm);font-size:11px;text-transform:uppercase;letter-spacing:1px;">per room / per night</div>
-<div style="color:var(--tm);font-size:11px;">$1,732 total per room (5 nights)</div>
-</div>
-</div>
-<div style="padding:18px 22px;">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:16px;">
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">TripAdvisor</div><div style="font-size:15px;font-weight:700;color:#2ECC71;">4.0 / 5</div></div>
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">Booking.com</div><div style="font-size:15px;font-weight:700;color:#2ECC71;">9.4</div></div>
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">Beach</div><div style="font-size:15px;font-weight:700;color:#2ECC71;">Direct</div></div>
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">Pool</div><div style="font-size:15px;font-weight:700;color:var(--gold);">Rooftop</div></div>
-</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#2ECC71;margin-bottom:8px;font-weight:700;">Pros</div>
-<div class="lir"><span class="arr">→</span>Highest-rated 5-star in Barra da Tijuca</div>
-<div class="lir"><span class="arr">→</span>Every room has ocean view + private balcony</div>
-<div class="lir"><span class="arr">→</span>Rooftop pool + cocktail bar with panoramic views</div>
-<div class="lir"><span class="arr">→</span>Beach loungers included — Windsor Oceanico guests pay or go without</div>
-<div class="lir"><span class="arr">→</span>Staff praised as world-class across thousands of reviews</div>
-<div class="lir"><span class="arr">→</span>Breakfast described as one of the best in the city</div>
-<div class="lir"><span class="arr">→</span>No racial discrimination reports — important for this group</div>
-</div>
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#e74c3c;margin-bottom:8px;font-weight:700;">Cons</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Most expensive option on this list</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>30–40 min Uber to Ipanema, Lapa, and Copacabana</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>WiFi inconsistency reported by some guests</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Breakfast paid separately (not free)</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Early check-in fee — confirm in advance</div>
+<div class="h-price-block">
+<div class="h-rate">~$346</div>
+<div class="h-rate-lbl">per room / night</div>
+<div class="h-rate-sub">$1,730 total per room · 5 nights</div>
 </div>
 </div>
-<div style="background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.25);border-radius:4px;padding:12px 14px;font-size:13px;color:var(--gl);">
-<strong>Trip Fit:</strong> The rooftop pool is your pre-game and recovery base. Beachfront positioning makes Rasta Beach, boat day pickup, and post-activity returns seamless. The experience level matches the rest of what you have planned.
+<div class="h-body">
+<div class="h-stats">
+<div class="h-stat"><div class="h-stat-l">TripAdvisor</div><div class="h-stat-v green">4.0 / 5</div></div>
+<div class="h-stat"><div class="h-stat-l">Booking.com</div><div class="h-stat-v green">9.4</div></div>
+<div class="h-stat"><div class="h-stat-l">Beach</div><div class="h-stat-v green">Direct</div></div>
+<div class="h-stat"><div class="h-stat-l">Pool</div><div class="h-stat-v gold">Rooftop</div></div>
 </div>
+<div class="h-pc">
+<div class="h-pros">
+<div class="h-pc-hdr pros">Pros</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Highest-rated 5-star in Barra da Tijuca</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Every room has ocean view + private balcony</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Rooftop pool + cocktail bar with panoramic views</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Beach loungers included — Oceanico guests don't get access</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Staff praised as world-class across thousands of reviews</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>No racial discrimination reports</div>
+</div>
+<div class="h-cons">
+<div class="h-pc-hdr cons">Cons</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Most expensive option on this list</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>30–40 min Uber to Ipanema, Lapa, Copacabana</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>WiFi inconsistency reported by some guests</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Breakfast paid separately — not included</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Early check-in fee — confirm in advance</div>
+</div>
+</div>
+<div class="h-verdict gold-verdict">The rooftop pool is your pre-game and recovery base. Beachfront positioning makes Rasta Beach, boat day, and post-activity returns seamless. Experience level matches everything else planned for this trip.</div>
 </div>
 </div>
 
-<!-- LAGHETTO STILO BARRA -->
-<div style="background:var(--cb);border:1px solid var(--bdr);border-radius:7px;overflow:hidden;margin-bottom:18px;">
-<div style="background:#1a1a1a;padding:18px 22px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+<!-- LAGHETTO -->
+<div class="h-card">
+<div class="h-head">
 <div>
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
-<span style="background:rgba(46,204,113,0.15);border:1px solid rgba(46,204,113,0.4);color:#2ECC71;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">#14 in Rio</span>
-<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--tm);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">4-Star</span>
-<span style="background:rgba(41,128,185,0.1);border:1px solid rgba(41,128,185,0.3);color:#5dade2;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">Beachfront</span>
+<div class="h-badges">
+<span class="hbdg hbdg-green">#14 in Rio</span>
+<span class="hbdg hbdg-dim">4-Star</span>
+<span class="hbdg hbdg-blue">Beachfront</span>
 </div>
-<div style="font-family:'Playfair Display',serif;font-size:21px;color:#fff;font-weight:700;">Laghetto Stilo Barra</div>
-<div style="color:var(--tm);font-size:12px;margin-top:3px;">Rua Marcelo Roberto, 65 · Barra da Tijuca · Directly across from beach</div>
+<div class="h-name">Laghetto Stilo Barra</div>
+<div class="h-addr">Rua Marcelo Roberto, 65 · Barra da Tijuca · Directly across from beach</div>
 </div>
-<div style="text-align:right;">
-<div style="font-family:'Playfair Display',serif;font-size:26px;color:#2ECC71;font-weight:700;">~$102–171</div>
-<div style="color:var(--tm);font-size:11px;text-transform:uppercase;letter-spacing:1px;">per room / per night</div>
-<div style="color:var(--tm);font-size:11px;">~$510–855 total per room (5 nights)</div>
-</div>
-</div>
-<div style="padding:18px 22px;">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:16px;">
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">TripAdvisor</div><div style="font-size:15px;font-weight:700;color:#2ECC71;">4.5 / 5</div></div>
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">TA Rank</div><div style="font-size:15px;font-weight:700;color:#2ECC71;">#14 of 355</div></div>
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">Breakfast</div><div style="font-size:15px;font-weight:700;color:#2ECC71;">Free</div></div>
-<div style="background:#111;border-radius:4px;padding:10px 12px;"><div style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;">Amenities</div><div style="font-size:15px;font-weight:700;color:var(--gold);">Pool+Jacuzzi</div></div>
-</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#2ECC71;margin-bottom:8px;font-weight:700;">Pros</div>
-<div class="lir"><span class="arr">→</span>Highest-rated hotel on this entire list — #14 in all of Rio</div>
-<div class="lir"><span class="arr">→</span>Free breakfast buffet included every morning</div>
-<div class="lir"><span class="arr">→</span>Outdoor pool + indoor jacuzzi + sauna + spa</div>
-<div class="lir"><span class="arr">→</span>Ocean view rooms available — balconies, stunning views</div>
-<div class="lir"><span class="arr">→</span>Staff praised as exceptional across all platforms</div>
-<div class="lir"><span class="arr">→</span>Significantly cheaper than Windsor Barra</div>
-</div>
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#e74c3c;margin-bottom:8px;font-weight:700;">Cons</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>4-star vs. 5-star — slightly less prestige</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Pool is small and gets crowded</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Rooms described as slightly dated (renovation coming)</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Breakfast area crowded at peak hours — go early or late</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Same 30–40 min to Lapa and Ipanema as other Barra hotels</div>
+<div class="h-price-block">
+<div class="h-rate green">~$301</div>
+<div class="h-rate-lbl">per room / night</div>
+<div class="h-rate-sub">$1,503 total per room · 5 nights (Expedia, Feb 5–10)</div>
 </div>
 </div>
-<div style="background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.2);border-radius:4px;padding:12px 14px;font-size:13px;color:#a8e6bf;">
-<strong>Trip Fit:</strong> Same Barra da Tijuca location as all planned activities. Free breakfast aligns with the meal schedule — saves money on days the chef isn't cooking. Jacuzzi and spa are perfect recovery tools after Carnival night and boat day.
+<div class="h-body">
+<div class="h-stats">
+<div class="h-stat"><div class="h-stat-l">TripAdvisor</div><div class="h-stat-v green">4.5 / 5</div></div>
+<div class="h-stat"><div class="h-stat-l">TA Rank</div><div class="h-stat-v green">#14 of 355</div></div>
+<div class="h-stat"><div class="h-stat-l">Breakfast</div><div class="h-stat-v green">Free</div></div>
+<div class="h-stat"><div class="h-stat-l">Amenities</div><div class="h-stat-v gold">Pool+Jacuzzi</div></div>
 </div>
+<div class="h-pc">
+<div class="h-pros">
+<div class="h-pc-hdr pros">Pros</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Highest-rated hotel on this entire list — #14 in all of Rio</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Free breakfast buffet every morning</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Outdoor pool + indoor jacuzzi + sauna + spa</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Ocean view rooms available with balconies</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Staff praised as exceptional across all platforms</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Significantly cheaper than Windsor Barra</div>
+</div>
+<div class="h-cons">
+<div class="h-pc-hdr cons">Cons</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>4-star vs. 5-star — slightly less prestige</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Pool is small and gets crowded</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Rooms described as slightly dated (renovation coming)</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Breakfast area crowded at peak hours</div>
+</div>
+</div>
+<div class="h-verdict green-verdict">Same Barra da Tijuca location as all planned activities. Free breakfast aligns with the meal schedule. Jacuzzi and spa are perfect recovery tools after Carnival night and boat day. Highest TripAdvisor ranking on this list.</div>
 </div>
 </div>
 
 <!-- WINDSOR MARAPENDI -->
-<div style="background:var(--cb);border:1px solid var(--bdr);border-radius:7px;overflow:hidden;margin-bottom:18px;opacity:0.85;">
-<div style="background:#1a1a1a;padding:16px 22px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+<div class="h-card h-dim">
+<div class="h-head">
 <div>
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
-<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--tm);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">5-Star</span>
-<span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#888;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">Near Beach</span>
+<div class="h-badges">
+<span class="hbdg hbdg-dim">5-Star</span>
+<span class="hbdg hbdg-dim">Near Beach</span>
 </div>
-<div style="font-family:'Playfair Display',serif;font-size:20px;color:#ccc;font-weight:700;">Windsor Marapendi</div>
-<div style="color:var(--tm);font-size:12px;margin-top:3px;">Av. Lucio Costa, 5400 · Barra da Tijuca · 1.2 km to beach</div>
+<div class="h-name" style="color:#ccc;">Windsor Marapendi</div>
+<div class="h-addr">Av. Lucio Costa, 5400 · 1.2 km to beach</div>
 </div>
-<div style="text-align:right;">
-<div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--tm);font-weight:700;">~$346</div>
-<div style="color:var(--tm);font-size:11px;">Same price as Windsor Barra, lower rating</div>
-</div>
-</div>
-<div style="padding:16px 22px;">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#2ECC71;margin-bottom:8px;font-weight:700;">Pros</div>
-<div class="lir"><span class="arr">→</span>5-star with rooftop pool and ocean views</div>
-<div class="lir"><span class="arr">→</span>Good price/quality ratio per reviews</div>
-<div class="lir"><span class="arr">→</span>Largest property (520 rooms) — availability during Carnival</div>
-</div>
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#e74c3c;margin-bottom:8px;font-weight:700;">Cons</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Beach is 1.2 km away — not directly beachfront</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Check-in takes 30+ minutes per multiple reviews</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Unexpected fees and overpriced charges flagged</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Same price as Windsor Barra, lower TripAdvisor rating</div>
+<div class="h-price-block">
+<div class="h-rate" style="color:var(--tm);">~$346</div>
+<div class="h-rate-lbl">Same price as Windsor Barra, lower rating</div>
 </div>
 </div>
-<div style="padding:10px 14px;background:#111;border-radius:4px;font-size:13px;color:var(--tm);">Verdict: Loses to Windsor Barra at the same price point on nearly every metric. Not a bad hotel — just not the right pick when better options exist at the same or lower cost.</div>
+<div class="h-body">
+<div class="h-pc">
+<div class="h-pros">
+<div class="h-pc-hdr pros">Pros</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>5-star with rooftop pool and ocean views</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Largest property (520 rooms) — availability during Carnival</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Good price/quality ratio per reviews (9.2)</div>
+</div>
+<div class="h-cons">
+<div class="h-pc-hdr cons">Cons</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Beach is 1.2 km away — not directly beachfront</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Check-in takes 30+ minutes per multiple reviews</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Unexpected fees flagged by guests</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Same price as Windsor Barra with lower rating</div>
+</div>
+</div>
+<div class="h-verdict dim-verdict">Loses to Windsor Barra at the same price point on nearly every metric. Not the right pick when better options exist.</div>
 </div>
 </div>
 
 <!-- WINDSOR OCEANICO -->
-<div style="background:rgba(231,76,60,0.05);border:1px solid rgba(231,76,60,0.5);border-radius:7px;overflow:hidden;margin-bottom:18px;">
-<div style="background:rgba(231,76,60,0.1);padding:16px 22px;border-bottom:1px solid rgba(231,76,60,0.3);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+<div class="h-card h-danger">
+<div class="h-head">
 <div>
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
-<span style="background:rgba(231,76,60,0.3);border:1px solid rgba(231,76,60,0.5);color:#ff6b6b;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">Do Not Book</span>
-<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--tm);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">4-Star</span>
+<div class="h-badges">
+<span class="hbdg hbdg-danger">Do Not Book</span>
+<span class="hbdg hbdg-dim">4-Star</span>
 </div>
-<div style="font-family:'Playfair Display',serif;font-size:20px;color:#f0a89e;font-weight:700;">Windsor Oceanico</div>
-<div style="color:var(--tm);font-size:12px;margin-top:3px;">Rua Martinho de Mesquita, 129 · 3-min walk to beach · Windsor Barra is next door</div>
+<div class="h-name" style="color:#f0a89e;">Windsor Oceanico</div>
+<div class="h-addr">Rua Martinho de Mesquita, 129 · Windsor Barra is next door via catwalk</div>
 </div>
-<div style="text-align:right;">
-<div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--tm);font-weight:700;">~$319</div>
-<div style="color:var(--tm);font-size:11px;">4-star pricing near 5-star</div>
+<div class="h-price-block">
+<div class="h-rate" style="color:var(--tm);">~$319</div>
+<div class="h-rate-lbl">4-star near 5-star pricing</div>
 </div>
 </div>
-<div style="padding:16px 22px;">
-<p style="color:#f0a89e;font-size:13px;line-height:1.6;margin-bottom:12px;">Multiple TripAdvisor reviews from Black travelers document being refused service at the pool bar, denied elevator access, and waited 40+ minutes while white guests were served. The Windsor Barra Hotel is literally connected to this building by a catwalk and is better in every single category. There is no reason to book the Oceanico.</p>
-<div style="padding:10px 14px;background:rgba(231,76,60,0.1);border-radius:4px;font-size:13px;color:#f0a89e;font-weight:600;">Skip this one entirely. Windsor Barra is right next door and is the superior experience.</div>
+<div class="h-body">
+<p style="color:#f0a89e;font-size:13px;line-height:1.6;margin-bottom:12px;">Multiple TripAdvisor reviews from Black travelers document being refused service at the pool bar, denied elevator access, and a 40+ minute wait while white guests were served. Windsor Barra is connected to this building by a catwalk and is better in every category.</p>
+<div class="h-verdict danger-verdict">Skip this one entirely. Windsor Barra is right next door and is the superior experience on every measure.</div>
 </div>
 </div>
 
 <!-- RESIDENCE INN -->
-<div style="background:var(--cb);border:1px solid var(--bdr);border-radius:7px;overflow:hidden;margin-bottom:24px;opacity:0.75;">
-<div style="background:#1a1a1a;padding:16px 22px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;">
+<div class="h-card h-dim">
+<div class="h-head">
 <div>
-<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
-<span style="background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.3);color:#e74c3c;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">Wrong Location</span>
-<span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--tm);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;">4-Star</span>
+<div class="h-badges">
+<span class="hbdg hbdg-danger">Wrong Location</span>
+<span class="hbdg hbdg-dim">4-Star</span>
 </div>
-<div style="font-family:'Playfair Display',serif;font-size:20px;color:#ccc;font-weight:700;">Residence Inn by Marriott</div>
-<div style="color:var(--tm);font-size:12px;margin-top:3px;">Av. Embaixador Abelardo Bueno, 5001 · Near Olympic Park · NO beach access</div>
+<div class="h-name" style="color:#ccc;">Residence Inn by Marriott</div>
+<div class="h-addr">Av. Embaixador Abelardo Bueno, 5001 · Near Olympic Park · No beach access</div>
 </div>
-<div style="text-align:right;">
-<div style="font-family:'Playfair Display',serif;font-size:24px;color:#2ECC71;font-weight:700;">~$277</div>
-<div style="color:var(--tm);font-size:11px;">Cheapest option — but wrong location</div>
-</div>
-</div>
-<div style="padding:16px 22px;">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#2ECC71;margin-bottom:8px;font-weight:700;">Pros</div>
-<div class="lir"><span class="arr">→</span>Cheapest at ~$277/night</div>
-<div class="lir"><span class="arr">→</span>Free breakfast + full kitchen in every room</div>
-<div class="lir"><span class="arr">→</span>Marriott Bonvoy points if anyone has status</div>
-<div class="lir"><span class="arr">→</span>Consistently excellent staff reviews (9.3)</div>
-</div>
-<div style="background:#111;border-radius:4px;padding:12px 14px;">
-<div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#e74c3c;margin-bottom:8px;font-weight:700;">Cons</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>No beach — located near Olympic Park / convention center</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Multiple reviewers describe it as "bland" business hotel</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Designed for extended corporate stays, not leisure</div>
-<div class="lir"><span class="arr" style="color:#e74c3c;">→</span>Farthest from all planned activities on the itinerary</div>
+<div class="h-price-block">
+<div class="h-rate green">~$277</div>
+<div class="h-rate-lbl">Cheapest — but wrong location entirely</div>
 </div>
 </div>
-<div style="padding:10px 14px;background:#111;border-radius:4px;font-size:13px;color:var(--tm);">Verdict: Cheapest option but wrong hotel for this trip. No beach access in a city where the beach is the whole point. The savings don't offset the location.</div>
+<div class="h-body">
+<div class="h-pc">
+<div class="h-pros">
+<div class="h-pc-hdr pros">Pros</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Cheapest at ~$277/night</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Free breakfast + full kitchen in every room</div>
+<div class="h-pc-item"><div class="h-dot pros-dot"></div>Marriott Bonvoy points if anyone has status</div>
+</div>
+<div class="h-cons">
+<div class="h-pc-hdr cons">Cons</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>No beach — near Olympic Park / convention center</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Described as "bland" business hotel by multiple reviewers</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Designed for corporate extended stays, not leisure</div>
+<div class="h-pc-item"><div class="h-dot cons-dot"></div>Farthest from every activity on the itinerary</div>
+</div>
+</div>
+<div class="h-verdict danger-verdict">Cheapest option but wrong hotel for this trip. No beach access in a city where the beach is the whole point.</div>
 </div>
 </div>
 
-<!-- COMPARISON TABLE -->
-<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:19px;margin:8px 0 14px;">Side-by-Side</h3>
+<!-- SIDE-BY-SIDE TABLE -->
+<h3 style="font-family:'Playfair Display',serif;color:#fff;font-size:18px;margin:24px 0 12px;">Side-by-Side</h3>
 <div style="overflow-x:auto;background:var(--cb);border:1px solid var(--bdr);border-radius:6px;">
-<table style="width:100%;border-collapse:collapse;min-width:520px;">
+<table style="width:100%;border-collapse:collapse;min-width:440px;">
 <thead><tr style="background:#1a1a1a;">
-<th style="text-align:left;padding:10px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">Hotel</th>
-<th style="padding:10px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">Stars</th>
-<th style="padding:10px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">Rating</th>
-<th style="padding:10px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">/Night</th>
-<th style="padding:10px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">Beach</th>
-<th style="padding:10px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">Bkfst</th>
-<th style="padding:10px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">Call</th>
+<th style="text-align:left;padding:9px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);">Hotel</th>
+<th style="padding:9px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);text-align:center;">★</th>
+<th style="padding:9px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);text-align:center;">Rating</th>
+<th style="padding:9px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);text-align:center;">/Night</th>
+<th style="padding:9px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);text-align:center;">Beach</th>
+<th style="padding:9px 8px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--bdr);text-align:center;">Call</th>
 </tr></thead>
 <tbody>
 <tr style="background:rgba(201,168,76,0.06);">
-<td style="padding:11px 12px;font-size:13px;color:#fff;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.04);">Windsor Barra</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--gold);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★★</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">9.4 / 4.0</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--gold);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">~$346</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Direct</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Paid</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--gold);font-weight:700;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Recommended</td>
+<td style="padding:10px 12px;font-size:13px;color:#fff;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.04);">Windsor Barra</td>
+<td style="padding:10px 8px;font-size:11px;color:var(--gold);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★★</td>
+<td style="padding:10px 8px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">9.4</td>
+<td style="padding:10px 8px;font-size:13px;color:var(--gold);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">$346</td>
+<td style="padding:10px 8px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Direct</td>
+<td style="padding:10px 8px;font-size:12px;color:var(--gold);font-weight:700;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Recommended</td>
 </tr>
 <tr>
-<td style="padding:11px 12px;font-size:13px;color:#fff;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.04);">Laghetto Stilo</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">9.4 / 4.5</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">~$102–171</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Direct</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Free</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Strong Alt.</td>
+<td style="padding:10px 12px;font-size:13px;color:#fff;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.04);">Laghetto Stilo</td>
+<td style="padding:10px 8px;font-size:11px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★</td>
+<td style="padding:10px 8px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">9.4</td>
+<td style="padding:10px 8px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">$102–171</td>
+<td style="padding:10px 8px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Direct</td>
+<td style="padding:10px 8px;font-size:12px;color:#2ECC71;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Strong Alt.</td>
 </tr>
 <tr style="background:rgba(255,255,255,0.015);">
-<td style="padding:11px 12px;font-size:13px;color:#bbb;border-bottom:1px solid rgba(255,255,255,0.04);">Windsor Marapendi</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★★</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">9.2 / 4.0</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">~$346</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">1.2 km</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Paid</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Not ideal</td>
+<td style="padding:10px 12px;font-size:13px;color:#bbb;border-bottom:1px solid rgba(255,255,255,0.04);">Windsor Marapendi</td>
+<td style="padding:10px 8px;font-size:11px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★★</td>
+<td style="padding:10px 8px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">9.2</td>
+<td style="padding:10px 8px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">$346</td>
+<td style="padding:10px 8px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">1.2 km</td>
+<td style="padding:10px 8px;font-size:12px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Not ideal</td>
 </tr>
 <tr>
-<td style="padding:11px 12px;font-size:13px;color:#f0a89e;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.04);">Windsor Oceanico</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">4.0</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">~$319</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">3-min walk</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Free</td>
-<td style="padding:11px 12px;font-size:13px;color:#e74c3c;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Do Not Book</td>
+<td style="padding:10px 12px;font-size:13px;color:#f0a89e;font-weight:600;border-bottom:1px solid rgba(255,255,255,0.04);">Windsor Oceanico</td>
+<td style="padding:10px 8px;font-size:11px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">★★★★</td>
+<td style="padding:10px 8px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">4.0</td>
+<td style="padding:10px 8px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">$319</td>
+<td style="padding:10px 8px;font-size:13px;color:var(--tm);border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">3-min</td>
+<td style="padding:10px 8px;font-size:12px;color:#e74c3c;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.04);text-align:center;">Do Not Book</td>
 </tr>
 <tr style="background:rgba(255,255,255,0.015);">
-<td style="padding:11px 12px;font-size:13px;color:#bbb;">Residence Inn Marriott</td>
-<td style="padding:11px 12px;font-size:13px;color:var(--tm);text-align:center;">★★★★</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;text-align:center;">9.3</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;text-align:center;">~$277</td>
-<td style="padding:11px 12px;font-size:13px;color:#e74c3c;text-align:center;">None</td>
-<td style="padding:11px 12px;font-size:13px;color:#2ECC71;text-align:center;">Free</td>
-<td style="padding:11px 12px;font-size:13px;color:#e74c3c;font-weight:700;text-align:center;">Wrong Area</td>
+<td style="padding:10px 12px;font-size:13px;color:#bbb;">Residence Inn</td>
+<td style="padding:10px 8px;font-size:11px;color:var(--tm);text-align:center;">★★★★</td>
+<td style="padding:10px 8px;font-size:13px;color:#2ECC71;text-align:center;">9.3</td>
+<td style="padding:10px 8px;font-size:13px;color:#2ECC71;text-align:center;">$277</td>
+<td style="padding:10px 8px;font-size:13px;color:#e74c3c;text-align:center;">None</td>
+<td style="padding:10px 8px;font-size:12px;color:#e74c3c;font-weight:700;text-align:center;">Wrong Area</td>
 </tr>
 </tbody>
 </table>
 </div>
+
 </div>
 
 <!-- FOOTER -->
@@ -1792,62 +1848,53 @@ renderMeals();
 
 
 /* ── HOTEL PRICING CALCULATOR ── */
-// Simple: per-room rate × 5 nights ÷ occupancy = cost per person per stay
-var HOTELS_DATA = [
+var HOTELS_DATA=[
   {name:"Windsor Barra Hotel",  rate:346, color:"var(--gold)"},
-  {name:"Laghetto Stilo Barra", rate:136, color:"#2ECC71"},
+  {name:"Laghetto Stilo Barra", rate:301, color:"#2ECC71"},
   {name:"Windsor Marapendi",    rate:346, color:"var(--tm)"},
 ];
-var NIGHTS = 5;
+var NIGHTS=5;
 
-function setHotelGroup(n, btn) {
+function setHotelGroup(n,btn){
   document.querySelectorAll('#hotels .gcb').forEach(function(b){b.className='gcb';});
   btn.className='gcb active-g';
   renderHotelPrices(n);
 }
 
-function renderHotelPrices(n) {
-  var con = document.getElementById('hotel-price-cards');
-  var note = document.getElementById('hotel-price-note');
+function renderHotelPrices(n){
+  var con=document.getElementById('hotel-price-cards');
+  var note=document.getElementById('hotel-price-note');
   if(!con) return;
   con.innerHTML='';
-  // Group size drives how many rooms needed, split evenly
-  var roomsNeeded = Math.ceil(n / 2); // default 2/room
-  
-  HOTELS_DATA.forEach(function(h) {
-    var pp1 = h.rate * NIGHTS;           // 1 person per room — solo room cost
-    var pp2 = (h.rate * NIGHTS) / 2;     // 2 per room — your share
-    var pp3 = (h.rate * NIGHTS) / 3;     // 3 per room — your share
-
-    var card = document.createElement('div');
-    card.style.cssText='background:var(--cb);border:1px solid var(--bdr);border-radius:6px;padding:16px;';
-    card.innerHTML='<div style="font-weight:600;color:#fff;font-size:13px;margin-bottom:12px;">'+h.name+'</div>'
-      +'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">'
-      // 1 per room
-      +'<div style="background:#111;border-radius:4px;padding:10px;">'
-      +'<div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tm);margin-bottom:4px;">Solo room</div>'
-      +'<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+Math.round(pp1).toLocaleString()+'</div>'
-      +'<div style="font-size:10px;color:var(--tm);margin-top:3px;">1 person · 5 nights</div>'
+  HOTELS_DATA.forEach(function(h){
+    var pp1=Math.round(h.rate*NIGHTS);
+    var pp2=Math.round((h.rate*NIGHTS)/2);
+    var pp3=Math.round((h.rate*NIGHTS)/3);
+    var card=document.createElement('div');
+    card.className='h-price-card';
+    card.innerHTML='<div class="h-price-card-name">'+h.name+'</div>'
+      +'<div class="h-occ-grid">'
+      +'<div class="h-occ-col">'
+      +'<div class="h-occ-lbl">Solo room</div>'
+      +'<div class="h-occ-amt" style="color:'+h.color+'">$'+pp1.toLocaleString()+'</div>'
+      +'<div class="h-occ-sub">1 person · 5 nights</div>'
       +'</div>'
-      // 2 per room
-      +'<div style="background:#111;border-radius:4px;padding:10px;border:1px solid rgba(201,168,76,0.3);">'
-      +'<div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">2 per room</div>'
-      +'<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+Math.round(pp2).toLocaleString()+'</div>'
-      +'<div style="font-size:10px;color:var(--tm);margin-top:3px;">your share · 5 nights</div>'
+      +'<div class="h-occ-col standard">'
+      +'<div class="h-occ-lbl std">2 per room</div>'
+      +'<div class="h-occ-amt" style="color:'+h.color+'">$'+pp2.toLocaleString()+'</div>'
+      +'<div class="h-occ-sub">your share · 5 nights</div>'
       +'</div>'
-      // 3 per room
-      +'<div style="background:#111;border-radius:4px;padding:10px;">'
-      +'<div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--tm);margin-bottom:4px;">3 per room</div>'
-      +'<div style="font-family:Playfair Display,serif;font-size:18px;font-weight:700;color:'+h.color+';">$'+Math.round(pp3).toLocaleString()+'</div>'
-      +'<div style="font-size:10px;color:var(--tm);margin-top:3px;">your share · 5 nights</div>'
+      +'<div class="h-occ-col">'
+      +'<div class="h-occ-lbl">3 per room</div>'
+      +'<div class="h-occ-amt" style="color:'+h.color+'">$'+pp3.toLocaleString()+'</div>'
+      +'<div class="h-occ-sub">your share · 5 nights</div>'
       +'</div>'
       +'</div>';
     con.appendChild(card);
   });
-
-  var rooms2 = Math.ceil(n/2);
-  var rooms3 = Math.ceil(n/3);
-  note.textContent = n+' people total. Standard 2/room = '+rooms2+' rooms. 3/room option = '+rooms3+' rooms. Rates are per-room estimates for Feb 5–10, 2027. Carnival week — book early.';
+  var rooms2=Math.ceil(n/2);
+  var rooms3=Math.ceil(n/3);
+  note.textContent=n+' people total — standard 2/room needs '+rooms2+' rooms, 3/room needs '+rooms3+' rooms. Per-room estimates for Feb 5–10, 2027. Book early — Carnival week rates rise.';
 }
 renderHotelPrices(5);
 
